@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ecj-26">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/ecj26/ecj/target/ecj-26.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

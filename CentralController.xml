@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FBType GUID="76C7CDC36915928D" Name="CentralController" Comment="Basic Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="0" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="spat251" Date="17/09/2012" Remarks="Template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request" />
+      <Event Name="REQ" Comment="Normal Execution Request">
+        <With Var="c1Home" />
+        <With Var="c1End" />
+        <With Var="c2Home" />
+        <With Var="c2End" />
+        <With Var="vcHome" />
+        <With Var="vcEnd" />
+        <With Var="pp1" />
+        <With Var="pp2" />
+        <With Var="pp3" />
+        <With Var="vac" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="c1Extend" />
+        <With Var="vacuum_on" />
+        <With Var="vcExtend" />
+        <With Var="c2Retract" />
+        <With Var="c2Extend" />
+        <With Var="c1Retract" />
+        <With Var="vacuum_off" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="vacuum_on" />
+        <With Var="vcExtend" />
+        <With Var="c2Retract" />
+        <With Var="c2Extend" />
+        <With Var="c1Retract" />
+        <With Var="c1Extend" />
+        <With Var="vacuum_off" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="c1Home" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="c1End" Type="BOOL" />
+      <VarDeclaration Name="c2Home" Type="BOOL" />
+      <VarDeclaration Name="c2End" Type="BOOL" />
+      <VarDeclaration Name="vcHome" Type="BOOL" />
+      <VarDeclaration Name="vcEnd" Type="BOOL" />
+      <VarDeclaration Name="pp1" Type="BOOL" />
+      <VarDeclaration Name="pp2" Type="BOOL" />
+      <VarDeclaration Name="pp3" Type="BOOL" />
+      <VarDeclaration Name="vac" Type="BOOL" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="c1Extend" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="c1Retract" Type="BOOL" />
+      <VarDeclaration Name="c2Extend" Type="BOOL" />
+      <VarDeclaration Name="c2Retract" Type="BOOL" />
+      <VarDeclaration Name="vcExtend" Type="BOOL" />
+      <VarDeclaration Name="vacuum_on" Type="BOOL" />
+      <VarDeclaration Name="vacuum_off" Type="BOOL" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" Comment="Initial State" x="866.6666" y="605.5555" />
+      <ECState Name="INIT" Comment="Initialization" x="1405.556" y="588.8889">
+        <ECAction Algorithm="INIT" Output="INITO" />
+      </ECState>
+      <ECState Name="GoDown" Comment="Normal execution" x="3477.778" y="2400">
+        <ECAction Algorithm="extendvc" Output="CNF" />
+      </ECState>
+      <ECState Name="Wait" x="1355.556" y="983.3333">
+        <ECAction Algorithm="Wait" />
+      </ECState>
+      <ECState Name="Piece1" x="3866.667" y="711.1111">
+        <ECAction Algorithm="extend1" Output="CNF" />
+      </ECState>
+      <ECState Name="Piece2" x="3050" y="1150">
+        <ECAction Algorithm="extend2" Output="CNF" />
+      </ECState>
+      <ECState Name="Piece3" x="1466.667" y="1466.667">
+        <ECAction Algorithm="extend1and2" Output="CNF" />
+      </ECState>
+      <ECState Name="Vacuum_On" x="1627.778" y="2705.555">
+        <ECAction Algorithm="TurnOnVac" Output="CNF" />
+      </ECState>
+      <ECState Name="GoUp" x="1400" y="3261.111">
+        <ECAction Algorithm="Retractvc" Output="CNF" />
+      </ECState>
+      <ECState Name="VacuumOff" x="3188.889" y="3483.333">
+        <ECAction Algorithm="TurnOffvac" Output="CNF" />
+      </ECState>
+      <ECState Name="Retract" x="988.8889" y="2383.333">
+        <ECAction Algorithm="RetracAll" Output="CNF" />
+      </ECState>
+      <ECTransition Source="START" Destination="INIT" Condition="INIT" x="1152.754" y="509.7978" />
+      <ECTransition Source="INIT" Destination="Wait" Condition="1" x="1463.857" y="795.5427" />
+      <ECTransition Source="GoUp" Destination="Wait" Condition="REQ&amp;vcHome AND c1Home AND c2Home" x="1377.745" y="2197.222" />
+      <ECTransition Source="Retract" Destination="GoDown" Condition="REQ&amp;vac AND c1Home AND c2Home" x="2224.936" y="2312.696" />
+      <ECTransition Source="Wait" Destination="Piece1" Condition="REQ&amp;pp1 AND vcHome" x="2597.01" y="770.6203" />
+      <ECTransition Source="Wait" Destination="Piece2" Condition="REQ&amp;NOT pp1 AND pp2 AND vcHome" x="2196.018" y="986.0659" />
+      <ECTransition Source="Wait" Destination="Piece3" Condition="REQ&amp;NOT pp1 AND NOT pp2 AND  pp3 AND vcHome" x="1491.824" y="1208.197" />
+      <ECTransition Source="Piece1" Destination="GoDown" Condition="REQ&amp;c1End" x="3747.62" y="1572.385" />
+      <ECTransition Source="Piece2" Destination="GoDown" Condition="REQ&amp;c2End" x="3338.043" y="1750.716" />
+      <ECTransition Source="Piece3" Destination="GoDown" Condition="REQ&amp;c1End AND c2End" x="2508.897" y="1863.682" />
+      <ECTransition Source="GoDown" Destination="Vacuum_On" Condition="REQ&amp;vcEnd AND NOT (c1Home AND c2Home)" x="2587.181" y="2629.411" />
+      <ECTransition Source="Vacuum_On" Destination="GoUp" Condition="REQ&amp;vac" x="1590.496" y="3011.784" />
+      <ECTransition Source="VacuumOff" Destination="GoUp" Condition="REQ&amp;NOT vac" x="2262.583" y="3448.787" />
+      <ECTransition Source="GoDown" Destination="VacuumOff" Condition="REQ&amp;vcEnd AND c1Home AND c2Home" x="3409.385" y="2960.991" />
+      <ECTransition Source="GoUp" Destination="Retract" Condition="REQ&amp;vcHome AND (NOT c1Home OR NOT c2Home)" x="1192.244" y="2897.222" />
+      <ECTransition Source="Wait" Destination="INIT" Condition="INIT" x="1225.075" y="770.8236">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="297.3629,203.5186,300.4272,179.3453" />
+      </ECTransition>
+      <ECTransition Source="Piece1" Destination="INIT" Condition="INIT" x="2640.475" y="232.4949">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="753.4498,32.32567,566.3621,23.03462" />
+      </ECTransition>
+      <ECTransition Source="Piece2" Destination="INIT" Condition="INIT" x="2381.813" y="714.337">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="666.0673,188.1349,547.0351,147.5192" />
+      </ECTransition>
+      <ECTransition Source="Piece3" Destination="INIT" Condition="INIT" x="742.2107" y="1167.792">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="138.9679,334.3974,134.4808,269.9463" />
+      </ECTransition>
+      <ECTransition Source="Retract" Destination="INIT" Condition="INIT" x="518.4738" y="963.47">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="61.79123,270.1763,94.49405,129.3363" />
+      </ECTransition>
+      <ECTransition Source="Vacuum_On" Destination="INIT" Condition="INIT" x="5595.821" y="811.6952">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="1737.506,219.5848,1719.9,51.89301" />
+      </ECTransition>
+      <ECTransition Source="GoDown" Destination="INIT" Condition="INIT" x="2439.2" y="1569.444">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="691.7839,469.7255,529.0496,327.4967" />
+      </ECTransition>
+      <ECTransition Source="GoUp" Destination="INIT" Condition="INIT" x="336.6367" y="650.8449">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="0.1150894,167.8214,0.5600052,-46.16673" />
+      </ECTransition>
+      <ECTransition Source="VacuumOff" Destination="INIT" Condition="INIT" x="6745.612" y="777.4967">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="2120.537,208.323,1977.284,-24.1837" />
+      </ECTransition>
+    </ECC>
+    <Algorithm Name="INIT" Comment="Initialization algorithm">
+      <ST Text="INIT:=FALSE;&#xD;&#xA;c1Extend:=FALSE;&#xD;&#xA;c2Extend:=FALSE;&#xD;&#xA;vcExtend:=FALSE;&#xD;&#xA;c1Retract:=FALSE;&#xD;&#xA;c2Retract:=FALSE;&#xD;&#xA;vacuum_on:=FALSE;&#xD;&#xA;vacuum_off:=FALSE;" />
+    </Algorithm>
+    <Algorithm Name="REQ" Comment="Normally executed algorithm">
+      <ST Text=";" />
+    </Algorithm>
+    <Algorithm Name="extend1">
+      <ST Text="c1Extend:=TRUE;&#xD;&#xA;REQ:=FALSE;" />
+    </Algorithm>
+    <Algorithm Name="extend2">
+      <ST Text="c2Extend:=TRUE;&#xD;&#xA;REQ:=FALSE;" />
+    </Algorithm>
+    <Algorithm Name="extend1and2">
+      <ST Text="c1Extend:=TRUE;&#xD;&#xA;c2Extend:=TRUE;&#xD;&#xA;REQ:=FALSE;" />
+    </Algorithm>
+    <Algorithm Name="extendvc">
+      <ST Text="vcExtend:=TRUE;&#xD;&#xA;REQ:=FALSE;" />
+    </Algorithm>
+    <Algorithm Name="TurnOnVac">
+      <ST Text="vacuum_on:=TRUE;&#xD;&#xA;vacuum_off:=FALSE;&#xD;&#xA;REQ:=FALSE;" />
+    </Algorithm>
+    <Algorithm Name="Retractvc">
+      <ST Text="vcExtend:=FALSE;&#xD;&#xA;REQ:=FALSE;" />
+    </Algorithm>
+    <Algorithm Name="TurnOffvac">
+      <ST Text="vacuum_on:=FALSE;&#xD;&#xA;vacuum_off:=TRUE;&#xD;&#xA;REQ:=FALSE;" />
+    </Algorithm>
+    <Algorithm Name="RetracAll">
+      <ST Text="c1Extend:=FALSE;&#xD;&#xA;c2Extend:=FALSE;&#xD;&#xA;c1Retract:=TRUE;&#xD;&#xA;c2Retract:=TRUE;&#xD;&#xA;REQ:=FALSE;" />
+    </Algorithm>
+    <Algorithm Name="Wait">
+      <ST Text="c1Extend:=FALSE;&#xD;&#xA;c2Extend:=FALSE;&#xD;&#xA;vcExtend:=FALSE;&#xD;&#xA;c1Retract:=FALSE;&#xD;&#xA;c2Retract:=FALSE;&#xD;&#xA;vacuum_on:=FALSE;&#xD;&#xA;vacuum_off:=FALSE;&#xD;&#xA;REQ:=FALSE;" />
+    </Algorithm>
+  </BasicFB>
+</FBType>

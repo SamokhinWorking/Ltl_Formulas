@@ -1,0 +1,20 @@
+
+Generation: 0
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: 56.0
+pp2 NOT     pp1 pp1 NOT pp1 pp3 pp3
+
+Generation: 1
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: 58.0
+( ) vcHome vac pp2 pp3 vcEnd     vcEnd
+
+Best Individual of Run:
+Subpopulation 0:
+Evaluated: T
+Fitness: 58.0
+( ) vcHome vac pp2 pp3 vcEnd     vcEnd
