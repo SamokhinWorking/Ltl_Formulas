@@ -1,0 +1,300 @@
+Generation 0
+Best individual: G(((!((P.c2Home U C.vacuum_off)) | X(C.vac)) U (F(C.c1Extend) | (pp1 U pp2))))
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.0 Fitness: 0.0
+--------------------
+Generation 1
+Best individual: G((!((X(P.c1Home) V P.c2End)) | (C.c2Retract | F(!(C.vacuum_off)))))
+Fitness: [0.75]
+Strength: 383.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 2
+Best individual: G((X((!(!(C.vcExtend)) | F(C.c2Extend))) | X(X((!(C.c1Retract) | pp3)))))
+Fitness: [0.75]
+Strength: 165.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 3
+Best individual: G((!(F(C.c2Retract)) | (X(P.c1Home) U C.vac)))
+Fitness: [0.75]
+Strength: 168.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 4
+Best individual: G((!(F(C.c1Extend)) | (X(C.vac) U C.vac)))
+Fitness: [0.75]
+Strength: 183.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 5
+Best individual: G((!(((((!(C.c1Extend) | P.vcEnd) U (pp3 V pp1)) V !((pp2 V C.vacuum_off))) U (!((!(C.c1Extend) | C.vacuum_on)) | X((C.c2Extend U pp1))))) | ((!(!((P.c1End V C.vcExtend))) | F(!(C.c2Extend))) U !(X((C.c1Retract U C.vac))))))
+Fitness: [0.75]
+Strength: 180.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 6
+Best individual: G((!(X(C.c1Extend)) | (C.vcExtend | F((C.c1Extend | C.c2Retract)))))
+Fitness: [0.75]
+Strength: 195.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 7
+Best individual: G((!(((!(((!(X(C.c2Retract)) | (C.c2Extend | F((C.c1Extend | C.vcExtend)))) | C.vacuum_on)) | (C.c1Extend V P.c1Home)) & X((pp1 & P.c1End)))) | F(!(F((P.c2End V C.c1Extend))))))
+Fitness: [0.75]
+Strength: 183.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 8
+Best individual: G((((P.c1Home | C.vcExtend) U (!(C.vacuum_on) | C.c1Extend)) | ((!(((C.c2Extend U C.vacuum_off) V F(C.c1Extend))) | (X(P.c2Home) U (C.c2Retract V P.c1End))) & F(C.vacuum_off))))
+Fitness: [0.75]
+Strength: 171.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 9
+Best individual: G((F(((P.c2End V pp1) & F(C.c1Extend))) | ((!(pp3) | F(C.c2Extend)) | F(!(C.c2Retract)))))
+Fitness: [0.75]
+Strength: 163.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 10
+Best individual: G((F(P.c1End) V X(X((!(C.vacuum_off) | C.vcExtend)))))
+Fitness: [0.75]
+Strength: 185.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 11
+Best individual: G(((!(X(P.c2End)) | F((pp1 & C.c2Extend))) V (!((P.c1Home V C.vcExtend)) U (!((C.vcExtend & P.vcHome)) | (C.c1Extend | P.c1Home)))))
+Fitness: [0.75]
+Strength: 185.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 12
+Best individual: G(((!(pp1) | C.c1Extend) U (!(P.vcHome) | C.vcExtend)))
+Fitness: [0.75]
+Strength: 195.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 13
+Best individual: G(((((C.c2Retract & C.c1Retract) & (P.vcEnd | P.c2End)) V !(F(P.vcEnd))) | (((C.c2Retract | C.vacuum_off) U (P.c2Home U C.c2Extend)) & (!(pp3) & (pp2 & P.c2End)))))
+Fitness: [0.75]
+Strength: 180.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 14
+Best individual: G(((!(P.c2End) | F((!((!(C.c2Retract) | P.c1End)) | C.c2Retract))) & (!(P.vcHome) | (!((pp2 V C.c1Retract)) | (C.c2Extend V C.c2Extend)))))
+Fitness: [0.75]
+Strength: 182.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 15
+Best individual: G(((!(F(C.c1Retract)) U ((pp1 & C.vacuum_on) | (C.vac | C.c2Extend))) V F((((!(!(pp3)) | (P.c1End & C.c1Retract)) & ((C.vcExtend V C.vacuum_off) V (P.vcEnd V P.c1End))) V F(((C.c2Retract U C.c1Extend) U (!(C.vac) | P.vcHome)))))))
+Fitness: [0.75]
+Strength: 176.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 16
+Best individual: G((!((F(!(P.vcEnd)) & P.c1Home)) | (((!(C.c1Extend) | pp2) V (C.vacuum_on & C.vcExtend)) V X((C.c2Extend & C.c1Retract)))))
+Fitness: [0.75]
+Strength: 174.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 17
+Best individual: G(((!(!(C.c2Extend)) | ((!(pp1) | F((!((!(C.c2Retract) | P.c1End)) | C.c1Retract))) & (!(P.c1End) | ((!(C.c2Extend) V F(C.c1Retract)) U F(P.c1Home))))) U ((!(pp2) | C.vacuum_on) | X(pp1))))
+Fitness: [0.75]
+Strength: 189.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 18
+Best individual: G(((!(!(C.vacuum_off)) | ((!(P.c1Home) | F((!((!(C.c1Extend) | P.c1End)) | C.vacuum_off))) & (!(P.vcHome) | (P.c1End | X(X((!(C.c1Retract) | C.c2Extend))))))) U ((!(P.c1End) | C.c2Retract) | X(C.vac))))
+Fitness: [0.75]
+Strength: 189.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 19
+Best individual: G(((!(P.vcHome) U (C.vacuum_off U C.c1Extend)) V ((!(C.c2Extend) | C.vacuum_off) | X(P.vcHome))))
+Fitness: [0.75]
+Strength: 171.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 20
+Best individual: G((P.vcEnd | X(X((!(C.c2Retract) | C.c1Retract)))))
+Fitness: [0.75]
+Strength: 199.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 21
+Best individual: G((F((!(pp2) | X(P.c1Home))) | (((X(C.vacuum_off) & !(P.c2Home)) U ((!(pp3) | C.c1Extend) U (!(P.vcHome) | C.c1Extend))) U (P.c1End V !(pp1)))))
+Fitness: [0.75]
+Strength: 172.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 22
+Best individual: G((F((!(F((C.c1Retract V C.c2Extend))) | !(X(C.vac)))) | (!(X((C.c1Retract U (pp3 & C.c2Retract)))) | (!(F(((P.vcEnd | C.vcExtend) | (!(C.vac) | C.vcExtend)))) | (!(X((C.c2Retract & C.c1Extend))) | ((C.c1Extend & C.vacuum_off) U F(P.c2End)))))))
+Fitness: [0.75]
+Strength: 177.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 23
+Best individual: G(((!(((P.c2Home | pp2) | ((pp1 & pp2) U (pp1 | C.c2Retract)))) | ((P.vcHome & C.vacuum_on) V F(C.c1Retract))) V (!((!((C.vacuum_off U C.c1Extend)) | X(C.vcExtend))) | (!(F(C.c1Extend)) | (!(C.c1Extend) | P.c1End)))))
+Fitness: [0.75]
+Strength: 157.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 24
+Best individual: G((F(C.vacuum_off) U !((P.c1Home & P.c1Home))))
+Fitness: [0.75]
+Strength: 181.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 25
+Best individual: G(((X(P.c1Home) U P.c2Home) V (!(((!(C.c2Extend) V (C.c2Extend U P.c2Home)) | ((!(C.c1Extend) | C.c1Extend) U (C.c2Extend U C.vcExtend)))) | ((!((!(P.c2Home) | C.c1Extend)) | (pp2 | C.c1Retract)) V (!((C.c1Retract & C.c1Retract)) | F(pp2))))))
+Fitness: [0.75]
+Strength: 170.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 26
+Best individual: G((X(P.vcEnd) V (!((P.vcHome V (P.c1End & C.c2Retract))) | F(!(C.vacuum_on)))))
+Fitness: [0.75]
+Strength: 183.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 27
+Best individual: G((!(((!(!(F(P.c2End))) | (P.vcEnd | pp2)) | ((X(P.c2Home) & (P.c2End | C.c2Retract)) | (F(C.c1Extend) | (C.c2Retract & P.c1Home))))) | (((F(pp1) | (pp1 & pp1)) | (X(C.c1Extend) V !(C.c2Retract))) V F((!(C.vac) V X(P.c1End))))))
+Fitness: [0.75]
+Strength: 184.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 28
+Best individual: G((F((F((P.c1Home & C.c1Retract)) V C.c1Extend)) V (!((C.vcExtend & C.vcExtend)) | ((!((!(pp2) | C.c2Retract)) | (pp2 | C.c1Retract)) V (!((C.vacuum_off & C.c2Retract)) | F(P.c1End))))))
+Fitness: [0.75]
+Strength: 175.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 29
+Best individual: G((!(X(P.c2End)) | !(pp1)))
+Fitness: [0.75]
+Strength: 170.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 30
+Best individual: G(((!(P.c1Home) | F(C.vacuum_off)) | F(!(C.c2Extend))))
+Fitness: [0.75]
+Strength: 178.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 31
+Best individual: G((!(F(P.c2Home)) | ((P.c2End | C.c2Retract) U (!(C.vcExtend) | C.vacuum_on))))
+Fitness: [0.75]
+Strength: 190.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 32
+Best individual: G((X(((F(P.c1End) V (C.vac & C.vacuum_off)) U F((!(C.c1Extend) | P.c2End)))) & (!(X(X((C.c2Extend U C.vacuum_off)))) | (!(F(!(C.c2Retract))) | (!((P.c1Home & C.c2Retract)) | F(P.c1End))))))
+Fitness: [0.75]
+Strength: 184.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 33
+Best individual: G((!(((C.vacuum_on U C.c1Extend) U F(pp3))) | (((!(C.c1Extend) | P.c2Home) | F(P.c1Home)) | ((!(pp1) & F(C.c2Retract)) | F(P.vcHome)))))
+Fitness: [0.75]
+Strength: 189.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 34
+Best individual: G((!(C.vacuum_off) | (F((C.c2Retract V P.c1Home)) | F((!((C.vacuum_off | C.vcExtend)) U ((C.vcExtend & C.vacuum_off) V (pp1 | C.vacuum_on)))))))
+Fitness: [0.75]
+Strength: 190.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 35
+Best individual: G(((!(P.vcHome) U !(C.c1Retract)) U !((P.c1End & P.vcEnd))))
+Fitness: [0.75]
+Strength: 181.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 36
+Best individual: G((!((P.vcEnd V C.vcExtend)) | (C.c2Retract V C.c1Retract)))
+Fitness: [0.75]
+Strength: 176.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 37
+Best individual: G((!((P.c1Home V C.c2Extend)) | (C.vcExtend V C.vcExtend)))
+Fitness: [0.75]
+Strength: 207.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 38
+Best individual: G((!((P.c1End | C.c1Retract)) | ((P.c2End & C.c1Retract) U F(P.c1Home))))
+Fitness: [0.75]
+Strength: 160.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 39
+Best individual: G((!(((C.vcExtend V F(C.c2Retract)) U C.c2Retract)) | (!((((C.c1Retract | C.vac) & (!(C.c2Retract) | (!((P.c2Home | pp1)) | (P.c2Home V P.c1End)))) U ((C.c1Retract & P.c1Home) | X(C.c1Extend)))) | X(X((C.vac | C.c2Retract))))))
+Fitness: [0.75]
+Strength: 194.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 40
+Best individual: G((!(!((F(P.c2Home) U F(P.c2End)))) | (C.vacuum_on U C.vacuum_on)))
+Fitness: [0.75]
+Strength: 184.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 41
+Best individual: G((!((!(((!(pp2) | C.c1Extend) & (!(C.c1Retract) | C.vcExtend))) | X((P.c2End | pp1)))) | (X((P.vcHome & pp1)) U (!(F(P.vcEnd)) | !(C.vac)))))
+Fitness: [0.75]
+Strength: 178.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 42
+Best individual: G((!(X(C.vacuum_off)) | (C.vacuum_off | (!((!((!(X(C.vac)) | (C.vacuum_off & pp3))) V (!(!((C.c1Retract | C.vac))) | X((!(C.c2Extend) | pp2))))) | P.c2End))))
+Fitness: [0.75]
+Strength: 182.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 43
+Best individual: G((!(F(((pp1 | C.vcExtend) | (!(pp1) | C.c1Extend)))) | (!(X((C.c2Extend & C.vcExtend))) | X(((!(C.vacuum_on) V F(C.c2Retract)) | (!(P.c1Home) V F(C.vacuum_off)))))))
+Fitness: [0.75]
+Strength: 152.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 44
+Best individual: G(((!(((P.c1End | pp2) | (!(C.vacuum_off) | P.c2End))) | ((P.c1Home & C.c1Extend) V F(C.vacuum_on))) V (!((!((!(F(pp3)) | (!(C.vacuum_off) | C.vacuum_off))) | X(C.c1Extend))) | (!(F(C.c1Retract)) | (!(C.c2Retract) | P.c1End)))))
+Fitness: [0.75]
+Strength: 181.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 45
+Best individual: G((F((!(C.vac) | (((C.c1Retract | C.c1Extend) & C.vacuum_off) & (!((pp1 | P.c2Home)) | (P.c1Home V P.vcHome))))) | (P.c2End U (P.c2End V !(P.c2Home)))))
+Fitness: [0.75]
+Strength: 181.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 46
+Best individual: G(((((C.vacuum_off & C.c2Retract) V X(C.c1Retract)) U (F(C.vacuum_off) | (C.c2Extend U C.c2Extend))) | (((P.vcEnd V C.c1Extend) U (P.c1End | P.c1Home)) U X((P.vcHome | C.vac)))))
+Fitness: [0.75]
+Strength: 184.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 47
+Best individual: G((!(F(P.vcEnd)) | F(pp3)))
+Fitness: [0.75]
+Strength: 195.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 48
+Best individual: G(((!((C.c2Retract U C.c2Retract)) | (pp1 V pp3)) V F((!(pp3) | !(pp2)))))
+Fitness: [0.75]
+Strength: 179.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 49
+Best individual: G(((P.c2End & C.vacuum_off) | X(X((!(C.vcExtend) | P.c1End)))))
+Fitness: [0.75]
+Strength: 188.0
+Distance: 0.5 Fitness: 0.5
+--------------------

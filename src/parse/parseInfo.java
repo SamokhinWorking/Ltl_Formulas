@@ -192,7 +192,7 @@ public class parseInfo {
 
     }
     public static ECTransition parseECTransition(Document document) throws DOMException, XPathExpressionException {
-       // System.out.println("Печать OutputVars");
+        // System.out.println("Печать OutputVars");
         XPathFactory pathFactory = XPathFactory.newInstance();
         XPath xpath = pathFactory.newXPath();
 
@@ -220,11 +220,26 @@ public class parseInfo {
         String[] source = sourceList.toArray(new String[sourceList.size()]);
         String[] destination=destinationList.toArray(new String[destinationList.size()]);
         String[] condition = conditionList.toArray(new String[conditionList.size()]);
+        //replace INIT
+        for (int i=0;i<source.length;i++){
+            source[i]=source[i].replace("INIT","INIT_S");
+            destination[i]=destination[i].replace("INIT","INIT_S");
+        }
+        for(int i=0; i<condition.length;i++)
+        {
+            condition[i]=condition[i].replaceAll("  "," ");
+            condition[i]=condition[i].replaceAll("\\(","( ");
+            condition[i]=condition[i].replaceAll("\\)"," )");
+            //delite REQ&
+            condition[i]=condition[i].replace("REQ&","");
+
+        }
+
 
         //System.out.println();
 
         ECTransition ecTransition = new ECTransition(source,destination,condition);
-       // ecTransition.printECTransition();
+        // ecTransition.printECTransition();
         return ecTransition;
 
     }
