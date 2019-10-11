@@ -13,6 +13,7 @@ import helpClass.*;
 import parse.parseInfo;
 
 public class TestParse {
+
     public static void main(String[] args) {
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -48,6 +49,9 @@ public class TestParse {
             {
                 System.out.println(outputVars[i]);
             }
+            ecState.printECState();
+            ecTransition.printECTransition();
+            algorithm.printAlgorithm();
 
         } catch (XPathExpressionException | ParserConfigurationException | SAXException | IOException ex) {
             ex.printStackTrace(System.out);

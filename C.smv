@@ -254,4 +254,3 @@ DEFINE
 
 
 --specification
-LTLSPEC G((F(((F(C.c2Extend) | (!(C.vacuum_off) | C.c2Extend)) V (F(C.c2Retract) & (pp1 & P.c2Home)))) | (X(((C.vacuum_off | P.c2Home) V X(C.vacuum_off))) & (((C.c2Extend V P.c2Home) & (C.c1Retract | C.c2Extend)) U C.vcExtend))))

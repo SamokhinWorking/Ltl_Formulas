@@ -16,7 +16,7 @@ public class TestSmthNew {
 
             String [] trying={"/bin/bash",
                     "-c",
-                    "/home/biscuit/Downloads/NuSMV-2.6.0-linux64/NuSMV-2.6.0-Linux/bin/NuSMV C.smv",
+                    "/home/vlasam/Downloads/NuSMV-2.6.0-linux64/NuSMV-2.6.0-Linux/bin/NuSMV  C.smv",
             };
             Process process = Runtime.getRuntime().exec(trying);
 

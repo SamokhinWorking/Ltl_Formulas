@@ -1,1877 +1,502 @@
 Ideal individual not found.
 
-Time taken: 0 days, 0 hours, 43 minutes, 36 seconds.
+Time taken: 0 days, 0 hours, 8 minutes, 34 seconds.
 
 Front:
-G(((pp1 & C.c2Extend) | X(X((C.c2Retract -> pp2)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((C.c2Extend U C.vacuum_on) U X(pp3)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((P.c1Home | X(X((C.vcExtend -> C.vcExtend)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((F((X(pp3) & (P.c2Home U pp2))) -> !(((P.c1End | P.vcHome) U (C.vac | P.c2End)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.vacuum_off -> C.vacuum_off) U X(P.c2Home)) -> !((C.vac U C.vacuum_on))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((F(P.vcHome) -> (C.vacuum_off -> C.c1Extend)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( F((C.vcExtend & C.c1Retract)) V F((P.c1End -> C.vac))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((( (pp1 -> P.c1End) V (pp3 -> C.c2Retract)) U F((C.c1Extend -> P.vcEnd))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((X(C.vacuum_off) -> ( C.vcExtend V C.c1Extend)) U (C.c2Retract -> ( C.c1Extend V pp2))) & ((P.c2Home -> (C.c1Retract & C.c1Retract)) -> (F(pp2) U (P.vcHome -> pp2)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((C.vacuum_on -> (F(( C.vcExtend V C.vac)) | F((pp2 -> C.c2Retract)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( X(C.vac) V (( C.vac V (pp2 & C.vcExtend)) -> F(!(C.vacuum_off)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((( F(pp3) V C.vcExtend) -> (X(P.vcHome) U P.vcHome)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((P.c2Home U C.vac) | X(P.c2End)) -> !((C.c2Retract | C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((F((F(( C.vacuum_on V C.c2Extend)) -> !(X(P.c1Home)))) | (X((C.c2Retract U (pp2 & C.vacuum_off))) -> (F(C.vcExtend) | F((C.c1Extend & P.c2Home))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((C.vacuum_on -> F(!((X(P.c1Home) & F(C.vacuum_on))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((((pp3 | ( C.vac V C.c1Retract)) | C.c1Extend) U (F(C.c1Extend) | ((C.c2Retract -> C.vacuum_on) -> (C.vacuum_off & C.c2Extend)))) U (( (C.vacuum_off | P.c2End) V C.c2Extend) | !(P.c2Home))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((F(( P.vcEnd V C.c1Extend)) -> (C.c1Retract -> F(!(pp1)))) | ( C.c2Retract V X(C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((!(P.c1Home) U !(C.vacuum_off)) U !((P.c2Home & pp2))))
-Fitness: [0.75]
-Strength: 188.0
+G((P.c1End -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( !(X(X(C.vacuum_off))) V ((F(C.c1Retract) -> ( C.vacuum_on V pp2)) | (X(P.c2End) U (P.vcEnd U C.c2Extend)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( ((F(!(pp2)) & (( C.vacuum_on V pp2) U X(C.vacuum_off))) U (F(pp3) -> ( F(pp3) V (P.vcHome | pp1)))) V ((F((P.c2Home -> P.c1End)) -> (X(P.c1Home) & (C.c2Retract -> C.c2Retract))) U ((( C.c1Retract V P.c1End) & (P.c1Home -> C.vacuum_off)) -> F(!(C.vcExtend))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((X(( P.c1End V P.c2End)) | (P.c2End | (C.vacuum_off U pp1))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((C.vcExtend U C.c1Retract) -> !(pp1)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.c2Retract | pp1) | (P.vcHome -> C.vacuum_on)) | (( C.vcExtend V C.vacuum_on) -> (P.c2Home -> C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((X(((P.c1End -> C.vac) & (C.vacuum_on | C.c2Extend))) | (!((C.vac & C.c2Extend)) U F((C.vacuum_on -> P.c1Home)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( (((pp2 | pp3) | (C.c1Retract -> P.c1End)) -> ( (P.c2End & C.vacuum_off) V F(C.c1Retract))) V (((C.c2Retract U C.vcExtend) -> X(C.c2Extend)) -> (F(C.vacuum_on) -> (C.vacuum_on -> P.vcEnd)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((F(C.vacuum_off) | (P.c2End & C.vac)) & ((pp2 & C.c2Retract) U ( pp2 V pp3))) -> !(( (pp2 | C.c2Retract) V F(pp2)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((( ((C.c2Retract -> P.c2Home) U ( P.c1Home V P.c1Home)) V !(( P.vcEnd V C.vacuum_off))) U ((C.vacuum_on -> C.vcExtend) -> X((C.c2Extend U pp1)))) -> (((P.vcEnd -> P.vcHome) -> ((C.c2Retract & C.vac) U !(C.vcExtend))) U !(X((C.c2Extend U P.c1Home))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((!(X((X(P.vcHome) | C.vacuum_on))) U C.vac))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.vacuum_off U C.c2Retract) & (C.c2Retract U C.vac)) -> F((( P.vcEnd V P.c1Home) & F(C.vacuum_on)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( ((C.c2Retract -> P.c2Home) U (C.c1Retract U C.c2Extend)) V ((C.c1Extend -> C.vacuum_off) | X(P.c2Home))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.c2Retract U C.vacuum_off) U F(P.c1Home)) -> (((C.c2Extend -> C.vac) | F(P.vcHome)) | (P.vcHome -> F(C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( (X(C.vac) -> F((pp1 & C.c1Retract))) V (!(( P.vcEnd V C.c2Retract)) U ((C.vacuum_on & P.c2Home) -> (C.c1Extend | P.c1Home)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((X(C.vcExtend) & !(pp2)) U ((C.vac -> C.vacuum_on) U (P.c1Home -> C.c2Extend))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((P.c1End -> F(((C.vacuum_on -> pp2) -> C.c2Extend))) & (P.c1End -> (( !(C.c2Retract) V F(C.vacuum_on)) U F(P.c1End)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( F(P.c1End) V (C.vcExtend -> C.c1Retract)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( !(( (C.c1Retract U P.vcEnd) V (C.c2Retract & C.vcExtend))) V ((!(C.c1Extend) U (P.vcEnd U P.c1End)) | ((P.vcEnd | C.vac) -> (C.c1Retract | C.c2Retract)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((C.c1Extend & X((C.c1Extend -> C.c1Extend))) -> (( (C.c2Extend U pp3) V (pp1 & P.vcHome)) | ((P.c2Home & pp2) -> (P.vcEnd -> pp1)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.vacuum_on -> C.c2Retract) -> (pp1 & P.c1Home)) | X((C.c2Retract -> P.c2End))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( (!(F(C.c1Retract)) U ((C.vac & C.c2Retract) | (pp1 | C.vacuum_on))) V F((C.vac -> !(pp1)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((( C.vacuum_on V F(C.vcExtend)) U C.vacuum_on) -> ((((C.vacuum_off | C.vac) & (C.vcExtend -> pp2)) U ((C.vacuum_on & P.c1Home) | X(C.c2Extend))) -> X(X((pp1 | C.c1Retract))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((P.c1Home -> F(C.vacuum_off)) | F(!(C.vcExtend))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((P.vcHome -> P.vcHome) -> C.c1Extend))
-Fitness: [0.75]
-Strength: 188.0
+G((pp1 -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((!((((C.vacuum_off -> P.c2End) U ( pp2 V C.c2Retract)) U X((P.c2Home -> C.vac)))) U (F((X(pp3) U F(P.c1Home))) | (((P.c2Home U P.c1Home) | (C.c2Extend & C.c1Extend)) -> ((P.c1End -> P.vcHome) | X(P.vcEnd))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( (C.c1Extend U P.vcHome) V X(P.vcEnd)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((((pp2 | (P.c1Home -> C.c1Extend)) -> F((pp3 U C.c2Extend))) -> (( P.c1Home V C.c1Retract) -> F(( C.c1Retract V pp3)))) U ((( P.c2Home V C.vcExtend) -> (!(P.c2End) & (P.c2Home | P.c2End))) -> (( (P.c1Home -> C.vac) V (C.c2Extend U P.c1Home)) -> (( C.vcExtend V C.c2Extend) -> F(C.vacuum_on))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((X((P.c2End | P.c2Home)) U F(!(C.c2Retract))) & ( (X(C.vacuum_off) U F(C.c1Extend)) V (F(pp3) U !(C.c2Retract)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((F(pp1) | (pp2 | pp2)) & X((P.c2Home -> P.c1Home))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((F(((P.c1End | C.c1Retract) | (pp2 -> C.c1Extend))) -> (X((C.c1Extend & C.vcExtend)) -> ((C.c2Extend & C.c2Extend) U F(P.c1Home)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((!(pp2) & F(C.vacuum_off)) | F(!(C.vacuum_off))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(pp3) | (P.vcHome -> C.c1Retract)) | ((P.vcHome U P.c1End) & X(C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.vacuum_on & P.vcHome) | ((!(C.vacuum_on) & C.c1Extend) -> C.c1Extend)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((C.c1Extend | F(C.vcExtend))) | X(X((C.vcExtend -> pp2)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (( (P.c1Home -> C.c2Extend) V (C.c2Retract U P.vcEnd)) -> (X(C.vacuum_off) | F(C.c2Extend))) V ( ( F(C.c2Extend) V ( pp3 V P.c2Home)) V !((pp2 U C.vacuum_off)))) U F((((C.vac & P.c1End) | X(C.c1Extend)) U F((C.c1Extend U P.c2End))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(!((C.vacuum_off U pp2))) | (( F(P.c1Home) V F(P.c1Home)) | (F(C.c2Extend) -> !(C.vacuum_off)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((C.vac -> X(P.vcEnd))) | (P.c2Home U ( pp1 V !(C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(P.vcHome) U F(P.vcEnd)) -> ( ( C.c1Retract V (C.vacuum_off & P.c2End)) V ((C.c2Retract U P.vcHome) | (C.vac | pp3)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((( F(P.c2Home) V (P.vcEnd & C.vacuum_on)) U F((C.c1Retract -> P.c2Home)))) & (X(X((C.c2Extend U C.c2Retract))) -> (F(!(C.c2Retract)) -> ((pp3 & C.c1Retract) -> F(pp1))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (( X((C.c1Extend -> C.c2Extend)) V ((C.vac & C.vac) U (C.vac | C.c1Extend))) U (((pp1 & P.c1Home) -> (C.vacuum_on & C.vcExtend)) -> ((pp1 U C.c1Retract) -> (P.vcEnd U C.vacuum_off)))) V (((X(pp1) -> (pp1 U C.c2Extend)) | (( P.c1End V P.vcEnd) | F(P.c1End))) U (!((P.c2Home U C.vac)) U ((C.c2Extend -> pp1) & X(P.vcHome))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.c2Retract & pp2) -> (C.vacuum_off U C.c2Retract)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (X((X(P.c2Home) & (pp2 & C.vcExtend))) | X(( (pp3 -> C.c1Retract) V F(C.vcExtend)))) V F((( ( P.vcEnd V C.vcExtend) V (C.vcExtend U P.vcHome)) & (X(C.vcExtend) U (P.c1Home -> C.c2Retract))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( F(C.c1Extend) V (C.c1Retract & P.c2End)) -> ( F(P.c1End) V F(C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(((X(C.c1Retract) | (P.vcHome | C.vac)) -> F((C.vacuum_off | C.vacuum_off)))) & !((X((P.c1Home -> C.vcExtend)) -> (F(P.c2Home) & (C.c2Extend & C.c1Retract))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((P.vcHome U P.vcHome)) -> (( pp2 V P.c1End) U !(P.c2End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((C.vacuum_on -> (P.vcHome -> P.c2End)) & C.c1Retract) | (pp1 U (C.c2Retract -> (pp1 | P.vcEnd)))) & !((((C.c1Retract | C.c1Extend) & C.vcExtend) & ((P.vcHome | pp2) -> ( P.c1End V P.c2Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c2Home | C.vcExtend) -> ( C.vacuum_off V P.vcEnd)) & X((P.c2Home & P.vcEnd))) -> F(!(F(( P.c1Home V C.vacuum_on))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(((C.vacuum_off -> P.c1End) -> (C.c2Retract | P.c2End))) | (((C.vcExtend -> pp2) & F(C.c2Retract)) U !((C.vcExtend U C.c1Extend)))) | X((( !(C.c1Retract) V F(C.vacuum_off)) | ( !(pp1) V F(C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(C.vacuum_on) | (P.c2End -> C.vacuum_off)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((( (C.vacuum_off & C.vcExtend) V X(C.vcExtend)) U (F(C.c1Extend) | F(P.c2End))) | ((( pp3 V C.c1Retract) U (P.vcEnd | pp2)) U X((P.vcEnd | P.vcEnd)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (C.c2Retract U C.vacuum_on) V F(C.vcExtend)) -> (X(pp1) U ( C.c1Retract V C.vac))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( ((C.vacuum_off & C.vacuum_on) & (C.vac | P.c1End)) V !(F(P.c1Home))) | (((C.vacuum_on | C.c1Retract) U (P.c2End U C.vacuum_off)) & (!(C.vac) & (P.vcEnd & P.c2End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(!(P.vcEnd)) & P.c1Home) -> ( ( (C.vac | C.c1Retract) V (C.vacuum_on & C.c2Extend)) V X((C.c1Retract & C.vcExtend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X(P.c1End) -> (C.c2Extend -> P.c2Home)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( pp2 V C.c1Extend) -> ( C.c2Extend V C.c2Extend)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ((C.vac | (P.c1Home & C.vacuum_on)) & ( ( C.c2Retract V C.vcExtend) V ( pp2 V P.vcEnd))) V F(((C.c2Extend U C.vacuum_off) U (P.vcEnd -> pp2)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((F(P.c1End) | !((C.c2Extend U C.vacuum_on))) | ((X(pp1) & (P.c2End | C.vacuum_off)) | (F(C.vacuum_off) | (C.vcExtend & C.vac)))) -> ( ((F(P.c2End) | (P.c2End & C.vac)) | ( X(C.c1Extend) V !(C.vacuum_on))) V F(( !(pp2) V X(P.vcHome))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((F((P.c2End -> C.c1Retract)) -> (F(C.vacuum_off) | ( C.vac V C.c1Extend))) -> !((X(P.c1Home) U (C.vacuum_on | P.c1Home)))) -> ( !((X(P.vcEnd) -> (C.c1Extend & pp3))) V ((C.vcExtend | P.vcHome) | X((C.c2Retract -> P.c1Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.c1Retract | ((C.c2Extend -> F((pp1 | C.vac))) U (P.c1Home -> ( C.vacuum_off V F(C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((pp1 | P.c2End) | !(X(C.vcExtend))) U ((C.vacuum_off -> (P.vcHome | pp2)) U (X(P.c1End) & ( C.c1Extend V P.c1Home)))) -> F(( ( (C.c2Retract | C.vacuum_off) V (C.vcExtend & C.c2Retract)) V F((C.c1Retract & P.vcEnd))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.c2Retract | X(C.c2Extend)) U ((P.c2End -> C.c1Retract) | X(P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (X(((P.c1Home U pp3) U X(P.vcEnd))) U (X(( C.c2Retract V C.c2Retract)) | ((C.vcExtend -> C.vacuum_on) | X(C.vac)))) V ( (((pp2 & P.vcEnd) -> (C.vacuum_off U C.vac)) U ((P.c2End & C.vcExtend) U F(pp2))) V !((( P.c2Home V P.c1End) & F(pp1))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((X((P.c1Home -> (C.c1Retract & C.vcExtend))) & (((C.c1Retract U C.vacuum_off) -> ( P.c2End V pp2)) -> (F(P.vcHome) -> (C.vacuum_on -> P.vcEnd)))) -> X((F((P.c1End & C.c2Extend)) -> (( C.vac V pp1) -> (P.c1Home -> C.vcExtend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c1Home -> C.c2Extend) & (C.c1Extend -> C.vacuum_on)) -> X((P.vcEnd | P.c1End))) -> (X((pp2 & P.c2End)) U (F(P.c2Home) -> !(pp3)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( P.c1Home V C.c2Extend) | F(!(C.c2Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (pp2 & P.c2End) V (C.vcExtend & P.vcHome)) U (P.c1End -> (C.vcExtend U P.c2End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X(( (C.c1Retract -> P.vcEnd) V !(P.c1Home))) U ((X(C.c2Retract) -> F(P.vcEnd)) -> F(( P.c2End V P.c2Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ( C.vcExtend V P.vcHome) V (C.c1Retract U pp2)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((pp3 | C.c1Extend) -> (pp1 -> C.c1Retract)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( F(( F((pp3 & C.c2Retract)) V C.vcExtend)) V ((( !(C.c1Extend) V (C.c2Retract U P.c1Home)) | ((C.vcExtend -> C.vcExtend) U (C.vacuum_off U C.c2Extend))) -> ( ((P.c2Home -> C.vacuum_on) -> (C.vac | C.vacuum_off)) V ((C.c2Retract & C.c1Retract) -> F(P.vcHome))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vcExtend U pp2) -> (pp1 -> P.c2End)) | (F(P.c1Home) -> C.c2Retract)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((pp1 & C.c2Extend) U F(P.c1Home)) -> ((C.vcExtend U C.c1Extend) | F(pp3))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (((( C.vacuum_off V P.c1End) U !(C.vac)) U pp2) -> (((C.vac -> C.c2Extend) -> (P.c1Home & C.c1Retract)) & ( (P.c1End U C.vacuum_on) V (P.c2Home & C.c2Extend)))) V (X((!(pp2) U F(P.c2End))) | pp3)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.vac U C.c2Extend) -> !(C.c1Retract)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( X(pp2) V (pp3 -> pp1)) & !(( C.vac V P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vcExtend & pp1) | (C.c2Extend | C.c2Extend)) | F((pp3 | pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( !((P.c2Home U !(C.c2Retract))) V X(X((pp3 -> C.c2Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X(C.c2Extend) -> (C.c2Retract | (X(P.vcHome) -> pp3))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.c1Extend & C.vacuum_off) -> !(pp1)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (X(C.vacuum_off) -> (C.c2Retract -> C.vacuum_on)) V (C.c1Extend -> (!(C.vac) U !(C.vacuum_on)))) | ((C.c2Retract -> !((pp2 -> C.vacuum_on))) | (X((C.vacuum_on | C.vac)) U ( (C.vac | C.c1Retract) V X(C.vacuum_on))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((!((C.c2Retract | C.c1Retract)) U ( (C.vacuum_off & C.vacuum_on) V (P.c1Home | C.vacuum_on)))) -> !(((!(C.c1Extend) & F(C.c1Extend)) -> (( P.c2End V pp2) & ( C.vcExtend V C.vacuum_on))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((P.c2End | C.c2Extend) U (C.c1Extend -> C.vacuum_on)) | ((P.vcHome U C.c2Retract) & F(C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (!(F(C.c2Retract)) U ((P.c1Home & C.c1Extend) | (pp1 | C.c1Extend))) V F((pp2 -> ((C.c2Retract & C.c2Extend) -> !(pp1))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.vacuum_on & C.vacuum_on) -> !(C.vac)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( X(C.vac) V (( pp1 V (P.c2End & C.c2Retract)) -> F(!(C.c1Extend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((C.c2Retract -> (P.c2End -> P.c2End)) & C.c2Extend) | (P.c2Home U (C.c1Extend -> (P.c2End | C.vac)))) & !((((C.c2Retract | C.vacuum_off) & C.c1Extend) & ((P.c2End | P.c2Home) -> ( pp1 V P.c1Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.c2Retract U P.c2End) | (C.vac | (C.vacuum_on U P.c2Home))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vcExtend U C.c1Retract) & X(( pp2 V P.vcHome))) -> F((( pp3 V P.c2Home) & F(C.c1Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((X(P.vcEnd) -> F((pp2 & C.c2Retract))) | F((pp3 | pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ((C.vacuum_on & pp2) | (C.vcExtend | C.vacuum_off)) V (!(( pp3 V C.c1Retract)) U ((C.vacuum_on & P.c1Home) -> (C.vacuum_off | P.vcHome)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( !(( (C.vacuum_on U P.vcHome) V (C.c2Retract & C.vcExtend))) V ((( pp1 V pp1) U (pp2 U P.c2End)) | ((pp2 | pp3) -> (C.c1Retract | C.c2Extend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( X(P.c2End) V (C.vac -> P.c2Home)) & !(( P.vcEnd V P.c2End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(((pp2 -> P.c1Home) -> C.vacuum_off)) -> (C.vacuum_off -> F(!(C.vac)))) | ( C.c2Retract V X(C.c2Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ((!(P.c1End) U !(C.c2Extend)) U !((P.c2Home & P.vcEnd))) V F((C.vac -> C.vac))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((!(P.c2Home) U !(C.c2Retract)) U !((P.c2Home & pp3))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (!(F(C.vacuum_on)) U ((P.c2End & C.vcExtend) | (P.c2End | C.c2Extend))) V F((P.c1End -> !(P.vcEnd)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((F((C.vac -> C.vacuum_off)) -> ((P.c1End | pp3) | ( P.vcHome V C.c1Extend))) -> !((X(P.c1Home) U (C.c1Retract | pp1)))) -> ( !((X(C.vac) -> (C.vacuum_off & P.c2Home))) V ((C.c1Extend | P.c1Home) | X((C.c2Retract -> pp3))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((pp2 | (pp2 -> C.c1Extend)) -> F((P.vcHome U C.c1Extend))) -> (( P.c2End V C.c2Extend) -> F(( C.vacuum_on V C.vac)))) U ((( pp2 V C.vacuum_off) -> (!(pp3) & F(C.c1Extend))) -> (( (P.vcEnd -> pp3) V (C.c2Retract U pp1)) -> (( C.vcExtend V C.c2Extend) -> F(C.vacuum_off))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((( (C.c2Retract & C.vacuum_on) V X(C.vacuum_off)) U (F(C.c2Extend) | F(C.vac))) | ((( F(pp1) V C.c1Retract) U (C.vac | pp1)) U X((P.c2End | P.c1Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((pp2 U P.c2Home)) -> (( P.vcHome V P.c1Home) U !(pp2))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((C.vac | C.c1Retract) -> ( C.c2Extend V P.vcEnd)) & X((P.c1End & P.c1End))) -> F(!((pp2 U pp3)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((X(P.vcEnd) | C.vacuum_off)) -> (X((P.c1Home & pp2)) U (F(pp3) -> !(C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((( C.vacuum_on V F(C.c2Retract)) U C.vacuum_on) -> ((((C.c2Retract | P.c1End) & (C.c2Retract -> P.c1End)) U ((C.c1Retract & P.vcHome) | X(C.c2Extend))) -> X(X((P.c1Home | C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( F(C.vacuum_on) V (C.vcExtend & P.c1End)) -> ((C.vcExtend -> P.c1Home) U (C.vacuum_off U C.c1Retract))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ( F(pp3) V F(C.vcExtend)) V ((C.vacuum_off -> C.c1Retract) | X(P.c2Home))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.c1Retract & pp2) | (C.vcExtend | C.vacuum_off)) | F((P.c1Home | P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (X(((C.vac U pp3) U X(P.c1Home))) U (X(( C.c1Extend V C.c2Retract)) | ((C.c1Retract -> C.c2Retract) | X(P.vcEnd)))) V ( (((P.vcEnd & P.c1Home) -> (C.c2Extend U P.vcHome)) U ((C.vac & C.c1Extend) U F(pp1))) V !((( pp3 V pp3) & F(P.vcHome))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((F(C.c1Extend) -> F(C.vacuum_on))) | X(X((C.c1Extend -> P.vcEnd)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((P.c1End | C.vacuum_on) U (C.c2Retract -> C.c1Retract)) | ((pp3 U C.c2Retract) & !(C.vcExtend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vacuum_on | pp3) | (F(C.c2Retract) -> !(C.vacuum_off))) | (( C.vacuum_on V C.c2Retract) -> (C.vac -> C.vacuum_on))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(!((C.c2Extend U P.vcEnd))) | (( F(pp2) V F(C.vac)) | (P.vcHome -> C.vacuum_off))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(((C.vac | C.vacuum_on) | (C.vacuum_off & C.c1Extend))) -> (X((C.vcExtend & C.c1Extend)) -> ((C.c2Retract & C.vacuum_on) U F(C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(pp2) | (( C.c2Retract V C.c2Retract) -> (P.vcEnd -> C.vacuum_on))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((pp1 -> F(((C.c2Extend -> P.vcEnd) -> C.c1Retract))) & (P.vcHome -> (( !(C.vcExtend) V F(C.vacuum_off)) U ((C.vcExtend | P.c1Home) | (C.vac -> C.c2Retract))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( F(C.c1Extend) V (C.c1Extend & C.c1Extend)) -> ( F(P.c2End) V F(C.vacuum_on))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((!(C.c2Retract) & X((P.c1Home -> pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(( pp2 V C.vacuum_off)) -> (C.c1Retract -> F((C.vacuum_on -> C.c1Extend)))) | ( C.c1Extend V X(C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((!(C.vac) & F(C.vacuum_on)) | F(!(P.vcHome))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.vacuum_on -> (F(( C.c2Extend V C.vacuum_off)) | F((pp1 -> C.c1Extend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(!(P.vcEnd)) & P.c1End) -> ( ( X(P.c1End) V (C.c2Retract & C.c2Retract)) V X((C.c2Extend & C.vcExtend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( !(( (C.c1Retract U P.c1Home) V (C.c1Extend & C.c2Retract))) V ((!(C.vacuum_off) U (P.vcHome U pp1)) | ((pp2 | P.c2Home) -> (C.c1Retract | C.c2Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c1Home | (C.vac -> C.c2Extend)) -> F(((!(C.vcExtend) & C.vacuum_off) -> C.c2Retract))) -> (( P.vcEnd V C.c2Retract) -> F(( C.vacuum_on V pp1)))) U ((( pp1 V C.c1Retract) -> (!(P.c1Home) & (pp2 | P.c1Home))) -> (( (pp3 -> P.vcHome) V (C.c2Retract U P.c2Home)) -> (( C.c1Retract V C.c2Retract) -> F(C.vacuum_off))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((P.c1Home -> X(P.c2Home))) | (P.c1Home U (( !(C.vacuum_on) V F(C.c2Retract)) U F(pp2)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((!(P.c2End) & X(C.vac)) | F(!(C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( P.c2End V C.c2Extend) | F(!(C.vacuum_off))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (X(((P.c2End U pp2) U X(P.c2End))) U (X(( C.c2Extend V C.c2Extend)) | ((C.c2Retract -> C.c2Extend) | X(C.vacuum_on)))) V ( (((P.c2End & P.c2Home) -> (C.c2Extend U P.vcEnd)) U ((C.vac & C.c1Retract) U F(pp2))) V !((( P.c1End V pp2) & F(pp1))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((C.c1Retract | F(C.c1Extend))) | X(X(P.c1Home))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((C.vacuum_off | F(C.vcExtend))) | X(X((C.c1Retract -> (C.vacuum_on -> C.vac))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (C.vac & P.c2Home) V (C.vacuum_off & P.c2End)) U (P.c2End -> (C.vacuum_on -> C.c2Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((!((P.c2Home & C.c2Extend)) U F((C.c1Extend -> pp2))) | (!((pp2 & C.vacuum_on)) U F((C.vacuum_on -> pp3)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((X(C.c1Extend) & !(pp1)) U ((P.c1Home -> C.c1Extend) U (P.c2End -> C.vcExtend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.vacuum_off -> (X(P.c2Home) | F((pp2 -> C.c1Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.vacuum_on | ((C.c1Retract -> F((P.c1End -> P.c2Home))) U (P.c2Home -> ( C.vcExtend V F(C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( F((C.vcExtend & C.c2Extend)) V F((pp1 | P.c1Home))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c2End | C.vcExtend) -> ( C.vcExtend V P.c1End)) & X((C.vcExtend & C.c2Retract))) -> F(!(F(( P.vcEnd V C.c1Retract))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (!(F(C.c2Retract)) U ((C.vcExtend | C.c2Retract) | (P.vcHome | C.vacuum_off))) V F((P.vcEnd -> !(P.vcHome)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((C.vacuum_off -> (pp3 -> P.c2Home)) & C.vcExtend) | (P.c1End U (C.c1Extend -> (pp2 | pp1)))) & !((((pp3 & C.c1Extend) & C.c1Extend) & ((P.c1Home | pp1) -> ( P.vcHome V P.c1End))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((F(( C.vacuum_off V C.c2Retract)) -> !(X(P.c1End)))) | (X((C.vacuum_off U (P.c2End & C.c2Extend))) -> (C.vacuum_on -> P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((pp1 -> C.c2Retract) | F(!(C.vacuum_on))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ((P.c2End -> P.c1Home) U ((P.c2End & C.vacuum_off) | (pp2 | C.c1Extend))) V F((P.c2Home -> !(P.vcEnd)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (!(F(C.c2Retract)) U ((P.c1Home & C.c2Extend) | (P.c2End | C.vacuum_off))) V F((pp3 -> !(P.c1Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F((( pp1 V pp3) & ( C.c2Retract V C.c2Extend))) & P.c1End) -> ( ( (P.c2Home | C.c2Extend) V (C.c2Retract & C.c1Extend)) V X((C.c2Extend & C.vacuum_on)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((!((C.vacuum_on | C.c1Extend)) U ( (C.c1Extend & C.vcExtend) V (P.c2Home | C.c2Retract)))) -> !(((!(C.vacuum_off) & F(C.c2Retract)) -> !(P.vcHome)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.c2Retract | ((C.vacuum_off -> F(P.c2Home)) U (pp2 -> ( C.c2Extend V F(C.c2Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c1Home & P.c1End) -> (C.c2Extend & C.vcExtend)) -> ((P.c1Home U C.c2Extend) -> (P.c2Home U C.vacuum_off))) U X(P.vcHome)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((X(P.c2Home) & F(C.c2Extend)) | ((((C.c2Retract | C.vac) & (C.c2Retract -> P.vcEnd)) U ((C.c2Retract & pp3) | X(C.c2Retract))) -> X(X((P.c1Home | C.c1Retract))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.c1Retract -> F(!((X(P.vcEnd) & F(C.vacuum_off))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((X((P.c1Home | C.vac)) U F(!(C.c2Extend))) & ( (X(C.vacuum_on) U F(C.c2Retract)) V (F(P.c2End) U !(C.c1Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.c2Retract -> C.vacuum_on) U X(C.vac)) -> (P.vcEnd | P.vcHome)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c1Home | ( pp1 V C.vcExtend)) | C.c1Retract) U (X((C.c2Retract -> P.vcEnd)) | ((C.vcExtend -> C.c2Retract) -> (C.c2Retract & C.c1Retract)))) U (( (C.c2Retract | P.c1End) V C.c2Extend) | !(pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((P.vcHome & C.c1Retract) | X(X((C.c1Retract -> P.c1Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((C.vacuum_on | pp1) | (P.c1Home -> C.vacuum_off)) | (( C.vcExtend V C.vacuum_off) -> (P.vcEnd -> C.c1Extend))) | ((C.vacuum_on -> !((P.c2Home -> C.c2Retract))) | (X((C.c1Extend | pp3)) U ( (C.vac | C.c2Retract) V X(C.vacuum_on))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(P.c2End) | (P.c2End -> C.vacuum_off)) | (C.vac -> C.c1Extend)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ((C.vacuum_on -> P.vcHome) U (C.c2Extend U C.vacuum_off)) V ((C.vacuum_off -> C.vacuum_off) | (P.c2End U !(C.vcExtend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( F(P.c1Home) V (pp3 -> C.c2Retract)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((pp3 | (C.vac -> C.vcExtend)) -> F((P.c2Home U C.vacuum_off))) -> (( P.c2Home V C.c1Extend) -> F(( C.c2Retract V P.c2Home)))) U ((( P.c1Home V C.c2Extend) -> (!(P.c1Home) & (P.vcHome | P.c1End))) -> (( F(C.c1Retract) V (C.c1Extend U P.c2End)) -> (( C.vacuum_off V C.c1Retract) -> F(C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((( F(C.vac) V (pp3 & C.c2Retract)) U F((C.vacuum_off -> pp2)))) & ((C.c1Retract -> P.c2Home) -> (F(!(C.vcExtend)) -> ((P.c2End & C.c2Extend) -> F(P.c1End))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (pp2 & pp1) V (C.c2Retract & P.c2Home)) U (P.vcHome -> !(pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (X(((P.vcEnd U pp3) U X(((P.vcEnd | C.c1Retract) U (C.c2Extend -> C.c1Retract))))) U (X(( C.vcExtend V C.vacuum_off)) | ((C.c1Extend -> C.c1Retract) | X(P.c2End)))) V ( (((P.vcEnd & P.c1Home) -> (C.c2Extend U P.vcEnd)) U ((P.c2End & C.c2Extend) U F(C.vac))) V !((( P.c2Home V P.vcHome) & F(C.vac))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(!((C.c1Extend U P.c1Home))) | (( F(P.c1End) V F(P.vcEnd)) | (((F(P.c1Home) | (pp1 | P.vcHome)) & X((pp2 -> P.c1End))) -> !(C.c2Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(P.c2Home) | (P.c1Home | P.c1Home)) & X((pp3 -> pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(pp1) U F(pp2)) -> ( ( C.c1Extend V (C.c1Extend & P.vcEnd)) V (((!(P.c1Home) U !(C.c2Extend)) U !((P.c2Home & P.c2End))) | (P.vcHome | C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((!((((C.c2Extend -> P.c2End) U ( pp3 V C.vacuum_on)) U X((pp2 -> pp1)))) U (F((X(P.c1End) U F(P.vcEnd))) | (((P.vcEnd U pp2) | (C.c1Retract & C.c1Retract)) -> ((pp2 -> P.c2Home) | X(P.vcEnd))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(((P.c1End | C.vacuum_off) | (C.vac -> C.vacuum_on))) -> (X((C.c2Extend & C.vacuum_on)) -> ((C.c2Extend & C.vacuum_on) U F(P.c1Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(( C.vac V !(C.vacuum_on))) -> (C.c1Extend -> F(!(pp2)))) | ( C.vacuum_on V X(C.vcExtend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((C.vacuum_off -> F(C.c2Extend))) | X(X((C.c1Retract -> pp2)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F((P.vcEnd U P.c2Home)) | (P.c1End | C.vac)) & X((P.c2Home -> pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.c2Extend & X((C.c2Retract -> C.c2Retract))) -> (( (C.vcExtend U C.vac) V (P.c1Home & pp1)) | ( P.vcEnd V C.c2Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (( X((C.vacuum_off -> C.c2Extend)) V ((P.c2End & C.vac) U (C.vac | C.vacuum_on))) U (((P.vcEnd & P.c2Home) -> (C.vcExtend & C.vacuum_on)) -> ((P.c1End U C.c2Retract) -> (P.c2Home U C.vacuum_off)))) V (((X(P.vcHome) -> (P.vcEnd U C.vacuum_on)) | (( P.c1End V P.vcHome) | F(pp1))) U (!((P.c2End U pp3)) U ((C.c2Extend -> pp2) & X(P.c1Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( F(P.c2End) V C.vacuum_on) -> (X((X((( F(P.c2Home) V (P.vcEnd & C.c2Extend)) U F((C.vacuum_off -> P.c1Home)))) & (X(X((C.vcExtend U C.c2Extend))) -> (F(!(C.c1Extend)) -> ((pp3 & C.c2Retract) -> F(pp2)))))) U P.c2Home)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((C.c2Extend -> P.c2End)) & (X(X((C.c1Retract U C.vacuum_on))) -> (F(!(C.c2Extend)) -> ((P.c2Home & C.vacuum_on) -> F(P.vcEnd))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (P.c2Home -> P.vcEnd) V (P.vcEnd -> C.vacuum_off)) U X((( F(pp2) V (P.c2Home & C.c1Retract)) U F((C.c2Extend -> P.c1End))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (C.c2Retract U C.c1Retract) V F(C.c1Extend)) -> (X(pp3) U ( C.c2Extend V pp2))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X(P.vcEnd) -> (F((P.vcHome -> X(pp1))) | (P.c1End U ( P.c2Home V !(P.c1Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( X(P.c2End) V (( C.vac V (P.vcEnd & C.c1Extend)) -> !((pp1 -> pp3)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((( ((C.c1Extend -> P.c2Home) U ( P.vcEnd V P.vcEnd)) V !(( P.vcHome V C.vacuum_on))) U ((C.vacuum_off -> C.vcExtend) -> X((C.vacuum_off U P.vcHome)))) -> ((F(!(C.c2Extend)) | ((C.vacuum_off & P.vcEnd) U !(C.vcExtend))) U !(X((C.vcExtend U P.c2End))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( P.vcHome V C.vacuum_on) | (P.c1End U P.c1End)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((!((((C.vacuum_off -> pp3) U ( P.vcHome V C.vacuum_on)) U X((C.vac -> P.vcEnd)))) U (F((X(P.c1Home) U F(P.c1End))) | ((F(!(C.c2Retract)) | (C.vacuum_on & C.c1Extend)) -> ((P.c1Home -> pp2) | X(P.c1Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((pp3 | (P.c1End -> C.c1Extend)) -> F((pp1 U C.c1Retract))) -> (( P.c1Home V C.vacuum_off) -> (X(pp2) & F(C.c2Retract)))) U ((( pp3 V C.c2Retract) -> (!(P.c2Home) & (pp1 | pp1))) -> (( (P.c2End -> P.c2Home) V (C.vcExtend U C.vac)) -> (( C.c2Retract V C.c2Extend) -> F(C.c2Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.c1Extend -> F(!(F(( C.c1Extend V pp3))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (P.vcHome & (pp3 | P.c2End)) V !(F(P.c1Home))) | (((C.vcExtend | C.c1Extend) U (P.vcHome U C.vacuum_off)) & (!(P.vcHome) & (C.vac & P.vcHome)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((P.c1Home U C.c1Retract) -> (X(pp3) U ( C.c1Extend V P.c1Home))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (C.c2Retract U pp1) V X(P.c1Home)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(((C.c2Extend -> P.c2Home) -> (pp3 U pp3))) | (((C.vacuum_on -> P.c2Home) & F(C.vcExtend)) U !((C.vcExtend U C.c2Extend)))) | X((( !(C.c2Retract) V F(C.vacuum_on)) | ( !(P.vcEnd) V F(C.c2Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((pp3 -> C.vcExtend)) | (!((pp2 & C.c1Extend)) U F((C.c2Retract -> P.vcHome)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((((C.c2Extend | pp3) | (P.c1Home -> C.c1Retract)) | (P.c2Home -> C.vacuum_off))) -> (X((C.c1Extend & C.c2Extend)) -> ((C.vacuum_on & C.c2Extend) U F(P.c2Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((P.c2End | C.c2Retract) | (( C.c2Extend V C.c1Extend) -> (P.c1End -> C.vacuum_on))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (!(F(C.c2Retract)) U X(X((C.vacuum_on -> P.vcHome)))) V F((P.c1End -> !(P.c1End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ((C.c2Retract -> P.vcHome) U (C.c1Extend U C.c2Extend)) V ((C.c2Extend -> C.c2Retract) | X((C.c2Retract -> pp2)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vacuum_on U C.c1Retract) & (C.c2Extend U P.c1Home)) -> F((X(P.c1Home) -> (C.c1Extend -> pp1)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(C.vac) U F(pp1)) -> ((C.c2Retract U C.c1Retract) | F(P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ((F(!(P.c2End)) & (( C.vacuum_on V P.vcEnd) U X(C.vacuum_on))) U ((C.vac & C.c2Retract) -> ( F(pp1) V (P.c1Home | pp1)))) V ((F((pp1 -> P.vcEnd)) -> (X(P.vcEnd) & (C.vacuum_on -> C.c2Retract))) U ((( C.vacuum_on V P.vcEnd) & (P.vcEnd -> C.c2Extend)) -> F(!(C.c1Retract))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X(C.vacuum_off) -> (C.c2Retract | (F(C.c2Retract) | (pp2 & pp1)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( F(C.c1Extend) V (C.c1Retract & pp3)) -> ( F(P.vcHome) V F(C.vcExtend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.c2Retract | ((C.vacuum_on -> F((P.c2End | P.vcEnd))) U (pp1 -> ( C.vacuum_off V (P.c2End -> C.vacuum_off))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vcExtend | pp3) | (P.vcEnd -> C.c1Extend)) | (( C.c1Retract V C.c2Retract) -> F(C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (C.c1Extend U C.c2Retract) V F(C.vcExtend)) -> (X(C.vac) U ( C.vcExtend V C.vac))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(pp2) U !(C.vacuum_on)) -> ( ( C.vcExtend V (C.c2Retract & pp2)) V ((C.vacuum_off U P.vcEnd) | (P.c2End | C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(( P.c1End V C.vacuum_off)) -> (F(P.vcEnd) | F(!(P.vcEnd)))) | ( C.c2Extend V X(C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( X(pp3) V (( ((!(C.c1Extend) & C.c1Extend) -> C.c2Retract) V (P.vcEnd & C.vacuum_off)) -> F(!(C.c2Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (((C.c2Retract U C.vac) -> (pp1 & C.c1Retract)) & ( ( C.c1Retract V C.vcExtend) V ( P.c2Home V P.vcEnd))) V F(((C.vcExtend U C.c1Extend) U (P.vcHome -> P.c2Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (X(C.vacuum_on) -> (C.c2Extend -> C.c2Retract)) V (C.vcExtend -> (!(C.vac) U !(C.vcExtend)))) | ((C.vacuum_off -> !((P.vcEnd -> C.c2Extend))) | (X((C.c1Extend | P.c1End)) U (C.vacuum_on & C.c2Extend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.c2Retract U C.vcExtend) U F(P.c1Home)) -> (((C.c1Retract -> P.c2End) | F(C.vac)) | (P.c2Home -> F(P.c2End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(C.c1Extend) | (P.c1End -> C.vcExtend)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vacuum_off -> C.c2Retract) U X(P.c1End)) -> (F(C.c1Extend) | (P.c2Home -> C.vacuum_on))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vacuum_off U C.c2Retract) & (C.c2Extend U P.c1End)) -> F((( pp2 V pp1) & F(C.c1Extend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((X((P.c1Home -> (C.c1Extend & C.vcExtend))) & (C.vcExtend & C.c1Extend)) -> X((F((C.vac & C.vacuum_off)) -> (( P.c1Home V P.c2End) -> (pp1 -> C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((pp3 U P.c1Home) | X(pp2)) -> !((C.c1Retract | C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(!((X(P.vcEnd) & F(C.c1Retract)))) | (C.c2Extend | C.c2Extend)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(P.vcHome) U P.vcHome) -> ( ( C.vcExtend V (C.vacuum_off & P.c1End)) V ((C.c2Retract U pp1) | (pp1 | P.c2End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( X(pp1) V ( X(P.c2End) V (( pp3 V (pp3 & C.vacuum_off)) -> F(!(C.c1Retract))))) & !(( P.c2End V P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((C.vac -> C.c2Retract) & (C.vcExtend -> C.vacuum_off)) -> X((pp2 | pp3))) -> (X(((P.vcHome & C.c1Extend) & pp2)) U (F(pp2) -> !(P.c2End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((F(C.c1Extend) | (pp1 & P.c2End)) & (C.vac U ( P.c2Home V P.vcEnd))) -> !(( (P.c1End | C.vacuum_off) V F(P.c1End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((P.c2End -> (P.c1Home | C.vacuum_off))) | (pp2 U ( P.c1Home V !(P.c1Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ((F(!(P.c2Home)) & (( C.vacuum_off V P.c2End) U X(C.c1Extend))) U (F(P.c1End) -> ( F(P.c1End) V (P.vcHome | P.c2Home)))) V ((F((P.c1End -> pp2)) -> !(X((X(pp2) | C.c1Retract)))) U ((( C.c2Retract V P.c1End) & (pp1 -> C.vacuum_off)) -> F(!(C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((!(F((pp2 & C.c2Retract))) & F(C.c2Retract)) | F(!(C.c2Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (X(P.c1End) -> P.vcHome) V (!(( pp3 V C.vacuum_off)) U ((C.c1Retract & pp2) -> (C.vacuum_off | P.c2Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(((C.vac | C.vacuum_on) | (pp3 -> C.vacuum_on))) -> (X((C.vcExtend & C.c2Extend)) -> ((C.vacuum_off U C.c1Extend) U F(P.c2End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (X(C.c2Extend) -> (C.vcExtend -> C.vacuum_off)) V (C.c2Extend -> (!(pp2) U !(C.c1Retract)))) | (!((C.c1Extend | C.c1Retract)) U ( (C.c2Retract & C.c1Extend) V (P.c2Home | C.vcExtend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.c2Extend & ( F(P.c2Home) V (C.vacuum_on -> C.c1Extend))) -> (( (C.vacuum_on U P.vcEnd) V (pp1 & P.c1Home)) | ((C.vac & P.vcHome) -> (P.vcEnd -> C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( F(pp1) V (C.vacuum_on -> C.vcExtend)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((( F(pp2) V (P.vcHome & C.c2Retract)) U F((C.vacuum_on -> C.vac)))) & (X(X((C.c1Extend U C.c1Extend))) -> (F(!(C.vacuum_off)) -> ((P.c1Home & C.vacuum_on) -> F(P.c2Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((F(P.vcHome) | !((C.vcExtend U C.vacuum_off))) | ((X(P.c2Home) & (pp3 | C.c1Retract)) | (F(C.vacuum_on) | (C.c1Retract & P.vcEnd)))) -> ( ((F(C.vac) | (P.c1Home & pp1)) | ( pp2 V !(C.c2Extend))) V F(( !(P.c1End) V X(P.c1Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((P.c1End | !(X(C.c1Extend))) U ((C.c1Retract -> (P.c2End | C.vac)) U (X(P.c1End) & ( C.vcExtend V P.vcHome)))) -> F(( ( (C.vacuum_on | C.vcExtend) V (C.vcExtend & C.c2Retract)) V F((C.vacuum_off & pp2))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((P.vcEnd | C.c2Extend) -> (pp1 -> C.c2Retract)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((((X(C.vcExtend) -> ( C.vcExtend V C.c1Retract)) U (C.c2Retract -> ( C.vacuum_off V pp1))) & ((P.c1End -> (C.vcExtend & C.c2Retract)) -> (F(P.c1Home) U (P.vcHome -> P.c2Home))))) | (pp2 U ( pp1 V !(P.c1End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(((C.vacuum_off -> pp3) -> (C.c2Extend | pp3))) | (((C.c2Retract -> P.c1End) & F(C.c2Extend)) U !((C.c1Extend U C.vacuum_off)))) | X((( !(C.c1Extend) V F(C.c1Retract)) | ( (P.c2End -> pp3) V F(C.vacuum_on))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((!(P.c1Home) & F(C.c1Retract)) | (F(!(C.vacuum_off)) -> ((P.c2End & C.vacuum_on) -> F(P.c2Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((( F(pp3) V (C.vac & C.vacuum_off)) U F((C.c1Retract -> P.c2End)))) & (X(X((C.vacuum_off U C.c2Retract))) -> F(!(C.c1Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (X(((C.vac U P.vcEnd) U X(P.c2Home))) U (X(( C.c1Retract V C.vacuum_off)) | ((C.c2Extend -> C.vacuum_on) | X(pp1)))) V ( (((pp2 & pp2) -> (C.c2Retract U P.c2End)) U ((P.vcHome & C.c2Retract) U F(P.c1Home))) V !((( P.c2End V P.c2Home) & F(P.c2Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((C.vacuum_on & C.c1Extend)) | (((C.c2Retract -> P.vcHome) | F(pp1)) | (C.vac -> F(C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( !(((C.c2Retract U C.c2Retract) U F(pp2))) V F((pp3 -> C.vac))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.c2Retract U C.vac) -> (pp3 -> pp2)) | ((P.c1Home | P.vcEnd) -> C.c1Retract)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.vcExtend | ((C.vacuum_off -> F((pp2 | P.c1Home))) U (P.c2End -> ( C.c2Retract V F(C.c1Retract))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(C.vac) | (P.c1End -> C.c1Extend)) | ((P.c2End U P.c2End) & X(((C.vacuum_off | C.c1Extend) & C.vcExtend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((F(( C.c2Extend V C.vacuum_off)) -> !(X(P.c1End)))) | (X((C.vacuum_on U (P.vcHome & ((P.c2End & C.c1Extend) | (pp2 | C.c2Retract))))) -> (F(C.c2Retract) | F((C.c1Extend & P.vcEnd))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (!(F(C.c1Retract)) U C.vcExtend) V F((C.vac -> !(pp2)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( F(P.c2End) V (X(P.c2Home) U P.c1Home)) -> (X(P.c1End) U pp2)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((( C.c1Retract V F(C.c1Extend)) U C.c2Extend) -> ((((C.vacuum_on | P.vcHome) & (C.vacuum_on -> P.c1End)) U F((P.vcEnd U pp3))) -> X(X((pp1 | C.vcExtend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (X(pp3) -> F((P.c1Home & C.vacuum_off))) V (C.c2Retract -> P.vcHome)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( !((P.vcEnd U ( pp1 V C.c1Extend))) V X(X((pp1 -> C.c2Extend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vcExtend -> C.c1Retract) U X(C.vac)) -> ((C.vacuum_off U C.c1Extend) -> !(pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.vacuum_on U C.c2Extend) -> !(pp3)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( F(( F((P.vcHome & C.c2Retract)) V C.vcExtend)) V ((( !(C.vcExtend) V (C.c2Retract U P.c2Home)) | ((C.c1Retract -> C.c1Extend) U (C.vcExtend U C.c1Extend))) -> ( ((P.vcHome -> C.c1Extend) -> (pp2 | C.vacuum_on)) V ((C.c1Extend & C.c2Extend) -> F(C.c2Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c2Home | pp3) | !(X(C.vacuum_off))) U ((C.vacuum_on -> (P.c1End | P.c2Home)) U (X(C.vac) & ( C.vcExtend V pp2)))) -> F(( ( (C.c1Extend | C.c2Retract) V (C.c1Extend & C.vacuum_on)) V F((C.vacuum_off & pp3))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X(pp2) -> F(!(C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((!(P.c2End) U !(C.vacuum_off)) U !((P.vcHome & C.vac))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( ((C.c2Extend & C.c2Retract) & (P.c2Home | pp2)) V !(F(pp2))) | (((C.vacuum_off | C.c2Retract) U (P.vcHome U C.vacuum_off)) & ((F(P.c2Home) -> (C.vacuum_off -> C.c2Retract)) & (P.c1Home & P.c1End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(P.c1Home) -> (C.c2Extend -> C.c2Retract)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((pp1 -> (C.c1Extend | (X(C.vac) -> P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((( F(P.c2Home) V (P.c2End & C.c2Retract)) U F((C.vacuum_on -> pp3)))) & ((F(pp2) | (C.vac & pp3)) | ( X(C.c1Retract) V !(C.c1Extend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.c1Extend & C.c1Extend) -> (C.vcExtend U C.vacuum_off)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c2End | P.vcHome) | !(X(C.c1Retract))) U ((C.vcExtend -> (P.c2Home | pp3)) U (X(C.vac) & ( C.c2Extend V P.vcHome)))) -> F(( ( (C.vacuum_off | C.vacuum_on) V (C.vacuum_off & P.vcEnd)) V F((C.vcExtend & C.vac))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(((P.c2End | C.c1Retract) | (pp1 -> C.c1Extend))) -> (X((C.c1Extend & C.c2Extend)) -> ((C.vacuum_off & C.vacuum_off) U F(pp2)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vacuum_on & P.vcHome) | (C.vacuum_on | C.vacuum_off)) | F((C.vacuum_off -> C.vacuum_off))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.c2Retract & P.vcHome) | (C.c1Retract | C.c1Retract)) | F((pp2 | C.vac))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(((P.c1End | C.c2Retract) | (P.vcEnd -> C.vcExtend))) -> (X((C.c2Extend & C.c2Retract)) -> ((C.vcExtend & C.c1Retract) U F(pp2)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(C.vcExtend) U ((P.c1Home -> C.c1Retract) U (pp3 -> C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( !(X(X(C.c2Retract))) V (((X(C.c2Extend) & !(C.vac)) -> ( C.vacuum_on V C.vac)) | (X(P.c1Home) U (P.vcHome U C.vacuum_on)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (((( C.c2Retract V pp2) U !(P.c1End)) U pp2) -> ((( F(C.vacuum_on) V (C.vacuum_off & P.c1Home)) -> (P.c2End & C.c2Extend)) & ( (C.vac U C.vacuum_off) V (pp1 & C.c2Extend)))) V (X((!(P.c2Home) U F(pp3))) | C.vac)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X((( F(pp3) V (pp2 & C.c2Retract)) U F((C.vacuum_off -> P.c2End)))) & (X(X(((C.c1Retract -> C.c1Extend) -> X((C.c2Retract U P.c2End))))) -> (F(!(C.c2Retract)) -> ((pp1 & C.c2Extend) -> F(P.c2End))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.vac | C.vacuum_off) -> (( P.c2End V pp1) U !(pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((F(( C.vcExtend V C.c1Retract)) -> !(X(P.vcEnd)))) | (X((C.c2Extend U (C.vac & C.vacuum_on))) -> (F(C.vacuum_off) | F((C.c1Extend & pp3))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c1Home | P.vcEnd) | !(X(C.c1Extend))) U ((C.c2Extend -> (P.c2End | P.c1End)) U (F(C.vacuum_off) & ( C.vacuum_off V P.c2End)))) -> F(( ( (C.c2Retract | C.vacuum_on) V (C.vcExtend & C.c2Extend)) V F((C.c2Extend & P.c1Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(!((C.c2Retract U P.vcEnd))) | (( F(P.c1Home) V F(pp1)) | (X(pp3) -> !(C.c1Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.c1Extend -> (!(P.c2End) U !(C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (X(C.c1Retract) -> (C.c2Retract -> C.c1Extend)) V (( P.c2End V C.vcExtend) -> ( C.vcExtend V C.vcExtend))) | ((C.c1Extend -> !((C.vac -> C.c2Retract))) | (X((C.c2Extend | pp3)) U ( (P.c1End | C.c1Retract) V X(C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((pp1 U P.c2End)) -> (( P.c1End V C.vac) U !(P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((F((pp3 -> C.vacuum_on)) -> (F(C.c2Extend) | ( pp1 V C.c2Extend))) -> !((X(C.vac) U (C.vcExtend | pp2)))) -> ( !((X(pp2) -> (C.c1Extend & pp3))) V ((C.c1Retract | P.vcEnd) | (F((pp1 U P.c2End)) -> (( P.c2End V pp1) U !(P.c1Home)))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( !((F((pp3 U P.vcEnd)) -> (( pp3 V P.vcEnd) U !(P.c2End)))) V ((!(C.c1Extend) U (pp3 U C.vac)) | ((P.vcHome | P.c1End) -> (C.vacuum_on | C.vcExtend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(!(P.c1End)) & pp3) -> ( ( (P.c2Home | C.c1Extend) V (C.c2Retract & C.vcExtend)) V X((C.vacuum_off & C.vacuum_off)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(pp1) -> (P.vcEnd | P.c2Home)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.vcExtend | ((C.vacuum_off -> F((C.vcExtend -> C.vacuum_on))) U (P.vcHome -> ( C.c1Retract V F(C.c2Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((C.c2Extend -> (P.vcEnd -> pp2)) & C.c2Retract) | (pp2 U (C.vacuum_on -> (pp3 | P.c1End)))) & !((((C.c2Retract | C.vcExtend) & C.vcExtend) & ((pp3 | P.c1End) -> ( P.c1Home V P.vcHome))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((!(P.c1Home) U !(C.c1Retract)) U !((P.c2End & P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((P.vcEnd & C.vac) | F(!(F(( P.vcHome V C.vacuum_off))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((pp2 | (pp1 -> C.c1Extend)) -> F((P.c2End U C.c1Extend))) -> (( P.c1Home V C.vcExtend) -> F(( C.vcExtend V P.c1Home)))) U ((( P.c1Home V C.c1Retract) -> (!(P.c2End) & P.c2End)) -> (( (P.vcEnd -> pp2) V (C.vacuum_off U P.c2End)) -> (( C.c1Retract V C.c2Extend) -> F(C.vacuum_off))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(((P.c1Home | P.c1End) U P.c1End)) -> (( pp2 V P.c1Home) U !(P.c1Home))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((( C.c1Retract V pp1) & P.c2End) -> ( ( (pp3 | C.c1Retract) V (C.c2Extend & C.c2Extend)) V X((C.vacuum_off & C.c2Extend)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((C.c2Extend -> (F(( C.vcExtend V P.c2End)) | F((P.vcEnd -> C.c1Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((pp3 | C.c2Retract) U (C.vacuum_off -> C.c2Extend)) | ((P.vcHome U C.vacuum_off) & F(C.c1Retract))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X(P.c1End) -> (C.c1Extend -> C.c1Extend)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.vcExtend | X(C.vcExtend)) U ((pp3 -> C.c2Retract) | F(P.vcEnd))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((( (C.vac -> P.vcEnd) V (pp2 -> C.c1Extend)) U F((C.vcExtend -> P.vcHome))) | (X(pp1) U P.c2Home)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((( (P.c2Home -> C.vac) V (P.vcEnd -> C.vacuum_on)) U F((C.vcExtend -> pp1))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F(P.c1End) | ((C.vacuum_off -> !((pp1 -> C.c2Extend))) | (X((C.c2Retract | C.vac)) U ( (P.c1Home | C.vacuum_on) V X(C.c1Retract))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (X(((P.c1End U pp1) U X(P.c1End))) U (X(( C.c2Retract V C.vacuum_on)) | ((C.vacuum_off -> C.c1Extend) | X(P.vcHome)))) V ( (((P.c1End & P.c2Home) -> (C.c1Extend U P.c2End)) U ((pp3 & C.vcExtend) U F(P.vcHome))) V !((( P.c1Home V P.vcEnd) & F(P.c2Home))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((P.c2Home | pp2) | (( pp1 V P.vcHome) & F(P.c1End))) U ((C.vacuum_on -> (pp2 | P.c1End)) U (X(C.vac) & ( C.vacuum_on V P.c2Home)))) -> F(( ( (C.c2Retract | C.c1Retract) V (C.vcExtend & C.c1Extend)) V F((C.c1Extend & P.vcHome))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((C.c1Extend U C.c1Retract) -> (((P.c1End U P.c1Home) | X(pp1)) -> !((C.c2Extend | C.c1Retract)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((C.vac U P.c2Home) | X(P.c1End)) -> !((C.c2Retract | C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((pp2 | (pp3 -> C.vacuum_on)) -> F((P.c2End U C.vacuum_on))) -> (( P.c1End V C.c2Retract) -> F(( pp3 V P.vcHome)))) U ((( P.c2End V C.vacuum_on) -> (!(pp3) & (pp3 | P.vcHome))) -> (( (P.vcHome -> P.c2Home) V (C.c1Extend U P.vcEnd)) -> (( C.vacuum_on V C.vcExtend) -> F(C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((C.vac U P.c1Home)) -> !(C.c1Retract)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( X(P.c2End) V (( pp2 V (P.c2Home & C.vacuum_off)) -> !(pp2))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( (!(F(C.vcExtend)) U ((P.c1Home & C.c1Retract) | (pp1 | C.c1Extend))) V F((P.c1Home -> F(!(C.vcExtend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((F((F(( C.c1Extend V C.c1Retract)) -> !(X(P.c1End)))) | (X((C.c1Retract U (P.c1End & C.vcExtend))) -> (F(C.vcExtend) | F((C.vacuum_off & P.vcEnd))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((X((P.vcEnd -> (C.vacuum_on & C.c2Extend))) & (((C.c2Extend U C.c1Extend) -> ( P.c1Home V P.c1End)) -> (F(P.c2End) -> (C.vacuum_off -> P.c1End)))) -> X(((F(( C.c2Extend V C.c2Extend)) -> !(X(pp1))) -> (( pp3 V P.c1Home) -> (P.c2End -> C.c1Retract))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((pp3 | (C.c1Retract & C.c2Retract)) -> F((P.c1Home U C.c1Retract))) -> (( C.vac V C.vcExtend) -> F(( C.c2Extend V P.c2End)))) U ((( P.c2End V C.c2Retract) -> (!(P.vcHome) & (C.vac | P.vcHome))) -> (( (pp3 -> pp1) V (C.vcExtend U P.c1Home)) -> (( C.c2Extend V C.c1Extend) -> F(C.c1Extend))))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(!(pp3)) & P.vcEnd) -> ( ( (pp2 | C.vacuum_on) V (C.c1Retract & C.c2Extend)) V X((pp2 -> C.vacuum_off)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((((pp2 -> C.vacuum_on) & (C.c1Retract -> C.c2Extend)) -> X((pp3 | P.c1Home))) -> (X((P.vcEnd & C.vac)) U (F(pp1) -> (pp3 | P.c1Home)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((( ( C.vacuum_off V P.c2End) V (C.vcExtend U P.c2End)) | (P.c2End & P.vcEnd)) & ((pp1 & C.c1Retract) U ( P.c1End V pp3))) -> !(( (pp3 | C.c1Retract) V F(C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(( ( C.c2Retract V P.vcHome) V (C.vacuum_off U pp2)))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(P.c2Home) | (C.vac -> C.vacuum_on)) | ((P.c2Home U P.c1End) & X(C.c1Retract))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((P.c2End | ( ((C.vacuum_on & C.vacuum_on) & (P.vcHome | pp2)) V !(F(P.c1End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((X(X((C.c1Extend -> C.vcExtend))) | (((C.c2Retract | C.c1Retract) U (pp2 U C.c1Retract)) & (!(pp2) & (P.vcHome & P.c1End)))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G(((F(P.c1Home) | P.c1Home) | ((P.c2Home U P.vcHome) & X(C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
-Distance: 0.5 Fitness: 0.5
---------------------
-G((((((P.c1End -> C.vcExtend) -> C.vcExtend) & (C.c2Extend -> C.vacuum_off)) -> X((P.c2Home | P.vcEnd))) -> (X((P.c1Home & P.vcEnd)) U (F(P.c2Home) -> !(P.vcHome)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
 
 Best individuals:
-G(((P.c2End & C.c1Retract) | X(X((C.vcExtend -> pp3)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((C.c2Retract U C.c2Retract) U X(pp3)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((P.vcHome | X(X((C.vacuum_off -> C.vacuum_on)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((F((X(pp1) & (pp3 U pp3))) -> !(((pp1 | P.c1End) U (pp1 | C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.c2Retract -> C.c1Extend) U X(P.c1End)) -> !((P.c2End U C.c1Retract))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((F(P.c1End) -> (C.vcExtend -> C.c2Retract)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( F((C.c1Retract & C.vacuum_off)) V F((C.vac -> P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((( (pp3 -> P.c2Home) V (pp1 -> C.c1Retract)) U F((C.c2Retract -> pp1))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((X(C.vacuum_on) -> ( C.c1Retract V C.c1Extend)) U (C.c2Extend -> ( C.vacuum_off V pp3))) & ((P.c2End -> (C.c1Extend & C.c1Retract)) -> (F(P.c1Home) U (P.c1End -> pp1)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((C.vacuum_off -> (F(( C.vacuum_on V P.vcEnd)) | F((P.c2Home -> C.c1Retract)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( X(P.c1Home) V (( P.c1End V (P.vcHome & C.vacuum_on)) -> F(!(C.c2Extend)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((( F(pp2) V C.vacuum_off) -> (X(pp2) U P.vcEnd)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((P.c2End U P.c2Home) | X(pp3)) -> !((C.vacuum_on | C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((F((F(( C.c1Extend V C.c1Retract)) -> !(X(P.vcEnd)))) | (X((C.c1Extend U (pp1 & C.c1Extend))) -> (F(C.c1Retract) | F((C.c2Extend & pp1))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((C.c2Retract -> F(!((X(P.c2Home) & F(C.vacuum_on))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((((P.c2End | ( P.c1End V C.vacuum_on)) | C.vacuum_off) U (F(C.vcExtend) | ((C.vcExtend -> C.vcExtend) -> (C.vcExtend & C.vacuum_on)))) U (( (C.c1Retract | pp2) V C.c2Extend) | !(P.vcHome))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((F(( P.vcEnd V C.c2Retract)) -> (C.vcExtend -> F(!(pp1)))) | ( C.vacuum_on V X(C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((!(pp2) U !(C.c2Extend)) U !((pp2 & P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
+G((P.c1Home -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( !(X(X(C.c2Extend))) V ((F(C.vacuum_on) -> ( C.c2Extend V P.vcHome)) | (X(P.c2End) U (P.c1Home U C.vacuum_off)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( ((F(!(P.c2End)) & (( C.c1Extend V P.c1Home) U X(C.c2Extend))) U (F(P.vcEnd) -> ( F(P.c1End) V (P.c2End | P.c1End)))) V ((F((C.vac -> P.c1End)) -> (X(C.vac) & (C.vacuum_off -> C.c1Extend))) U ((( C.c2Extend V P.c1Home) & (P.vcHome -> C.c1Retract)) -> F(!(C.c2Retract))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((X(( P.c1End V P.vcEnd)) | (pp2 | (C.vacuum_off U P.c1End))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((C.vcExtend U C.vcExtend) -> !(P.c1End)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.c2Extend | P.c1End) | (P.c2End -> C.c2Extend)) | (( C.c1Retract V C.vcExtend) -> (P.vcHome -> C.vacuum_on))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((X(((P.c1Home -> P.c1Home) & (C.vacuum_on | C.c1Retract))) | (!((pp3 & C.vcExtend)) U F((C.vacuum_off -> P.vcHome)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( (((P.vcHome | pp3) | (C.vacuum_off -> pp3)) -> ( (P.vcHome & C.c1Retract) V F(C.c2Extend))) V (((C.vcExtend U C.vacuum_off) -> X(C.vcExtend)) -> (F(C.vacuum_off) -> (C.c1Extend -> C.vac)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((F(C.c2Extend) | (P.c2End & P.c2Home)) & ((P.c1End & C.c1Retract) U ( C.vac V P.c1End))) -> !(( (P.c1End | C.vacuum_on) V F(P.c2End)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((( ((C.c1Retract -> pp1) U ( pp2 V C.vac)) V !(( P.c2End V C.c1Extend))) U ((C.c2Retract -> C.c1Retract) -> X((C.c2Retract U C.vac)))) -> (((P.c1End -> P.c1Home) -> ((C.c2Extend & C.vac) U !(C.c1Extend))) U !(X((C.c1Extend U C.vac))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((!(X((X(P.c2End) | C.vacuum_on))) U pp1))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.vacuum_on U C.c1Extend) & (C.vacuum_off U C.vac)) -> F((( P.c2End V P.c2End) & F(C.c1Extend)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( ((C.c2Extend -> pp2) U (C.vcExtend U C.vcExtend)) V ((C.vacuum_on -> C.vcExtend) | X(P.c2Home))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.c2Retract U C.vcExtend) U F(P.vcEnd)) -> (((C.c2Extend -> C.vac) | F(pp1)) | (P.c1Home -> F(pp1)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( (X(pp1) -> F((P.c2End & C.c1Extend))) V (!(( P.vcEnd V C.c1Retract)) U ((C.c1Extend & P.vcEnd) -> (C.c2Extend | P.vcEnd)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((X(C.c2Extend) & !(pp2)) U ((pp2 -> C.vacuum_off) U (P.c2End -> C.c1Extend))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((P.vcEnd -> F(((C.vacuum_off -> P.c2Home) -> C.c2Extend))) & (C.vac -> (( !(C.c1Retract) V F(C.c1Retract)) U F(pp3)))))
-Fitness: [0.75]
-Strength: 188.0
+G((P.c1End -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( F(P.c1End) V (C.c2Extend -> C.c1Extend)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( !(( (C.vacuum_on U pp1) V (C.vcExtend & C.c1Extend))) V ((!(C.vcExtend) U (pp1 U P.c2End)) | ((P.vcEnd | P.vcHome) -> (C.c1Extend | C.vcExtend)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((C.c1Retract & X((C.c2Extend -> C.c2Retract))) -> (( (C.vacuum_off U P.c1End) V (P.c1Home & pp2)) | ((C.vac & P.c2Home) -> (pp2 -> pp3)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((((C.c2Retract -> C.vcExtend) -> (P.c2Home & C.vac)) | X((C.c2Extend -> P.c1Home))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( (!(F(C.c2Retract)) U ((P.c2Home & C.vacuum_off) | (pp2 | C.vacuum_on))) V F((P.vcHome -> !(P.c1End)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_on -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((( C.c1Retract V F(C.vacuum_off)) U C.vcExtend) -> ((((C.vcExtend | P.c2Home) & (C.c1Extend -> pp2)) U ((C.vacuum_on & P.c2End) | X(C.c2Retract))) -> X(X((P.c1End | C.c1Retract))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Retract -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((P.vcHome -> F(C.vcExtend)) | F(!(C.c1Retract))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((P.vcHome -> P.c1End) -> C.c1Retract))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c2Extend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((!((((C.c1Extend -> pp1) U ( P.c1End V C.c1Extend)) U X((P.c2Home -> pp3)))) U (F((X(P.c1Home) U F(P.c2End))) | (((P.c1Home U pp1) | (C.vacuum_on & C.vcExtend)) -> ((P.c1End -> P.c1End) | X(P.c1Home))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(( (C.c1Retract U P.c1Home) V X(P.vcHome)))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Extend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((((C.vac | (P.c2End -> C.c2Retract)) -> F((P.c2Home U C.c1Extend))) -> (( pp3 V C.c2Retract) -> F(( C.c2Retract V pp1)))) U ((( P.c2End V C.vacuum_off) -> (!(P.c1Home) & (pp3 | P.c2End))) -> (( (pp1 -> P.c1Home) V (C.c1Extend U P.c1End)) -> (( C.c2Retract V C.c2Retract) -> F(C.c2Extend))))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vcExtend -> (C.vacuum_on -> C.vacuum_on)))
+Fitness: [0.0 0.0 0.0]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((X((pp2 | P.c1Home)) U F(!(C.c1Extend))) & ( (X(C.vacuum_off) U F(C.vacuum_off)) V (F(P.c2End) U !(C.vcExtend)))))
-Fitness: [0.75]
-Strength: 188.0
+G(C.c2Extend)
+Fitness: [0.0 0.0 0.0]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((F(pp2) | (pp2 | P.c2Home)) & X((P.c2End -> P.c1Home))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.vacuum_off -> C.c1Extend))
+Fitness: [0.0 0.0 0.0]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G((F(((P.c2Home | C.vcExtend) | (P.vcEnd -> C.vacuum_off))) -> (X((C.c2Retract & C.vacuum_on)) -> ((C.c2Retract & C.c1Retract) U F(pp3)))))
-Fitness: [0.75]
-Strength: 188.0
+G((C.c1Retract -> C.vacuum_off))
+Fitness: [0.0 0.0 0.0]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((!(P.c2Home) & F(C.c1Retract)) | F(!(C.c2Extend))))
-Fitness: [0.75]
-Strength: 188.0
+G(((C.vacuum_on -> C.vacuum_off) -> C.c2Retract))
+Fitness: [0.0 0.0 0.0]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------
-G(((F(P.c1Home) | (C.vac -> C.vcExtend)) | ((P.vcEnd U P.c1End) & X(C.c2Retract))))
-Fitness: [0.75]
-Strength: 188.0
+G(C.vcExtend)
+Fitness: [0.0 0.0 0.0]
+Strength: 350.0
 Distance: 0.5 Fitness: 0.5
 --------------------

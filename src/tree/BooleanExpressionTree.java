@@ -1,6 +1,7 @@
 package tree;
 // Java program to construct an expression tree
 
+import javax.management.loading.MLetMBean;
 import java.awt.*;
 import java.util.Stack;
 import java.util.ArrayList;
@@ -16,11 +17,13 @@ public class BooleanExpressionTree {
 
         String value;
         Node left, right;//,parent;
+        int weight;
 
 
         Node(String item) {
 
             value = item;
+            weight=0;
            // parent=null;
             left = right = null;
         }
@@ -69,7 +72,6 @@ public class BooleanExpressionTree {
         return result;
     }
     // Utility function to do inorder traversal
-
 
     void inorder(Node t) {
 
@@ -127,11 +129,13 @@ public class BooleanExpressionTree {
                 t = new Node(expresion[i]);
                 st.push(t);
 
+                level++;
 
             }
             else if(isOperatorUnary(expresion[i])) {
                 t=new Node(expresion[i]);
                 i++;
+                level++;
 
                 if(expresion[i].equals("(")) {
                     st.push(t);
@@ -143,11 +147,14 @@ public class BooleanExpressionTree {
 
                    // t1.parent=t;
                     st.push(t);
+                    level++;
 
                 }
             }
             else // operator
             {
+
+
                 if(expresion[i].equals("(")){
                     continue;
                 }
@@ -157,7 +164,9 @@ public class BooleanExpressionTree {
                     if(st.empty())
                     {
                         st.push(t1);
-                        continue;
+                       // continue;
+
+
                     }
                     else {
                         t2 = st.pop();
@@ -165,6 +174,10 @@ public class BooleanExpressionTree {
                             t2.right = t1;
                           //  t1.parent=t2;
                             st.push(t2);
+
+
+
+
                         } else {
                             t = st.pop();
                             t2.left = t1;
@@ -173,11 +186,15 @@ public class BooleanExpressionTree {
                          //   t2.parent=t;
                             st.push(t);
 
+
+
+
                         }
                     }
                 }
                 //operator
                 else {
+
                     t = new Node(expresion[i]);
                     // Pop two top nodes
                     // Store top
@@ -185,18 +202,27 @@ public class BooleanExpressionTree {
                     t1 = st.pop();
                     t.left = t1;
 
+                    level++;
+
+
+
                   //  t1.parent=t;
                     i++;
                     if (expresion[i].equals("(")) {
                         st.push(t);
+
                     }
                     else if (isOperatorUnary(expresion[i])) {
                         t2=new Node(expresion[i]);
 
                         i++;
+
+                        level++;
+
                         if(expresion[i].equals("(")) {
                             st.push(t);
                             st.push(t2);
+
                         }else
                         {
                             Node t3;
@@ -206,6 +232,7 @@ public class BooleanExpressionTree {
                             t.right=t2;
                           //  t2.parent=t;
                             st.push(t);
+                            level++;
 
                         }
                     }
@@ -222,6 +249,9 @@ public class BooleanExpressionTree {
                         // System.out.println(t1 + "" + t2);
                         // Add this subexpression to stack
                         st.push(t);
+                        level++;
+
+
                     }
                 }
 
@@ -233,19 +263,26 @@ public class BooleanExpressionTree {
         t = st.peek();
         st.pop();
 
+        t.weight=level;
         return t;
     }
-    Node changeTree(Node t1, Node t2){
+    public void constructTree(String str){
+        this.root=constructTreeHelp(str);
+    }
+
+    Node changeTreeOneValue (Node t1, String value){
 
         Node test=null;
 
         //take a random under the tree
         Random randomDirection = new Random();
         Random randomNumber = new Random();
-        int val=14;
+        int val=t1.weight;
         int k =randomNumber.nextInt(val+1);
         boolean direction;
-        //  System.out.println("k= "+k);
+
+        //System.out.println("k= "+k);
+
         test=t1;
         ArrayList<String> ListDirection = new ArrayList<String>();
         for(int i=0; i<k;i++)
@@ -255,7 +292,9 @@ public class BooleanExpressionTree {
                 break;
             }
             direction= randomDirection.nextBoolean();
-            //System.out.println("result bool = "+direction);
+
+          //  System.out.println("result bool = "+direction);
+
             if(direction){
                 if(test.left!=null)
                 {
@@ -280,7 +319,120 @@ public class BooleanExpressionTree {
             }
 
         }
-     //   System.out.println("what change -> "+test.value);
+
+       //   System.out.println("what change -> "+test.value);
+
+        String []result=ListDirection.toArray(new String[ListDirection.size()]);
+
+        //the tree t2 with our value
+        Node t2=new Node(value);
+
+        Stack<Node> st = new Stack();
+
+        st.push(t1);
+        Node tmp=t1;
+
+        //System.out.println("Check my labels");
+        /*
+        for(int i=0;i<result.length;i++)
+        {
+            System.out.print(result[i]+" ");
+        }
+        System.out.println();
+        */
+
+        for(int i=0;i<result.length;i++)
+        {
+            if(result[i].equals("l"))
+            {
+                tmp=tmp.left;
+            }
+            else
+            {
+                tmp=tmp.right;
+            }
+            st.push(tmp);
+        }
+        st.pop();
+
+
+        Node helpT1,helpT2;
+
+        st.push(t2);
+
+
+        for(int i=result.length-1; i>=0;i--)
+        {
+            helpT1=st.pop();
+            helpT2=st.pop();
+            if(result[i].equals("l"))
+            {
+                helpT2.left=helpT1;
+            }
+            else
+            {
+                helpT2.right=helpT1;
+            }
+            st.push(helpT2);
+        }
+
+        helpT2=st.pop();
+
+        return helpT2;
+
+
+    }
+    public void changeTreeOneValue (String t){
+        this.root= changeTreeOneValue(root,t);
+    }
+
+    Node changeTree(Node t1, Node t2){
+
+        Node test=null;
+
+        //take a random under the tree
+        Random randomDirection = new Random();
+        Random randomNumber = new Random();
+        int val=6;
+        int k =randomNumber.nextInt(val+1);
+        boolean direction;
+
+        //System.out.println("k= "+k);
+        test=t1;
+        ArrayList<String> ListDirection = new ArrayList<String>();
+        for(int i=0; i<k;i++)
+        {
+            if(test.left ==null && test.right==null)
+            {
+                break;
+            }
+            direction= randomDirection.nextBoolean();
+           // System.out.println("result bool = "+direction);
+            if(direction){
+                if(test.left!=null)
+                {
+                    test=test.left;
+                    ListDirection.add("l");
+                }
+                else{
+                    test=t1.right;
+                    ListDirection.add("r");
+                }
+            }
+            else{
+                if(test.right!=null)
+                {
+                    test=test.right;
+                    ListDirection.add("r");
+                }
+                else{
+                    test=test.left;
+                    ListDirection.add("l");
+                }
+            }
+
+        }
+        //System.out.println("what change -> "+test.value);
 
         String []result=ListDirection.toArray(new String[ListDirection.size()]);
 
@@ -316,7 +468,7 @@ public class BooleanExpressionTree {
             }
 
         }
-      //  System.out.println("for what change -> "+t2.value);
+      // System.out.println("for what change -> "+t2.value);
        // System.out.println();
 
         Stack<Node> st = new Stack();
@@ -378,9 +530,7 @@ public class BooleanExpressionTree {
     public void changeTree(BooleanExpressionTree t){
         this.root= changeTree(root,t.root);
     }
-    public void constructTree(String str){
-        this.root=constructTreeHelp(str);
-    }
+
 
     String makeString(Node t) {
         String result="";
@@ -407,6 +557,7 @@ public class BooleanExpressionTree {
 
     }
 
+
     public static void main(String args[]) {
 
         BooleanExpressionTree et = new BooleanExpressionTree();
@@ -415,16 +566,21 @@ public class BooleanExpressionTree {
         String expr2="vcHome AND ( NOT c1Home OR NOT c2Home )";
         String expr3="vcEnd AND NOT ( c1Home AND c2Home )";
 
-        et.constructTree(expr3);
+        et.constructTree(expr);
         BooleanExpressionTree et2=new BooleanExpressionTree();
 
         String smth=et.makeString();
         System.out.println("My string : "+smth);
 
-       // et2.constructTree(smth);
-       // String k =et2.makeString();
+     //   et2.constructTree(expr);
+      //  smth=et2.makeString();
+      //  System.out.println("My string : "+smth);
 
-      //  System.out.println("New string : "+k);
+        et.changeTreeOneValue("c1Home");
+
+        String k =et.makeString();
+
+        System.out.println("New string : "+k);
 
 
 

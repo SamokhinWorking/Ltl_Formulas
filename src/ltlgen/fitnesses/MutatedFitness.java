@@ -7,80 +7,68 @@ import parse.parseInfo;
 import smv_model.SmvModel;
 import tree.BooleanExpressionTree;
 import verifier.Verifier;
+import automat.Automat;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+
 public class MutatedFitness extends SingleFitness{
 
-    public double getResult(String formula){
+    public double getResult(String formula,Automat auto){
         double result=0.0;
-        try {
-            DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document document = documentBuilder.parse("CentralController.xml");
 
-            ECState ecState = parseInfo.parseECState(document);
-            ECTransition ecTransition = parseInfo.parseECTransition(document);
-            Algorithm algorithm = parseInfo.parseAlgorithm(document);
+
+
+            ECState ecState = auto.getEcState();
+            ECTransition ecTransition = auto.getEcTransition();
+            Algorithm algorithm = auto.getAlgorithm();
+            String[] inputVars=auto.getInputVars();
+
+
 
             ArrayList<BooleanExpressionTree> trees =new ArrayList<BooleanExpressionTree>();
             for(int i=0;i<ecTransition.Condition.length;i++){
-                if(!ecTransition.Condition[i].equals("INIT") && !ecTransition.Source[i].equals("START")) {
+
                     BooleanExpressionTree tree = new BooleanExpressionTree();
                     tree.constructTree(ecTransition.Condition[i]);
                     trees.add(tree);
-                }
-                else if (ecTransition.Source[i].equals("START")){
-                    BooleanExpressionTree tree = new BooleanExpressionTree();
-                    tree.constructTree(ecTransition.Condition[i]);
-                    trees.add(tree);
-                }
+
 
             }
             BooleanExpressionTree[] someTree = trees.toArray(new BooleanExpressionTree[trees.size()]);
             String[] condition = new String[someTree.length];
 
 
-            int val=condition.length-2;
-            int stateVal =ecState.Name.length-2;
+            int val=condition.length-1;
+            int stateVal =ecState.Name.length-1;
+            int inVal=inputVars.length-1;
+
 
 
                 Random randomNumber = new Random();
 
-                int first =randomNumber.nextInt(val);
-                int second= randomNumber.nextInt(val);
-                int valForEcState = randomNumber.nextInt(stateVal);
+                int conditionRandom =randomNumber.nextInt(val)+1;
+                int inValRandom = randomNumber.nextInt(inVal)+1;
+                int valForEcState = randomNumber.nextInt(stateVal)+1;
 
 
-                if (first == second)
+                // check that destination != new random destination
+
+                if(ecTransition.Destination[conditionRandom].equals(ecState.Name[valForEcState]))
                 {
-                    while (first==second)
+                    while (ecTransition.Destination[conditionRandom].equals(ecState.Name[valForEcState]))
                     {
-                        second=randomNumber.nextInt(val);
+                        valForEcState = randomNumber.nextInt(valForEcState);
                     }
                 }
 
-                if(ecTransition.Destination[first+2].equals(ecState.Name[valForEcState+2]))
-                {
-                    while (ecTransition.Destination[first+2].equals(ecState.Name[valForEcState+2]))
-                    {
-                        valForEcState = randomNumber.nextInt(stateVal);
-                    }
-                }
+                // change destination + condition
+                someTree[conditionRandom].changeTreeOneValue(inputVars[inValRandom]); // меняю дерево
+                ecTransition.Destination[conditionRandom]=ecState.Name[valForEcState]; // меняю путь
 
 
-                someTree[first+2].changeTree(someTree[second+2]);
-                ecTransition.Destination[first+2]=ecState.Name[valForEcState+2];
-
-                //String controlS= someTree[first+2].makeString();
-                // System.out.println(controlS);
-                //System.out.println();
 
                 for (int i = 0; i < someTree.length; i++) {
                     condition[i] = someTree[i].makeString();
@@ -113,10 +101,6 @@ public class MutatedFitness extends SingleFitness{
                     result+=0.0175;
                 }
 
-        }
-        catch (XPathExpressionException | ParserConfigurationException | SAXException | IOException ex) {
-            ex.printStackTrace(System.out);
-        }
 
 
         return result;
@@ -125,10 +109,10 @@ public class MutatedFitness extends SingleFitness{
     public double getFitness(String formula, int complexity) {
 
         double result=0.0;
-        
+        Automat auto = new Automat("CentralController.xml");
         for(int i=0;i<50;i++)
         {
-            result+=getResult(formula);
+            result+=getResult(formula,auto);
         }
         return result;
     }

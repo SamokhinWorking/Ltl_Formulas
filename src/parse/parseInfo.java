@@ -145,7 +145,7 @@ public class parseInfo {
         return name;
     }
     public static ECState parseECState(Document document) throws DOMException, XPathExpressionException {
-       // System.out.println("Печать OutputVars");
+        // System.out.println("Печать OutputVars");
         XPathFactory pathFactory = XPathFactory.newInstance();
         XPath xpath = pathFactory.newXPath();
 
@@ -186,7 +186,13 @@ public class parseInfo {
             }
         }
         String[] algorithm = algorithmsList.toArray(new String[algorithmsList.size()]);
+        for (int i = 0; i < name.length; i++)
+        {
+            name[i]=name[i].replace("INIT","INIT_S");
+            algorithm[i]=algorithm[i].replace("INIT","INIT_S");
+        }
         ECState ecState =new ECState(name,algorithm);
+
        // ecState.printECState();
         return ecState;
 
@@ -217,6 +223,16 @@ public class parseInfo {
 
             }
         }
+
+        int metka=15;
+
+        while (sourceList.size()>metka)
+        {
+            sourceList.remove(metka);
+            destinationList.remove(metka);
+            conditionList.remove(metka);
+        }
+
         String[] source = sourceList.toArray(new String[sourceList.size()]);
         String[] destination=destinationList.toArray(new String[destinationList.size()]);
         String[] condition = conditionList.toArray(new String[conditionList.size()]);
@@ -224,6 +240,7 @@ public class parseInfo {
         for (int i=0;i<source.length;i++){
             source[i]=source[i].replace("INIT","INIT_S");
             destination[i]=destination[i].replace("INIT","INIT_S");
+            condition[i]=condition[i].replace("INIT","INIT_S");
         }
         for(int i=0; i<condition.length;i++)
         {

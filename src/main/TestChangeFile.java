@@ -12,8 +12,8 @@ public class TestChangeFile {
         File file = new File("C.smv");
         Verifier ver =new Verifier(file);
         //ver.addNewRow(row2);
-       // ver.testLtlFormulas();
-       // ver.deleteLastRow();
+        // ver.testLtlFormulas();
+        // ver.deleteLastRow();
 
 
     }

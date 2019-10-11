@@ -46,6 +46,7 @@ public class LTLProblem extends GPProblem {
 
         fitnesses = new SingleFitness[state.parameters.getInt(new Parameter(new String[]{"multi", "fitness", "num-objectives"}), null)];
         Parameter f = base.push("fitness");
+
         for (int i = 0; i < fitnesses.length; i++) {
             Class c = state.parameters.getClassForParameter(f.push(Integer.toString(i)), null, SingleFitness.class);
             try {
