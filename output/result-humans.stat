@@ -1,0 +1,502 @@
+Ideal individual not found.
+
+Time taken: 0 days, 0 hours, 9 minutes, 17 seconds.
+
+Front:
+G((C.c2Retract -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+
+Best individuals:
+G((C.vacuum_on -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_off -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.vacuum_on))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vcExtend -> C.vcExtend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.vacuum_off))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Extend -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.c1Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c1Retract -> C.c1Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Extend -> C.c2Extend))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G(((C.c2Retract -> C.c2Retract) -> C.vacuum_off))
+Fitness: [0.0 0.0 0.0]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G(C.c1Retract)
+Fitness: [0.0 0.0 0.0]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.c2Retract -> C.c1Extend))
+Fitness: [0.0 0.0 0.0]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G(((C.c2Retract -> C.c1Retract) | C.c2Retract))
+Fitness: [0.0 0.0 0.0]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G(((C.c1Extend -> C.vacuum_on) -> C.c1Extend))
+Fitness: [0.0 0.0 0.0]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G(C.c1Extend)
+Fitness: [0.0 0.0 0.0]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.c2Retract))
+Fitness: [0.25 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G(((C.vacuum_off -> C.c1Extend) | C.vacuum_off))
+Fitness: [0.0 0.0 0.0]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G(((C.c1Extend -> C.vcExtend) | C.vacuum_off))
+Fitness: [0.16666666666666666 0.75 0.8749999999999994]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G((C.vacuum_on -> C.vcExtend))
+Fitness: [0.25 0.75 0.14]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+G(((C.vacuum_on -> C.c2Extend) | C.c1Retract))
+Fitness: [0.0 0.0 0.0]
+Strength: 263.0
+Distance: 0.5 Fitness: 0.5
+--------------------
