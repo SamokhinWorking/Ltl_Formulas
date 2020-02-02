@@ -1,6 +1,6 @@
-package ltlgen.fitnesses;
+package ltlgenCondition.fitnesses;
 
-import automat.Automat;
+
 import ec.EvolutionState;
 import ec.Setup;
 import ec.util.Parameter;
@@ -15,6 +15,6 @@ public abstract class SingleFitness implements Setup {
         }
     }
 
-    public abstract double getFitness(String formula, int complexity, Automat automat,String [] setOfCondition);
+    public abstract double getCondFitness(String formula, int complexity);
 
 }

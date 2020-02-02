@@ -1,0 +1,28 @@
+parent.0 = cond-spea2.params
+#parent.0 = cond-nsga2.param
+
+#
+# General
+#
+
+pop.subpop.0.size = 500
+generations = 10
+
+#
+# Fitness
+#
+
+multi.fitness.num-objectives = 1
+
+eval.problem.fitness.0 = ltlgenCondition.fitnesses.ComplexityFitness
+eval.problem.fitness.0.threshold = 0.65
+
+
+#
+# Filters
+#
+
+eval.problem.filters.number = 1
+
+eval.problem.filters.0 = ltlgen.filters.TemporalFilter
+

@@ -25,6 +25,7 @@ public class MutatedFitness extends SingleFitness{
             ECTransition ecTransition = auto.getEcTransition();
             Algorithm algorithm = auto.getAlgorithm();
             String[] inputVars=auto.getInputVars();
+            String [] outputVars =auto.getOutputVars();
 
 
 
@@ -76,45 +77,45 @@ public class MutatedFitness extends SingleFitness{
 
 
                 //create smv file
-                // we need replace src/smv_model -> smv_model
 
-                File file1 = new File("smv_model/Controller.smv");
-                SmvModel smv = new SmvModel(file1, "smv_model/Controller.smv");
+                File file1 = new File("src/smv_model/Controller.smv");
+                SmvModel smv = new SmvModel(file1, "src/smv_model/Controller.smv");
 
                 smv.clearFile();
-                smv.buildSmvModel(ecState, ecTransition, algorithm, condition);
+                smv.buildSmvModel(ecState, ecTransition, algorithm, condition,inputVars,outputVars);
 
 
                 //Verifier LTL Formulas
 
                 String row = new String();
                 row = "\nLTLSPEC " + formula;
-                File file = new File("smv_model/Controller.smv");
+                File file = new File("src/smv_model/Controller.smv");
                 Verifier ver = new Verifier(file);
                 ver.addNewRow(row);
 
                 int test;
-                test = ver.testLtlFormulas("smv_model/Controller.smv");
+                test = ver.testLtlFormulas("src/smv_model/Controller.smv");
                 ver.deleteLastRow();
 
                 if(test==1)
                 {
                     result+=0.0175;
                 }
+       // System.out.println("I verify my formula and answer == "+test);
 
 
 
         return result;
     }
     @Override
-    public double getFitness(String formula, int complexity) {
+    public double getFitness(String formula, int complexity,Automat automat,String []setOfCondition) {
 
         double result=0.0;
-        Automat auto = new Automat("CentralController.xml");
+        //Automat auto = new Automat("CentralController.xml");
         for(int i=0;i<50;i++)
         {
-            result+=getResult(formula,auto);
+            result+=getResult(formula,automat);
         }
-        return result;
+        return 1-result;
     }
 }

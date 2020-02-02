@@ -1,6 +1,6 @@
-package ltlgen;
+package ltlgenCondition;
 
-import automat.Automat;
+
 import ec.EvolutionState;
 import ec.Individual;
 import ec.gp.GPIndividual;
@@ -9,19 +9,13 @@ import ec.gp.koza.KozaFitness;
 import ec.multiobjective.MultiObjectiveFitness;
 import ec.util.Parameter;
 import ltlgen.filters.Filter;
-import ltlgen.fitnesses.SingleFitness;
+import ltlgenCondition.fitnesses.SingleFitness;
 
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
-public class LTLProblem extends GPProblem {
+public class DataConditionProblem extends GPProblem {
     public static int EVENT_NUMBER;
     public static int ACTION_NUMBER;
     private static Filter[] filters;
@@ -31,11 +25,11 @@ public class LTLProblem extends GPProblem {
     @Override
     public void setup(final EvolutionState state, Parameter base) {
         super.setup(state, base);
-        if (!(input instanceof LTLData)) {
-            state.output.fatal("GPData class must subclass from " + LTLData.class, base.push(P_DATA));
+        if (!(input instanceof DataCondition)) {
+            state.output.fatal("GPData class must subclass from " +  DataCondition.class, base.push(P_DATA));
         }
 
-       // Parameter a = new Parameter("automaton");
+        // Parameter a = new Parameter("automaton");
         //EVENT_NUMBER = state.parameters.getInt(a.push("event-number"), null);
         //ACTION_NUMBER = state.parameters.getInt(a.push("action-number"), null);
 
@@ -65,11 +59,11 @@ public class LTLProblem extends GPProblem {
         }
     }
 
-    private double[]  getFitness(String formula, int size, Automat automat, String[] setOfCondition) {
+    private double[]  getCondFitness(String formula, int size) {
         if (results.containsKey(formula)) {
             return results.get(formula).result;
         }
-       // int result=0; // = new double[fitnesses.length];
+        // int result=0; // = new double[fitnesses.length];
         double[] result = new double[fitnesses.length];
 
         boolean r = true;
@@ -81,7 +75,7 @@ public class LTLProblem extends GPProblem {
         }
         if (r) {
             for (int i = 0; i < result.length; i++) {
-                result[i] = fitnesses[i].getFitness(formula, size,automat,setOfCondition);
+                result[i] = fitnesses[i].getCondFitness(formula, size);
                 if (result[i] == -1) {
                     for (int j = 0; j <= i; j++) {
                         result[j] = 0;
@@ -97,14 +91,9 @@ public class LTLProblem extends GPProblem {
     @Override
     public void evaluate(EvolutionState state, Individual ind, int subpopulation, int threadnum) {
         if (!ind.evaluated) {
-            LTLData input = (LTLData) this.input;
+            DataCondition input = ( DataCondition) this.input;
             GPIndividual individual = (GPIndividual) ind;
             individual.trees[0].child.eval(state, threadnum, input, stack, individual, this);
-
-            //change my file add automat to function getFitness()
-            Automat automat = new Automat("CentralController.xml");
-            String [] setOfCondition=TakeConditions("src/conditions/result-humans.stat");
-
             /*
             KozaFitness f =(KozaFitness) ind.fitness;
 
@@ -117,44 +106,13 @@ public class LTLProblem extends GPProblem {
             */
 
             MultiObjectiveFitness f = (MultiObjectiveFitness) ind.fitness;
-            String formula = "G(" + input.result + ")";
+           // String formula = "G(" + input.result + ")";
+            String formula = input.result;
             //f.set
-            f.setObjectives(state, getFitness(formula, input.complexity,automat,setOfCondition));
+            f.setObjectives(state, getCondFitness(formula, input.complexity));
             ind.evaluated = true;
 
         }
-    }
-
-
-    public static String [] TakeConditions(String name){
-        ArrayList<String> lines = new ArrayList<String>();
-        try{
-
-            BufferedReader reader =new BufferedReader(new FileReader(name));
-            String line;
-            String target1="Fitness:";
-            String target2="Strength:";
-            String target3="Distance:";
-            while((line=reader.readLine())!= null){
-
-                if(!line.contains(target1) &&  !line.contains(target2) && !line.contains(target3)) {
-                    lines.add(line);
-                }
-            }
-            reader.close();
-
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String [] allCondition = lines.toArray(new String[lines.size()]);
-
-
-
-        return allCondition;
     }
 
     private static class EvaluationResult {

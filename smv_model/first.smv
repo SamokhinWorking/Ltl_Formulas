@@ -1,7 +1,7 @@
 --controller model
 MODULE CONTROL(REQ, c1Home, c1End, c2Home, c2End, vcHome, vcEnd, pp1, pp2, pp3) 
 VAR
-    _state : {START, INIT_S, GoUp, Retract, Wait, Piece1, Piece2, Piece3, GoDown, Vacuum_On, VacuumOff};
+    _state : {state_0, state_1, state_2, state_3, state_4, state_5, state_6, state_7, state_8, state_9, state_10};
     CNF : boolean;
     c1Extend : boolean;
     c1Retract : boolean;
@@ -14,7 +14,7 @@ VAR
     vac : boolean;
 	
 ASSIGN
-    init(_state) := START;
+    init(_state) := state_0;
 
 --variable part of controller starts here--
 

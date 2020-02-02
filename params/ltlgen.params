@@ -1,6 +1,6 @@
-parent.0 = ltlgen-spea2.params
+#parent.0 = ltlgen-spea2.params
 
-#parent.0 = ltlgen-general.params
+parent.0 = ltlgen-nsga2.params
 
 
 
@@ -8,8 +8,8 @@ parent.0 = ltlgen-spea2.params
 # General
 #
 
-pop.subpop.0.size = 500
-generations = 50
+pop.subpop.0.size = 200
+generations = 10
 
 #
 # Fitness
@@ -24,8 +24,12 @@ eval.problem.fitness.1 = ltlgen.fitnesses.CorrectnessFitness
 eval.problem.fitness.1.threshold = 0.75
 
 eval.problem.fitness.2 = ltlgen.fitnesses.MutatedFitness
-eval.problem.fitness.2.number =50
+#eval.problem.fitness.2.number =50
 
+#eval.problem.fitness.2 = ltlgen.fitnesses.RandomFitness
+
+
+#eval.problem.fitness.3.number =50
 
 
 

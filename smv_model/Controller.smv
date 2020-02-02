@@ -1,56 +1,56 @@
 --controller model
-MODULE CONTROL(REQ, c1Home, c1End, c2Home, c2End, vcHome, vcEnd, pp1, pp2, pp3) 
+MODULE CONTROL(REQ,c1Home, c1End, c2Home, c2End, vcHome, vcEnd, pp1, pp2, pp3)
 VAR
-    _state : {START, INIT_S, GoUp, Retract, Wait, Piece1, Piece2, Piece3, GoDown, Vacuum_On, VacuumOff};
-    CNF : boolean;
-    c1Extend : boolean;
-    c1Retract : boolean;
-    c2Extend : boolean;
-    c2Retract : boolean;
-    vcExtend : boolean;
-    vacuum_on : boolean;
-    vacuum_off : boolean;
-    vs : boolean;
-    vac : boolean;
-	
+	_state : {START, INIT_S, GoDown, Wait, Piece1, Piece2, Piece3, Vacuum_On, GoUp, VacuumOff, Retract};
+	CNF : boolean;
+	c1Extend : boolean;
+	c1Retract : boolean;
+	c2Extend : boolean;
+	c2Retract : boolean;
+	vcExtend : boolean;
+	vacuum_on : boolean;
+	vacuum_off : boolean;
+	vs : boolean;
+	vac : boolean;
+
 ASSIGN
-    init(_state) := START;
+	init(_state) := START;
 
 --variable part of controller starts here--
 
 next(_state) := case
 	_state = START : INIT_S;
-	_state = INIT_S : Piece3;
-	_state = GoUp & REQ & ( ( c2Home ) & ( ( c1Home ) & ( vcHome ) ) ) : Piece1;
-	_state = Retract & REQ & ( ( c2Home ) & ( ( c1Home ) & ( vac ) ) ) : Wait;
-	_state = Wait & REQ & ( ( vcHome ) & ( pp1 ) ) : GoUp;
-	_state = Wait & REQ & ( ( vcHome ) & ( ( pp2 ) & ( ! ( pp1 ) ) ) ) : GoDown;
-	_state = Wait & REQ & ( ( vcHome ) & ( ( pp3 ) & ( ( ! ( pp2 ) ) & ( ! ( pp1 ) ) ) ) ) : Vacuum_On;
-	_state = Piece1 & REQ & ( c1End ) : Piece3;
+	_state = INIT_S : VacuumOff;
+	_state = GoUp & REQ & ( ( c2Home ) & ( ( c1Home ) & ( vcHome ) ) ) : Wait;
+	_state = Retract & REQ & ( ( c2Home ) & ( ( c1Home ) & ( vac ) ) ) : Retract;
+	_state = Wait & REQ & ( ( vcHome ) & ( pp1 ) ) : GoDown;
+	_state = Wait & REQ & ( ( vcHome ) & ( ( pp2 ) & ( ! ( pp1 ) ) ) ) : Wait;
+	_state = Wait & REQ & ( ( vcHome ) & ( ( pp3 ) & ( ( ! ( pp2 ) ) & ( ! ( pp1 ) ) ) ) ) : GoUp;
+	_state = Piece1 & REQ & ( c1End ) : Retract;
 	_state = Piece2 & REQ & ( c2End ) : Wait;
-	_state = Piece3 & REQ & ( ( c2End ) & ( c1End ) ) : GoDown;
-	_state = GoDown & REQ & ( ( ! ( ( c2Home ) & ( c1Home ) ) ) & ( pp2 ) ) : Piece3;
-	_state = Vacuum_On & REQ & ( vac ) : GoDown;
+	_state = Piece3 & REQ & ( ( c2End ) & ( c1End ) ) : Piece1;
+	_state = GoDown & REQ & ( ( ! ( ( c2Home ) & ( c1Home ) ) ) & ( vcEnd ) ) : Piece3;
+	_state = Vacuum_On & REQ & ( vac ) : Wait;
 	_state = VacuumOff & REQ & ( ! ( vac ) ) : Retract;
-	_state = GoDown & REQ & ( ( c2Home ) & ( ( c1Home ) & ( vcEnd ) ) ) : Wait;
-	_state = GoUp & REQ & ( ( ( ! ( c2Home ) ) | ( ! ( c1Home ) ) ) & ( vcHome ) ) : Wait;
+	_state = GoDown & REQ & ( ( c2End ) & ( ( c1Home ) & ( vcEnd ) ) ) : START;
+	_state = GoUp & REQ & ( ( ( ! ( c2Home ) ) | ( ! ( c1Home ) ) ) & ( vcHome ) ) : START;
 TRUE : _state;
 esac;
  
 next(CNF) := case
-	_state = GoUp & REQ & next(_state) = Piece1 & ( ( c2Home ) & ( ( c1Home ) & ( vcHome ) ) ): TRUE;
-	_state = Retract & REQ & next(_state) = Wait & ( ( c2Home ) & ( ( c1Home ) & ( vac ) ) ): TRUE;
-	_state = Wait & REQ & next(_state) = GoUp & ( ( vcHome ) & ( pp1 ) ): TRUE;
-	_state = Wait & REQ & next(_state) = GoDown & ( ( vcHome ) & ( ( pp2 ) & ( ! ( pp1 ) ) ) ): TRUE;
-	_state = Wait & REQ & next(_state) = Vacuum_On & ( ( vcHome ) & ( ( pp3 ) & ( ( ! ( pp2 ) ) & ( ! ( pp1 ) ) ) ) ): TRUE;
-	_state = Piece1 & REQ & next(_state) = Piece3 & ( c1End ): TRUE;
+	_state = GoUp & REQ & next(_state) = Wait & ( ( c2Home ) & ( ( c1Home ) & ( vcHome ) ) ): TRUE;
+	_state = Retract & REQ & next(_state) = Retract & ( ( c2Home ) & ( ( c1Home ) & ( vac ) ) ): TRUE;
+	_state = Wait & REQ & next(_state) = GoDown & ( ( vcHome ) & ( pp1 ) ): TRUE;
+	_state = Wait & REQ & next(_state) = Wait & ( ( vcHome ) & ( ( pp2 ) & ( ! ( pp1 ) ) ) ): TRUE;
+	_state = Wait & REQ & next(_state) = GoUp & ( ( vcHome ) & ( ( pp3 ) & ( ( ! ( pp2 ) ) & ( ! ( pp1 ) ) ) ) ): TRUE;
+	_state = Piece1 & REQ & next(_state) = Retract & ( c1End ): TRUE;
 	_state = Piece2 & REQ & next(_state) = Wait & ( c2End ): TRUE;
-	_state = Piece3 & REQ & next(_state) = GoDown & ( ( c2End ) & ( c1End ) ): TRUE;
-	_state = GoDown & REQ & next(_state) = Piece3 & ( ( ! ( ( c2Home ) & ( c1Home ) ) ) & ( pp2 ) ): TRUE;
-	_state = Vacuum_On & REQ & next(_state) = GoDown & ( vac ): TRUE;
+	_state = Piece3 & REQ & next(_state) = Piece1 & ( ( c2End ) & ( c1End ) ): TRUE;
+	_state = GoDown & REQ & next(_state) = Piece3 & ( ( ! ( ( c2Home ) & ( c1Home ) ) ) & ( vcEnd ) ): TRUE;
+	_state = Vacuum_On & REQ & next(_state) = Wait & ( vac ): TRUE;
 	_state = VacuumOff & REQ & next(_state) = Retract & ( ! ( vac ) ): TRUE;
-	_state = GoDown & REQ & next(_state) = Wait & ( ( c2Home ) & ( ( c1Home ) & ( vcEnd ) ) ): TRUE;
-	_state = GoUp & REQ & next(_state) = Wait & ( ( ( ! ( c2Home ) ) | ( ! ( c1Home ) ) ) & ( vcHome ) ): TRUE;
+	_state = GoDown & REQ & next(_state) = START & ( ( c2End ) & ( ( c1Home ) & ( vcEnd ) ) ): TRUE;
+	_state = GoUp & REQ & next(_state) = START & ( ( ( ! ( c2Home ) ) | ( ! ( c1Home ) ) ) & ( vcHome ) ): TRUE;
 TRUE : FALSE;
 esac;
  
@@ -59,15 +59,7 @@ init(c1Extend) := FALSE;
 next(c1Extend) := case
 	FALSE | next(_state) = Piece1 | next(_state) = Piece3  : TRUE;
  	FALSE | next(_state) = Retract | next(_state) = Wait  : FALSE;
- 	TRUE : c1Extend;
-esac;
- 
-init(c2Extend) := FALSE;
-
-next(c2Extend) := case
-	FALSE | next(_state) = Piece2 | next(_state) = Piece3  : TRUE;
- 	FALSE | next(_state) = Retract | next(_state) = Wait  : FALSE;
- 	TRUE : c2Extend;
+ 	TRUE :c1Extend;
 esac;
  
 init(c1Retract) := FALSE;
@@ -75,7 +67,15 @@ init(c1Retract) := FALSE;
 next(c1Retract) := case
 	FALSE | next(_state) = Retract  : TRUE;
  	FALSE | next(_state) = Wait  : FALSE;
- 	TRUE : c1Retract;
+ 	TRUE :c1Retract;
+esac;
+ 
+init(c2Extend) := FALSE;
+
+next(c2Extend) := case
+	FALSE | next(_state) = Piece2 | next(_state) = Piece3  : TRUE;
+ 	FALSE | next(_state) = Retract | next(_state) = Wait  : FALSE;
+ 	TRUE :c2Extend;
 esac;
  
 init(c2Retract) := FALSE;
@@ -83,7 +83,7 @@ init(c2Retract) := FALSE;
 next(c2Retract) := case
 	FALSE | next(_state) = Retract  : TRUE;
  	FALSE | next(_state) = Wait  : FALSE;
- 	TRUE : c2Retract;
+ 	TRUE :c2Retract;
 esac;
  
 init(vcExtend) := FALSE;
@@ -91,7 +91,7 @@ init(vcExtend) := FALSE;
 next(vcExtend) := case
 	FALSE | next(_state) = GoDown  : TRUE;
  	FALSE | next(_state) = GoUp | next(_state) = Wait  : FALSE;
- 	TRUE : vcExtend;
+ 	TRUE :vcExtend;
 esac;
  
 init(vacuum_on) := FALSE;
@@ -99,7 +99,7 @@ init(vacuum_on) := FALSE;
 next(vacuum_on) := case
 	FALSE | next(_state) = Vacuum_On  : TRUE;
  	FALSE | next(_state) = VacuumOff | next(_state) = Wait  : FALSE;
- 	TRUE : vacuum_on;
+ 	TRUE :vacuum_on;
 esac;
  
 init(vacuum_off) := FALSE;
@@ -107,7 +107,7 @@ init(vacuum_off) := FALSE;
 next(vacuum_off) := case
 	FALSE | next(_state) = VacuumOff  : TRUE;
  	FALSE | next(_state) = Vacuum_On | next(_state) = Wait  : FALSE;
- 	TRUE : vacuum_off;
+ 	TRUE :vacuum_off;
 esac;
  
 

@@ -1,12 +1,13 @@
 package ltlgen.fitnesses;
 
+import automat.Automat;
 import verifier.Verifier;
 
 import java.io.File;
 public class CorrectnessFitness extends SingleFitness{
 
     @Override
-    public double getFitness(String formula, int complexity) {
+    public double getFitness(String formula, int complexity, Automat automat,String []setOfCondition) {
 
         String row =new String();
         row="LTLSPEC "+formula;

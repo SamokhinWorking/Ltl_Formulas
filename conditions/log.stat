@@ -1,0 +1,60 @@
+Generation 0
+Best individual: ((!(((c1Home | vcHome) & (c2End | vcEnd))) & (!((pp3 & c2End)) | !((c1Home & pp3)))) | !(((!(vcHome) & (vac & pp3)) | !((c1End & pp1)))))
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.0 Fitness: 0.0
+--------------------
+Generation 1
+Best individual: (!(c1Home) & (c2End & vcHome))
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 2
+Best individual: ((c1Home | !((vcHome & vac))) & ((!(vcEnd) | (pp1 & pp3)) & vac))
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 3
+Best individual: (c2Home | vcHome)
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 4
+Best individual: ((!(vcHome) & !(pp2)) | (!(c2Home) | (vcEnd & vcHome)))
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 5
+Best individual: (((!(c1End) | (c1Home & c2End)) & !((c1End | pp2))) & (((c2End | vcHome) | (c1Home | c2Home)) | ((c1Home | c2Home) & (vac | c1Home))))
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 6
+Best individual: (!((vcHome | vcEnd)) & (!(c1Home) & (!(((pp3 | pp3) | (pp3 | vcEnd))) & ((!(vcEnd) | (pp3 | c2End)) | !((c1Home & c1End))))))
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 7
+Best individual: (!((!((c1Home | vac)) & !((vcEnd & pp3)))) & !((((vcHome & c2End) | (vcEnd | c1End)) | !((c2End | c2End)))))
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 8
+Best individual: ((!((c1End | vcHome)) & (c2Home | (vcEnd | pp1))) & pp1)
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.5 Fitness: 0.5
+--------------------
+Generation 9
+Best individual: ((!((!(vcEnd) & !(pp2))) | (((pp1 & c2End) & (vac & vac)) | ((c2Home | c1Home) & !(c2End)))) | (!(((c1Home & vcEnd) & (vcHome & c1End))) | ((!(c2End) & (pp3 & c2Home)) | !(c1End))))
+Fitness: [0.0]
+Strength: 0.0
+Distance: 0.5 Fitness: 0.5
+--------------------

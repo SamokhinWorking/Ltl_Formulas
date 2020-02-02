@@ -1,4 +1,5 @@
 package smv_model;
+import ec.util.Output;
 import helpClass.*;
 import parse.parseInfo;
 
@@ -32,6 +33,51 @@ public class SmvModel {
         }
 
     }
+    public String outputVarsDiscription(Algorithm algorithm,ECState ecState, String outputVar) {
+        //init(c1Extend) := FALSE;
+        String rowLine="init("+outputVar+") := FALSE;\n\nnext("+outputVar+") := case\n";
+        //smv.addNewRow(rowLine);
+
+
+        String rowT="\tFALSE | next(_state) = ";
+        String rowF="\tFALSE | next(_state) = ";
+
+        //row for TRUE / False
+        for (int i=0; i<algorithm.Text.length;i++)
+        {
+            String rowTrue=outputVar+":=TRUE";
+            String rowFalse=outputVar+":=FALSE";
+            if(algorithm.Text[i].contains(rowTrue)){
+
+                for(int j=0;j<ecState.Name.length;j++){
+                    if (ecState.Algorithm[j].equals(algorithm.Name[i])){
+                        rowT+=ecState.Name[j]+" | next(_state) = ";
+                        break;
+                    }
+                }
+
+            }
+            else if(algorithm.Text[i].contains(rowFalse)){
+                for(int j=0;j<ecState.Name.length;j++){
+                    if (ecState.Algorithm[j].equals(algorithm.Name[i])){
+                        rowF+=ecState.Name[j]+" | next(_state) = ";
+                        break;
+                    }
+                }
+            }
+
+        }
+        rowF=replaceLast(rowF,"| next(_state) ="," : FALSE;\n");
+        rowT=replaceLast(rowT,"| next(_state) ="," : TRUE;\n");
+        //smv.addNewRow(rowT);
+       // smv.addNewRow(rowF);
+        String closeRow="\tTRUE :"+outputVar+";\nesac;\n \n";
+        rowLine+=rowT+rowF+closeRow;
+
+        //smv.addNewRow(closeRow);
+        return rowLine;
+
+    }
 
     public static String replaceLast(String string, String toReplace, String replacement) {
         int pos = string.lastIndexOf(toReplace);
@@ -45,17 +91,19 @@ public class SmvModel {
     }
 
     public void buildSmvModel( ECState ecState, ECTransition ecTransition,
-                               Algorithm algorithm,String condition []){
+                               Algorithm algorithm,String condition [],String[] inputVars, String [] outputVars){
 
         try {
 
-            File file2 = new File("smv_model/first.smv");
+           // File file2 = new File("src/smv_model/first.smv");
 
             //Открываем 1-й файл для записи
             BufferedOutputStream bufOut = new BufferedOutputStream(new FileOutputStream(this.file, true)); // true - добавление в конец файла
 
             //Открываем 2-й файл для считывания
-            BufferedInputStream bufRead = new BufferedInputStream(new FileInputStream(file2));
+           // BufferedInputStream bufRead = new BufferedInputStream(new FileInputStream(file2));
+
+            /*
             int n;
             while ((n = bufRead.read()) != -1) {
                 bufOut.write(n);
@@ -63,38 +111,91 @@ public class SmvModel {
             bufOut.flush();      // Принудительно выталкиваем данные с буфера
             bufOut.close();     // Закрываем соединения
             bufRead.close();  //
+          */
+
+
+            String first;
+
+
 
             SmvModel smv = new SmvModel(this.file,this.path);
+
+            first="--controller model\n";// +
+                 //   "MODULE CONTROL(REQ, c1Home, c1End, c2Home, c2End, vcHome, vcEnd, pp1, pp2, pp3) \n" +
+                 //   "VAR\n";
+
+            smv.addNewRow(first);
+
+            // module control init vars
+            first="MODULE CONTROL(REQ,";
+            for(int i=0;i<inputVars.length-2;i++){
+                first+=inputVars[i]+", ";
+            }
+            first+=inputVars[inputVars.length-2]+")\nVAR\n";
+
+            first+="\t_state : {";
+
+            for(int i=0;i<ecState.Name.length-1;i++){
+                first+=ecState.Name[i]+", ";
+            }
+            first+=ecState.Name[ecState.Name.length-1]+"};\n";
+
+
+            first+="\tCNF : boolean;\n";
+            for(int i=0;i< outputVars.length;i++){
+                first+="\t"+outputVars[i]+" : boolean;\n";
+            }
+            first+="\tvs : boolean;\n"+
+                    "\tvac : boolean;\n\n";
+            smv.addNewRow(first);
+
+            first="ASSIGN\n\tinit(_state) := "+ecState.Name[0]+";\n\n"+
+            "--variable part of controller starts here--\n\n"+
+            "next(_state) := case\n";
+            smv.addNewRow(first);
+
+
             String row = "_state = ";
 
-            /*
-            //replace INIT
-            for (int i=0;i<ecTransition.Source.length;i++){
-                ecTransition.Source[i]=ecTransition.Source[i].replace("INIT","INIT_S");
-                ecTransition.Destination[i]=ecTransition.Destination[i].replace("INIT","INIT_S");
-            }
-            */
-            // add next(_state) := case
 
 
 
             // replace AND -> &
             for (int i=0;i<condition.length;i++){
-                condition[i]=condition[i].replace("AND","&");
-            }
-            // replace OR -> |
-            for (int i=0;i<condition.length;i++){
-                condition[i]=condition[i].replace("OR","|");
-            }
-            // replace NOT -> !
-            for (int i=0;i<condition.length;i++){
-                condition[i]=condition[i].replace("NOT","!");
+                if(condition[i].contains("AND")) {
+                    condition[i] = condition[i].replace("AND", "&");
+                }
+                // replace OR -> |
+                if(condition[i].contains("OR"))
+                {
+                    condition[i] = condition[i].replace("OR", "|");
+                }
+                // replace NOT -> !
+                if(condition[i].contains("NOT")) {
+                    condition[i] = condition[i].replace("NOT", "!");
+                }
+
             }
 
 
-            for(int i=0; i<condition.length;i++)
-            {
+
+            // ot pervonachalnogo ya vischitau pervii stroki statov, a tolko potom yje next
+
+
+
+
+
+
                 String rowToAdd="\n";
+                rowToAdd = "\t" + row + ecTransition.Source[0]  + " : "
+                        + ecTransition.Destination[0] + ";\n";
+                smv.addNewRow(rowToAdd);
+
+
+
+            for(int i=1; i<condition.length;i++)
+            {
+                rowToAdd="\n";
                 if(!ecTransition.Destination[i].equals("INIT_S")){
 
                     if(!ecTransition.Source[i].equals("INIT_S")) {
@@ -124,14 +225,14 @@ public class SmvModel {
 
             //next(CNF) := case
 
-
+            // just change "i" from "0" -> "2"
 
             String rowLine="next(CNF) := case\n";
             smv.addNewRow(rowLine);
             String next_state=" next(_state) ";
-            for(int i=0; i<condition.length;i++)
+            for(int i=1; i<condition.length;i++)
             {
-                String rowToAdd="\n";
+                rowToAdd="\n";
                 if(!ecTransition.Destination[i].equals("INIT_S")){
 
                     if(!ecTransition.Source[i].equals("INIT_S") && !ecTransition.Source[i].equals("START")) {
@@ -147,303 +248,14 @@ public class SmvModel {
             smv.addNewRow(closeRow);
 
 
+            //outputVars description
 
-
-            //init(c1Extend) := FALSE;
-            rowLine="init(c1Extend) := FALSE;\n\nnext(c1Extend) := case\n";
-            smv.addNewRow(rowLine);
-
-
-            String rowT="\tFALSE | next(_state) = ";
-            String rowF="\tFALSE | next(_state) = ";
-
-            //row for TRUE / False
-            for (int i=1; i<algorithm.Text.length;i++)
-            {
-                String rowTrue="c1Extend:=TRUE";
-                String rowFalse="c1Extend:=FALSE";
-                if(algorithm.Text[i].contains(rowTrue)){
-
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowT+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-
-                }
-                else if(algorithm.Text[i].contains(rowFalse)){
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowF+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-                }
-
+            for(int i=0;i<outputVars.length;i++){
+                rowToAdd=outputVarsDiscription(algorithm,ecState,outputVars[i]);
+                smv.addNewRow(rowToAdd);
             }
-            rowF=replaceLast(rowF,"| next(_state) ="," : FALSE;\n");
-            rowT=replaceLast(rowT,"| next(_state) ="," : TRUE;\n");
-            smv.addNewRow(rowT);
-            smv.addNewRow(rowF);
-            closeRow="\tTRUE : c1Extend;\nesac;\n \n";
-            smv.addNewRow(closeRow);
 
-            //c2Extend
-
-            rowLine="init(c2Extend) := FALSE;\n\nnext(c2Extend) := case\n";
-            smv.addNewRow(rowLine);
-
-
-
-            rowT="\tFALSE | next(_state) = ";
-            rowF="\tFALSE | next(_state) = ";
-
-            //row for TRUE / False
-            for (int i=1; i<algorithm.Text.length;i++)
-            {
-                String rowTrue="c2Extend:=TRUE";
-                String rowFalse="c2Extend:=FALSE";
-                if(algorithm.Text[i].contains(rowTrue)){
-
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowT+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-
-                }
-                else if(algorithm.Text[i].contains(rowFalse)){
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowF+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-                }
-
-            }
-            rowF=replaceLast(rowF,"| next(_state) ="," : FALSE;\n");
-            rowT=replaceLast(rowT,"| next(_state) ="," : TRUE;\n");
-            smv.addNewRow(rowT);
-            smv.addNewRow(rowF);
-            closeRow="\tTRUE : c2Extend;\nesac;\n \n";
-            smv.addNewRow(closeRow);
-
-            //c1Retract
-
-            rowLine="init(c1Retract) := FALSE;\n\nnext(c1Retract) := case\n";
-            smv.addNewRow(rowLine);
-
-            rowT="\tFALSE | next(_state) = ";
-            rowF="\tFALSE | next(_state) = ";
-
-            //row for TRUE / False
-            for (int i=1; i<algorithm.Text.length;i++)
-            {
-                String rowTrue="c1Retract:=TRUE";
-                String rowFalse="c1Retract:=FALSE";
-                if(algorithm.Text[i].contains(rowTrue)){
-
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowT+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-
-                }
-                else if(algorithm.Text[i].contains(rowFalse)){
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowF+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-                }
-
-            }
-            rowF=replaceLast(rowF,"| next(_state) ="," : FALSE;\n");
-            rowT=replaceLast(rowT,"| next(_state) ="," : TRUE;\n");
-            smv.addNewRow(rowT);
-            smv.addNewRow(rowF);
-            closeRow="\tTRUE : c1Retract;\nesac;\n \n";
-            smv.addNewRow(closeRow);
-
-
-            //c2Retract
-
-            rowLine="init(c2Retract) := FALSE;\n\nnext(c2Retract) := case\n";
-            smv.addNewRow(rowLine);
-
-            rowT="\tFALSE | next(_state) = ";
-            rowF="\tFALSE | next(_state) = ";
-
-            //row for TRUE / False
-            for (int i=1; i<algorithm.Text.length;i++)
-            {
-                String rowTrue="c2Retract:=TRUE";
-                String rowFalse="c2Retract:=FALSE";
-                if(algorithm.Text[i].contains(rowTrue)){
-
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowT+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-
-                }
-                else if(algorithm.Text[i].contains(rowFalse)){
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowF+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-                }
-
-            }
-            rowF=replaceLast(rowF,"| next(_state) ="," : FALSE;\n");
-            rowT=replaceLast(rowT,"| next(_state) ="," : TRUE;\n");
-            smv.addNewRow(rowT);
-            smv.addNewRow(rowF);
-            closeRow="\tTRUE : c2Retract;\nesac;\n \n";
-            smv.addNewRow(closeRow);
-
-            //vcExtend
-
-            rowLine="init(vcExtend) := FALSE;\n\nnext(vcExtend) := case\n";
-            smv.addNewRow(rowLine);
-
-
-
-            rowT="\tFALSE | next(_state) = ";
-            rowF="\tFALSE | next(_state) = ";
-
-            //row for TRUE / False
-            for (int i=1; i<algorithm.Text.length;i++)
-            {
-                String rowTrue="vcExtend:=TRUE";
-                String rowFalse="vcExtend:=FALSE";
-                if(algorithm.Text[i].contains(rowTrue)){
-
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowT+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-
-                }
-                else if(algorithm.Text[i].contains(rowFalse)){
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowF+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-                }
-
-            }
-            rowF=replaceLast(rowF,"| next(_state) ="," : FALSE;\n");
-            rowT=replaceLast(rowT,"| next(_state) ="," : TRUE;\n");
-            smv.addNewRow(rowT);
-            smv.addNewRow(rowF);
-            closeRow="\tTRUE : vcExtend;\nesac;\n \n";
-            smv.addNewRow(closeRow);
-
-
-
-            //vacuum_on
-
-
-            rowLine="init(vacuum_on) := FALSE;\n\nnext(vacuum_on) := case\n";
-            smv.addNewRow(rowLine);
-
-
-
-            rowT="\tFALSE | next(_state) = ";
-            rowF="\tFALSE | next(_state) = ";
-
-            //row for TRUE / False
-            for (int i=1; i<algorithm.Text.length;i++)
-            {
-                String rowTrue="vacuum_on:=TRUE";
-                String rowFalse="vacuum_on:=FALSE";
-                if(algorithm.Text[i].contains(rowTrue)){
-
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowT+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-
-                }
-                else if(algorithm.Text[i].contains(rowFalse)){
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowF+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-                }
-
-            }
-            rowF=replaceLast(rowF,"| next(_state) ="," : FALSE;\n");
-            rowT=replaceLast(rowT,"| next(_state) ="," : TRUE;\n");
-            smv.addNewRow(rowT);
-            smv.addNewRow(rowF);
-            closeRow="\tTRUE : vacuum_on;\nesac;\n \n";
-            smv.addNewRow(closeRow);
-
-
-            //vacuum_off
-
-            rowLine="init(vacuum_off) := FALSE;\n\nnext(vacuum_off) := case\n";
-            smv.addNewRow(rowLine);
-
-
-
-            rowT="\tFALSE | next(_state) = ";
-            rowF="\tFALSE | next(_state) = ";
-
-            //row for TRUE / False
-            for (int i=1; i<algorithm.Text.length;i++)
-            {
-                String rowTrue="vacuum_off:=TRUE";
-                String rowFalse="vacuum_off:=FALSE";
-                if(algorithm.Text[i].contains(rowTrue)){
-
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowT+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-
-                }
-                else if(algorithm.Text[i].contains(rowFalse)){
-                    for(int j=0;j<ecState.Name.length;j++){
-                        if (ecState.Algorithm[j].equals(algorithm.Name[i])){
-                            rowF+=ecState.Name[j]+" | next(_state) = ";
-                            break;
-                        }
-                    }
-                }
-
-            }
-            rowF=replaceLast(rowF,"| next(_state) ="," : FALSE;\n");
-            rowT=replaceLast(rowT,"| next(_state) ="," : TRUE;\n");
-            smv.addNewRow(rowT);
-            smv.addNewRow(rowF);
-            closeRow="\tTRUE : vacuum_off;\nesac;\n \n";
-            smv.addNewRow(closeRow);
-
-
-            File file3 = new File("smv_model/C.smv");
+            File file3 = new File("src/smv_model/C.smv");
 
             //Открываем 1-й файл для записи
             BufferedOutputStream bufOut2 = new BufferedOutputStream(new FileOutputStream(this.file, true)); // true - добавление в конец файла
@@ -471,7 +283,7 @@ public class SmvModel {
     }
     public void clearFile(){
         try{
-            FileWriter fw = new FileWriter("smv_model/Controller.smv");
+            FileWriter fw = new FileWriter("src/smv_model/Controller.smv");
             PrintWriter pw = new PrintWriter(fw);
             pw.write("");
             pw.flush();
@@ -509,7 +321,7 @@ public class SmvModel {
             }
             BooleanExpressionTree [] someTree =trees.toArray(new BooleanExpressionTree[trees.size()]);
             String [] condition= new String[someTree.length];
-            someTree[3].changeTree(someTree[11]);
+            //someTree[3].changeTree(someTree[11]);
 
             for(int i=0;i<someTree.length;i++)
             {
@@ -517,15 +329,11 @@ public class SmvModel {
             }
 
 
-            //File file = new File("src/smv_model/Controller.smv");
-            //SmvModel smv = new SmvModel(file, "src/smv_model/Controller.smv");
-
-
-            File file = new File("smv_model/Controller.smv");
-            SmvModel smv = new SmvModel(file, "smv_model/Controller.smv");
+            File file = new File("src/smv_model/Controller.smv");
+            SmvModel smv = new SmvModel(file, "src/smv_model/Controller.smv");
 
             smv.clearFile();
-            smv.buildSmvModel(ecState,ecTransition,algorithm,condition);
+            smv.buildSmvModel(ecState,ecTransition,algorithm,condition,inputVars,outputVars);
 
            // System.out.println("infix expression is");
         }

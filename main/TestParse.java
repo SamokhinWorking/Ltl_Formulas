@@ -49,7 +49,7 @@ public class TestParse {
             {
                 System.out.println(outputVars[i]);
             }
-            ecState.printECState();
+           // ecState.printECState();
             ecTransition.printECTransition();
             algorithm.printAlgorithm();
 

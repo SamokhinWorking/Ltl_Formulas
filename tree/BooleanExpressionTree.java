@@ -115,7 +115,7 @@ public class BooleanExpressionTree {
     // Returns root of constructed tree for given
     // postfix expression
     Node constructTreeHelp(String str) {
-        Stack<Node> st = new Stack<Node>();
+        Stack<Node> st = new Stack();
         Node t, t1, t2;
         String [] expresion=toStringArray(str);
 
@@ -327,7 +327,7 @@ public class BooleanExpressionTree {
         //the tree t2 with our value
         Node t2=new Node(value);
 
-        Stack<Node> st = new Stack <Node>();
+        Stack<Node> st = new Stack();
 
         st.push(t1);
         Node tmp=t1;
@@ -471,7 +471,7 @@ public class BooleanExpressionTree {
       // System.out.println("for what change -> "+t2.value);
        // System.out.println();
 
-        Stack<Node> st = new Stack <Node>();
+        Stack<Node> st = new Stack();
 
         st.push(t1);
         Node tmp=t1;
