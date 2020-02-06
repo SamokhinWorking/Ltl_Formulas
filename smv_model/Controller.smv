@@ -1,7 +1,7 @@
 --controller model
 MODULE CONTROL(REQ,c1Home, c1End, c2Home, c2End, vcHome, vcEnd, pp1, pp2, pp3)
 VAR
-	_state : {START, INIT_S, GoDown, Wait, Piece1, Piece2, Piece3, Vacuum_On, GoUp, VacuumOff, Retract};
+	_state : {state_0, state_1, state_2, state_3, state_4, state_5, state_6, state_7};
 	CNF : boolean;
 	c1Extend : boolean;
 	c1Retract : boolean;
@@ -14,99 +14,94 @@ VAR
 	vac : boolean;
 
 ASSIGN
-	init(_state) := START;
+	init(_state) := state_0;
 
 --variable part of controller starts here--
 
 next(_state) := case
-	_state = START : INIT_S;
-	_state = INIT_S : VacuumOff;
-	_state = GoUp & REQ & ( ( c2Home ) & ( ( c1Home ) & ( vcHome ) ) ) : Wait;
-	_state = Retract & REQ & ( ( c2Home ) & ( ( c1Home ) & ( vac ) ) ) : Retract;
-	_state = Wait & REQ & ( ( vcHome ) & ( pp1 ) ) : GoDown;
-	_state = Wait & REQ & ( ( vcHome ) & ( ( pp2 ) & ( ! ( pp1 ) ) ) ) : Wait;
-	_state = Wait & REQ & ( ( vcHome ) & ( ( pp3 ) & ( ( ! ( pp2 ) ) & ( ! ( pp1 ) ) ) ) ) : GoUp;
-	_state = Piece1 & REQ & ( c1End ) : Retract;
-	_state = Piece2 & REQ & ( c2End ) : Wait;
-	_state = Piece3 & REQ & ( ( c2End ) & ( c1End ) ) : Piece1;
-	_state = GoDown & REQ & ( ( ! ( ( c2Home ) & ( c1Home ) ) ) & ( vcEnd ) ) : Piece3;
-	_state = Vacuum_On & REQ & ( vac ) : Wait;
-	_state = VacuumOff & REQ & ( ! ( vac ) ) : Retract;
-	_state = GoDown & REQ & ( ( c2End ) & ( ( c1Home ) & ( vcEnd ) ) ) : START;
-	_state = GoUp & REQ & ( ( ( ! ( c2Home ) ) | ( ! ( c1Home ) ) ) & ( vcHome ) ) : START;
+	_state = state_0 : state_1;
+	_state = state_1 & REQ & (c1End & pp1) : state_6;
+	_state = state_2 & REQ & ((((!(vac) & (vcEnd | vcEnd)) | (vcEnd | vcEnd)) -> ((!(c2Home) & (vac | c2Home)) & !((c1Home & c2End)))) & (((pp2 | pp2) -> ((vcEnd | c1End) & (c1Home & pp3))) & (((c1Home | pp2) & (c1Home | c1Home)) | (!(c2End) & (vac | vac))))) : state_4;
+	_state = state_3 & REQ & (((vcHome -> (vcEnd | vac)) -> (((vcHome & pp2) & (pp3 | c2End)) & !((vcHome | pp1)))) & (!(((vac & c2End) & !(c1Home))) & ((vac & vcEnd) & (vcHome -> (c1Home | vcEnd))))) : state_2;
+	_state = state_4 & REQ & (pp1 & vcEnd) : state_6;
+	_state = state_5 & REQ & (((c2Home | vcHome) -> ((vcEnd | c2Home) -> ((c1End & c2Home) & (!((c1Home | (c1End | pp1))) & vcEnd)))) | c2End) : state_4;
+	_state = state_6 & REQ & (((!((c2Home & vcHome)) & !((c2Home | vcHome))) | (!((c1Home | pp2)) & !((c1Home & vcEnd)))) & ((((pp1 & pp2) | (c2End & vcEnd)) & ((vcHome | pp1) | (c1Home & vcHome))) & ((c2Home & c1Home) -> (!((c2End | pp2)) & (vcHome & vcHome))))) : state_5;
+	_state = state_7 & REQ & ((!((vcEnd | vac)) & ((pp2 & c2Home) | (vcEnd & c2Home))) | ((vac & pp2) -> (vcEnd & c1Home))) : state_2;
+	_state = state_6 & REQ & (!(vac) & (c2Home | vcHome)) : state_3;
+	_state = state_2 & REQ & (c1End -> (c2Home & c1Home)) : state_7;
+	_state = state_2 & REQ & ((!(vcEnd) & (pp1 & vac)) | ((vcHome & c2End) & (vac & c2End))) : state_1;
+	_state = state_6 & REQ & ((pp2 & vcEnd) -> !((c1End -> (c2Home & c1End)))) : state_1;
 TRUE : _state;
 esac;
  
 next(CNF) := case
-	_state = GoUp & REQ & next(_state) = Wait & ( ( c2Home ) & ( ( c1Home ) & ( vcHome ) ) ): TRUE;
-	_state = Retract & REQ & next(_state) = Retract & ( ( c2Home ) & ( ( c1Home ) & ( vac ) ) ): TRUE;
-	_state = Wait & REQ & next(_state) = GoDown & ( ( vcHome ) & ( pp1 ) ): TRUE;
-	_state = Wait & REQ & next(_state) = Wait & ( ( vcHome ) & ( ( pp2 ) & ( ! ( pp1 ) ) ) ): TRUE;
-	_state = Wait & REQ & next(_state) = GoUp & ( ( vcHome ) & ( ( pp3 ) & ( ( ! ( pp2 ) ) & ( ! ( pp1 ) ) ) ) ): TRUE;
-	_state = Piece1 & REQ & next(_state) = Retract & ( c1End ): TRUE;
-	_state = Piece2 & REQ & next(_state) = Wait & ( c2End ): TRUE;
-	_state = Piece3 & REQ & next(_state) = Piece1 & ( ( c2End ) & ( c1End ) ): TRUE;
-	_state = GoDown & REQ & next(_state) = Piece3 & ( ( ! ( ( c2Home ) & ( c1Home ) ) ) & ( vcEnd ) ): TRUE;
-	_state = Vacuum_On & REQ & next(_state) = Wait & ( vac ): TRUE;
-	_state = VacuumOff & REQ & next(_state) = Retract & ( ! ( vac ) ): TRUE;
-	_state = GoDown & REQ & next(_state) = START & ( ( c2End ) & ( ( c1Home ) & ( vcEnd ) ) ): TRUE;
-	_state = GoUp & REQ & next(_state) = START & ( ( ( ! ( c2Home ) ) | ( ! ( c1Home ) ) ) & ( vcHome ) ): TRUE;
+	_state = state_1 & REQ & next(_state) = state_6 & (c1End & pp1): TRUE;
+	_state = state_2 & REQ & next(_state) = state_4 & ((((!(vac) & (vcEnd | vcEnd)) | (vcEnd | vcEnd)) -> ((!(c2Home) & (vac | c2Home)) & !((c1Home & c2End)))) & (((pp2 | pp2) -> ((vcEnd | c1End) & (c1Home & pp3))) & (((c1Home | pp2) & (c1Home | c1Home)) | (!(c2End) & (vac | vac))))): TRUE;
+	_state = state_3 & REQ & next(_state) = state_2 & (((vcHome -> (vcEnd | vac)) -> (((vcHome & pp2) & (pp3 | c2End)) & !((vcHome | pp1)))) & (!(((vac & c2End) & !(c1Home))) & ((vac & vcEnd) & (vcHome -> (c1Home | vcEnd))))): TRUE;
+	_state = state_4 & REQ & next(_state) = state_6 & (pp1 & vcEnd): TRUE;
+	_state = state_5 & REQ & next(_state) = state_4 & (((c2Home | vcHome) -> ((vcEnd | c2Home) -> ((c1End & c2Home) & (!((c1Home | (c1End | pp1))) & vcEnd)))) | c2End): TRUE;
+	_state = state_6 & REQ & next(_state) = state_5 & (((!((c2Home & vcHome)) & !((c2Home | vcHome))) | (!((c1Home | pp2)) & !((c1Home & vcEnd)))) & ((((pp1 & pp2) | (c2End & vcEnd)) & ((vcHome | pp1) | (c1Home & vcHome))) & ((c2Home & c1Home) -> (!((c2End | pp2)) & (vcHome & vcHome))))): TRUE;
+	_state = state_7 & REQ & next(_state) = state_2 & ((!((vcEnd | vac)) & ((pp2 & c2Home) | (vcEnd & c2Home))) | ((vac & pp2) -> (vcEnd & c1Home))): TRUE;
+	_state = state_6 & REQ & next(_state) = state_3 & (!(vac) & (c2Home | vcHome)): TRUE;
+	_state = state_2 & REQ & next(_state) = state_7 & (c1End -> (c2Home & c1Home)): TRUE;
+	_state = state_2 & REQ & next(_state) = state_1 & ((!(vcEnd) & (pp1 & vac)) | ((vcHome & c2End) & (vac & c2End))): TRUE;
+	_state = state_6 & REQ & next(_state) = state_1 & ((pp2 & vcEnd) -> !((c1End -> (c2Home & c1End)))): TRUE;
 TRUE : FALSE;
 esac;
  
 init(c1Extend) := FALSE;
 
 next(c1Extend) := case
-	FALSE | next(_state) = Piece1 | next(_state) = Piece3  : TRUE;
- 	FALSE | next(_state) = Retract | next(_state) = Wait  : FALSE;
+	FALSE | next(_state) = state_2  : TRUE;
+ 	FALSE | next(_state) = state_0 | next(_state) = state_3 | next(_state) = state_4 | next(_state) = state_6 | next(_state) = state_7  : FALSE;
  	TRUE :c1Extend;
 esac;
  
 init(c1Retract) := FALSE;
 
 next(c1Retract) := case
-	FALSE | next(_state) = Retract  : TRUE;
- 	FALSE | next(_state) = Wait  : FALSE;
+	FALSE | next(_state) = state_1 | next(_state) = state_3 | next(_state) = state_4 | next(_state) = state_7  : TRUE;
+ 	FALSE | next(_state) = state_0 | next(_state) = state_2 | next(_state) = state_5 | next(_state) = state_6  : FALSE;
  	TRUE :c1Retract;
 esac;
  
 init(c2Extend) := FALSE;
 
 next(c2Extend) := case
-	FALSE | next(_state) = Piece2 | next(_state) = Piece3  : TRUE;
- 	FALSE | next(_state) = Retract | next(_state) = Wait  : FALSE;
+	FALSE | next(_state) = state_5  : TRUE;
+ 	FALSE | next(_state) = state_0 | next(_state) = state_1 | next(_state) = state_2  : FALSE;
  	TRUE :c2Extend;
 esac;
  
 init(c2Retract) := FALSE;
 
 next(c2Retract) := case
-	FALSE | next(_state) = Retract  : TRUE;
- 	FALSE | next(_state) = Wait  : FALSE;
+	FALSE | next(_state) = state_5 | next(_state) = state_7  : TRUE;
+ 	FALSE | next(_state) = state_0  : FALSE;
  	TRUE :c2Retract;
 esac;
  
 init(vcExtend) := FALSE;
 
 next(vcExtend) := case
-	FALSE | next(_state) = GoDown  : TRUE;
- 	FALSE | next(_state) = GoUp | next(_state) = Wait  : FALSE;
+	FALSE | next(_state) = state_7  : TRUE;
+ 	FALSE | next(_state) = state_0 | next(_state) = state_2 | next(_state) = state_3  : FALSE;
  	TRUE :vcExtend;
 esac;
  
 init(vacuum_on) := FALSE;
 
 next(vacuum_on) := case
-	FALSE | next(_state) = Vacuum_On  : TRUE;
- 	FALSE | next(_state) = VacuumOff | next(_state) = Wait  : FALSE;
+	FALSE | next(_state) = state_2 | next(_state) = state_4 | next(_state) = state_5 | next(_state) = state_7  : TRUE;
+ 	FALSE | next(_state) = state_0 | next(_state) = state_1  : FALSE;
  	TRUE :vacuum_on;
 esac;
  
 init(vacuum_off) := FALSE;
 
 next(vacuum_off) := case
-	FALSE | next(_state) = VacuumOff  : TRUE;
- 	FALSE | next(_state) = Vacuum_On | next(_state) = Wait  : FALSE;
+	FALSE | next(_state) = state_4 | next(_state) = state_5  : TRUE;
+ 	FALSE | next(_state) = state_0 | next(_state) = state_1 | next(_state) = state_3 | next(_state) = state_7  : FALSE;
  	TRUE :vacuum_off;
 esac;
  

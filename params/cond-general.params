@@ -118,12 +118,12 @@ gp.fs.0.func.3.nc = oth0
 
 
 stat = ec.multiobjective.MultiObjectiveStatistics
-stat.front = $src/conditions/front.stat
-stat.file = $src/conditions/out.stat
+stat.front = $conditions/front.stat
+stat.file = $conditions/out.stat
 
 stat.num-children = 1
 stat.child.0 = ltlgenCondition.DataConditionStatistics
-stat.child.0.log = $src/conditions/log.stat
-stat.child.0.result = $src/conditions/result.stat
-stat.child.0.result-humans = $src/conditions/result-humans.stat
+stat.child.0.log = $conditions/log.stat
+stat.child.0.result = $conditions/result.stat
+stat.child.0.result-humans = $conditions/result-humans.stat
 stat.child.0.best-number = 50

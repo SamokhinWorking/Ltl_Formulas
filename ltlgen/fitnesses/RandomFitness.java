@@ -283,8 +283,8 @@ public class RandomFitness extends SingleFitness{
 
         //create smv file
 
-        File file1 = new File("src/smv_model/Controller.smv");
-        SmvModel smv = new SmvModel(file1, "src/smv_model/Controller.smv");
+        File file1 = new File("smv_model/Controller.smv");
+        SmvModel smv = new SmvModel(file1, "smv_model/Controller.smv");
 
 
         smv.clearFile();
@@ -295,12 +295,12 @@ public class RandomFitness extends SingleFitness{
 
         String row = new String();
         row = "\nLTLSPEC " + formula;
-        File file = new File("src/smv_model/Controller.smv");
+        File file = new File("smv_model/Controller.smv");
         Verifier ver = new Verifier(file);
         ver.addNewRow(row);
 
         int test;
-        test = ver.testLtlFormulas("src/smv_model/Controller.smv");
+        test = ver.testLtlFormulas("smv_model/Controller.smv");
         ver.deleteLastRow();
 
         if(test==1)

@@ -23,13 +23,12 @@ eval.problem.fitness.0.threshold = 0.04
 eval.problem.fitness.1 = ltlgen.fitnesses.CorrectnessFitness
 eval.problem.fitness.1.threshold = 0.75
 
-eval.problem.fitness.2 = ltlgen.fitnesses.MutatedFitness
-#eval.problem.fitness.2.number =50
-
-#eval.problem.fitness.2 = ltlgen.fitnesses.RandomFitness
+#eval.problem.fitness.2 = ltlgen.fitnesses.MutatedFitness
 
 
-#eval.problem.fitness.3.number =50
+eval.problem.fitness.2 = ltlgen.fitnesses.RandomFitness
+
+
 
 
 

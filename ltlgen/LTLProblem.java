@@ -103,7 +103,7 @@ public class LTLProblem extends GPProblem {
 
             //change my file add automat to function getFitness()
             Automat automat = new Automat("CentralController.xml");
-            String [] setOfCondition=TakeConditions("src/conditions/result-humans.stat");
+            String [] setOfCondition=TakeConditions("conditions/result-humans.stat");
 
             /*
             KozaFitness f =(KozaFitness) ind.fitness;

@@ -6,7 +6,7 @@ parent.0 = cond-spea2.params
 #
 
 pop.subpop.0.size = 500
-generations = 10
+generations = 50
 
 #
 # Fitness

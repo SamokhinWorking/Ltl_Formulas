@@ -130,12 +130,12 @@ gp.fs.0.func.9.nc = oth0
 
 
 stat = ec.multiobjective.MultiObjectiveStatistics
-stat.front = $src/output/front.stat
-stat.file = $src/output/out.stat
+stat.front = $output/front.stat
+stat.file = $output/out.stat
 
 stat.num-children = 1
 stat.child.0 = ltlgen.LTLStatistics
-stat.child.0.log = $src/output/log.stat
-stat.child.0.result = $src/output/result.stat
-stat.child.0.result-humans = $src/output/result-humans.stat
+stat.child.0.log = $output/log.stat
+stat.child.0.result = $output/result.stat
+stat.child.0.result-humans = $output/result-humans.stat
 stat.child.0.best-number = 50
