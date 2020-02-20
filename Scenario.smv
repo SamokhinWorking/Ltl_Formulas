@@ -1,0 +1,447 @@
+MODULE CONTROL(REQ, c1Home,c1End,c2Home,c2End,vcHome,vcEnd,pp1,pp2,pp3,vac)
+VAR
+    _state : {s1, s2, s3, s4, s5, s6, s7, s8};
+    CNF : boolean;
+    c1Extend : boolean;
+    c1Retract : boolean;
+    c2Extend : boolean;
+    c2Retract : boolean;
+    vcExtend : boolean;
+    vacuum_on : boolean;
+    vacuum_off : boolean;
+ASSIGN
+    init(_state) := s1;
+    next(_state) := case
+        _state=s1 & REQ & (pp2) : s2;
+        _state=s1 & REQ & (pp3) : s3;
+        _state=s1 & REQ & (pp1) : s4;
+        _state=s2 & REQ & (c2End) : s5;
+        _state=s3 & REQ & (c2End) : s5;
+        _state=s4 & REQ & (c1End) : s5;
+        _state=s5 & REQ & (!vac & vcEnd) : s6;
+        _state=s5 & REQ & (vcHome & vac) : s7;
+        _state=s6 & REQ & (c2End) : s5;
+        _state=s6 & REQ & (pp1) : s5;
+        _state=s6 & REQ & (vcEnd) : s8;
+        _state=s7 & REQ & (pp1) : s4;
+        _state=s7 & REQ & (pp2) : s2;
+        _state=s7 & REQ & (pp3) : s3;
+        _state=s7 & REQ & (c2Home & vac & c1Home) : s6;
+        _state=s8 & REQ & (vcEnd) : s7;
+        TRUE : _state;
+    esac;
+    
+    init(CNF) := FALSE;
+    next(CNF) := case
+        _state=s1 & REQ & (pp2) : TRUE;
+        _state=s1 & REQ & (pp3) : TRUE;
+        _state=s1 & REQ & (pp1) : TRUE;
+        _state=s2 & REQ & (c2End) : TRUE;
+        _state=s3 & REQ & (c2End) : TRUE;
+        _state=s4 & REQ & (c1End) : TRUE;
+        _state=s5 & REQ & (!vac & vcEnd) : TRUE;
+        _state=s5 & REQ & (vcHome & vac) : TRUE;
+        _state=s6 & REQ & (c2End) : TRUE;
+        _state=s6 & REQ & (pp1) : TRUE;
+        _state=s6 & REQ & (vcEnd) : TRUE;
+        _state=s7 & REQ & (pp1) : TRUE;
+        _state=s7 & REQ & (pp2) : TRUE;
+        _state=s7 & REQ & (pp3) : TRUE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) : TRUE;
+        _state=s8 & REQ & (vcEnd) : TRUE;
+        TRUE : FALSE;
+    esac;
+    
+    init(c1Extend) := FALSE;
+    next(c1Extend) := case
+        _state=s1 & REQ & (pp2) & !c1Extend : FALSE;
+        _state=s1 & REQ & (pp2) & c1Extend : TRUE;
+        _state=s1 & REQ & (pp3) & !c1Extend : TRUE;
+        _state=s1 & REQ & (pp3) & c1Extend : TRUE;
+        _state=s1 & REQ & (pp1) & !c1Extend : TRUE;
+        _state=s1 & REQ & (pp1) & c1Extend : TRUE;
+        _state=s2 & REQ & (c2End) & !c1Extend : FALSE;
+        _state=s2 & REQ & (c2End) & c1Extend : TRUE;
+        _state=s3 & REQ & (c2End) & !c1Extend : FALSE;
+        _state=s3 & REQ & (c2End) & c1Extend : TRUE;
+        _state=s4 & REQ & (c1End) & !c1Extend : FALSE;
+        _state=s4 & REQ & (c1End) & c1Extend : TRUE;
+        _state=s5 & REQ & (!vac & vcEnd) & !c1Extend : FALSE;
+        _state=s5 & REQ & (!vac & vcEnd) & c1Extend : TRUE;
+        _state=s5 & REQ & (vcHome & vac) & !c1Extend : FALSE;
+        _state=s5 & REQ & (vcHome & vac) & c1Extend : FALSE;
+        _state=s6 & REQ & (c2End) & !c1Extend : FALSE;
+        _state=s6 & REQ & (c2End) & c1Extend : TRUE;
+        _state=s6 & REQ & (pp1) & !c1Extend : FALSE;
+        _state=s6 & REQ & (pp1) & c1Extend : TRUE;
+        _state=s6 & REQ & (vcEnd) & !c1Extend : FALSE;
+        _state=s6 & REQ & (vcEnd) & c1Extend : TRUE;
+        _state=s7 & REQ & (pp1) & !c1Extend : TRUE;
+        _state=s7 & REQ & (pp1) & c1Extend : TRUE;
+        _state=s7 & REQ & (pp2) & !c1Extend : FALSE;
+        _state=s7 & REQ & (pp2) & c1Extend : TRUE;
+        _state=s7 & REQ & (pp3) & !c1Extend : TRUE;
+        _state=s7 & REQ & (pp3) & c1Extend : TRUE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & !c1Extend : FALSE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & c1Extend : TRUE;
+        _state=s8 & REQ & (vcEnd) & !c1Extend : FALSE;
+        _state=s8 & REQ & (vcEnd) & c1Extend : FALSE;
+        TRUE : c1Extend;
+    esac;
+    
+    init(c1Retract) := FALSE;
+    next(c1Retract) := case
+        _state=s1 & REQ & (pp2) & !c1Retract : FALSE;
+        _state=s1 & REQ & (pp2) & c1Retract : FALSE;
+        _state=s1 & REQ & (pp3) & !c1Retract : FALSE;
+        _state=s1 & REQ & (pp3) & c1Retract : FALSE;
+        _state=s1 & REQ & (pp1) & !c1Retract : FALSE;
+        _state=s1 & REQ & (pp1) & c1Retract : FALSE;
+        _state=s2 & REQ & (c2End) & !c1Retract : FALSE;
+        _state=s2 & REQ & (c2End) & c1Retract : TRUE;
+        _state=s3 & REQ & (c2End) & !c1Retract : FALSE;
+        _state=s3 & REQ & (c2End) & c1Retract : TRUE;
+        _state=s4 & REQ & (c1End) & !c1Retract : FALSE;
+        _state=s4 & REQ & (c1End) & c1Retract : TRUE;
+        _state=s5 & REQ & (!vac & vcEnd) & !c1Retract : FALSE;
+        _state=s5 & REQ & (!vac & vcEnd) & c1Retract : TRUE;
+        _state=s5 & REQ & (vcHome & vac) & !c1Retract : TRUE;
+        _state=s5 & REQ & (vcHome & vac) & c1Retract : TRUE;
+        _state=s6 & REQ & (c2End) & !c1Retract : FALSE;
+        _state=s6 & REQ & (c2End) & c1Retract : TRUE;
+        _state=s6 & REQ & (pp1) & !c1Retract : FALSE;
+        _state=s6 & REQ & (pp1) & c1Retract : TRUE;
+        _state=s6 & REQ & (vcEnd) & !c1Retract : FALSE;
+        _state=s6 & REQ & (vcEnd) & c1Retract : TRUE;
+        _state=s7 & REQ & (pp1) & !c1Retract : FALSE;
+        _state=s7 & REQ & (pp1) & c1Retract : FALSE;
+        _state=s7 & REQ & (pp2) & !c1Retract : FALSE;
+        _state=s7 & REQ & (pp2) & c1Retract : FALSE;
+        _state=s7 & REQ & (pp3) & !c1Retract : FALSE;
+        _state=s7 & REQ & (pp3) & c1Retract : FALSE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & !c1Retract : FALSE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & c1Retract : TRUE;
+        _state=s8 & REQ & (vcEnd) & !c1Retract : TRUE;
+        _state=s8 & REQ & (vcEnd) & c1Retract : TRUE;
+        TRUE : c1Retract;
+    esac;
+    
+    init(c2Extend) := FALSE;
+    next(c2Extend) := case
+        _state=s1 & REQ & (pp2) & !c2Extend : TRUE;
+        _state=s1 & REQ & (pp2) & c2Extend : TRUE;
+        _state=s1 & REQ & (pp3) & !c2Extend : TRUE;
+        _state=s1 & REQ & (pp3) & c2Extend : TRUE;
+        _state=s1 & REQ & (pp1) & !c2Extend : FALSE;
+        _state=s1 & REQ & (pp1) & c2Extend : TRUE;
+        _state=s2 & REQ & (c2End) & !c2Extend : FALSE;
+        _state=s2 & REQ & (c2End) & c2Extend : TRUE;
+        _state=s3 & REQ & (c2End) & !c2Extend : FALSE;
+        _state=s3 & REQ & (c2End) & c2Extend : TRUE;
+        _state=s4 & REQ & (c1End) & !c2Extend : FALSE;
+        _state=s4 & REQ & (c1End) & c2Extend : TRUE;
+        _state=s5 & REQ & (!vac & vcEnd) & !c2Extend : FALSE;
+        _state=s5 & REQ & (!vac & vcEnd) & c2Extend : TRUE;
+        _state=s5 & REQ & (vcHome & vac) & !c2Extend : FALSE;
+        _state=s5 & REQ & (vcHome & vac) & c2Extend : FALSE;
+        _state=s6 & REQ & (c2End) & !c2Extend : FALSE;
+        _state=s6 & REQ & (c2End) & c2Extend : TRUE;
+        _state=s6 & REQ & (pp1) & !c2Extend : FALSE;
+        _state=s6 & REQ & (pp1) & c2Extend : TRUE;
+        _state=s6 & REQ & (vcEnd) & !c2Extend : FALSE;
+        _state=s6 & REQ & (vcEnd) & c2Extend : TRUE;
+        _state=s7 & REQ & (pp1) & !c2Extend : FALSE;
+        _state=s7 & REQ & (pp1) & c2Extend : TRUE;
+        _state=s7 & REQ & (pp2) & !c2Extend : TRUE;
+        _state=s7 & REQ & (pp2) & c2Extend : TRUE;
+        _state=s7 & REQ & (pp3) & !c2Extend : TRUE;
+        _state=s7 & REQ & (pp3) & c2Extend : TRUE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & !c2Extend : FALSE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & c2Extend : TRUE;
+        _state=s8 & REQ & (vcEnd) & !c2Extend : FALSE;
+        _state=s8 & REQ & (vcEnd) & c2Extend : FALSE;
+        TRUE : c2Extend;
+    esac;
+    
+    init(c2Retract) := FALSE;
+    next(c2Retract) := case
+        _state=s1 & REQ & (pp2) & !c2Retract : FALSE;
+        _state=s1 & REQ & (pp2) & c2Retract : FALSE;
+        _state=s1 & REQ & (pp3) & !c2Retract : FALSE;
+        _state=s1 & REQ & (pp3) & c2Retract : FALSE;
+        _state=s1 & REQ & (pp1) & !c2Retract : FALSE;
+        _state=s1 & REQ & (pp1) & c2Retract : FALSE;
+        _state=s2 & REQ & (c2End) & !c2Retract : FALSE;
+        _state=s2 & REQ & (c2End) & c2Retract : TRUE;
+        _state=s3 & REQ & (c2End) & !c2Retract : FALSE;
+        _state=s3 & REQ & (c2End) & c2Retract : TRUE;
+        _state=s4 & REQ & (c1End) & !c2Retract : FALSE;
+        _state=s4 & REQ & (c1End) & c2Retract : TRUE;
+        _state=s5 & REQ & (!vac & vcEnd) & !c2Retract : FALSE;
+        _state=s5 & REQ & (!vac & vcEnd) & c2Retract : TRUE;
+        _state=s5 & REQ & (vcHome & vac) & !c2Retract : TRUE;
+        _state=s5 & REQ & (vcHome & vac) & c2Retract : TRUE;
+        _state=s6 & REQ & (c2End) & !c2Retract : FALSE;
+        _state=s6 & REQ & (c2End) & c2Retract : TRUE;
+        _state=s6 & REQ & (pp1) & !c2Retract : FALSE;
+        _state=s6 & REQ & (pp1) & c2Retract : TRUE;
+        _state=s6 & REQ & (vcEnd) & !c2Retract : FALSE;
+        _state=s6 & REQ & (vcEnd) & c2Retract : TRUE;
+        _state=s7 & REQ & (pp1) & !c2Retract : FALSE;
+        _state=s7 & REQ & (pp1) & c2Retract : FALSE;
+        _state=s7 & REQ & (pp2) & !c2Retract : FALSE;
+        _state=s7 & REQ & (pp2) & c2Retract : FALSE;
+        _state=s7 & REQ & (pp3) & !c2Retract : FALSE;
+        _state=s7 & REQ & (pp3) & c2Retract : FALSE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & !c2Retract : FALSE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & c2Retract : TRUE;
+        _state=s8 & REQ & (vcEnd) & !c2Retract : TRUE;
+        _state=s8 & REQ & (vcEnd) & c2Retract : TRUE;
+        TRUE : c2Retract;
+    esac;
+    
+    init(vcExtend) := FALSE;
+    next(vcExtend) := case
+        _state=s1 & REQ & (pp2) & !vcExtend : FALSE;
+        _state=s1 & REQ & (pp2) & vcExtend : FALSE;
+        _state=s1 & REQ & (pp3) & !vcExtend : FALSE;
+        _state=s1 & REQ & (pp3) & vcExtend : FALSE;
+        _state=s1 & REQ & (pp1) & !vcExtend : FALSE;
+        _state=s1 & REQ & (pp1) & vcExtend : FALSE;
+        _state=s2 & REQ & (c2End) & !vcExtend : TRUE;
+        _state=s2 & REQ & (c2End) & vcExtend : FALSE;
+        _state=s3 & REQ & (c2End) & !vcExtend : TRUE;
+        _state=s3 & REQ & (c2End) & vcExtend : FALSE;
+        _state=s4 & REQ & (c1End) & !vcExtend : TRUE;
+        _state=s4 & REQ & (c1End) & vcExtend : FALSE;
+        _state=s5 & REQ & (!vac & vcEnd) & !vcExtend : TRUE;
+        _state=s5 & REQ & (!vac & vcEnd) & vcExtend : TRUE;
+        _state=s5 & REQ & (vcHome & vac) & !vcExtend : FALSE;
+        _state=s5 & REQ & (vcHome & vac) & vcExtend : FALSE;
+        _state=s6 & REQ & (c2End) & !vcExtend : TRUE;
+        _state=s6 & REQ & (c2End) & vcExtend : FALSE;
+        _state=s6 & REQ & (pp1) & !vcExtend : TRUE;
+        _state=s6 & REQ & (pp1) & vcExtend : FALSE;
+        _state=s6 & REQ & (vcEnd) & !vcExtend : FALSE;
+        _state=s6 & REQ & (vcEnd) & vcExtend : TRUE;
+        _state=s7 & REQ & (pp1) & !vcExtend : FALSE;
+        _state=s7 & REQ & (pp1) & vcExtend : FALSE;
+        _state=s7 & REQ & (pp2) & !vcExtend : FALSE;
+        _state=s7 & REQ & (pp2) & vcExtend : FALSE;
+        _state=s7 & REQ & (pp3) & !vcExtend : FALSE;
+        _state=s7 & REQ & (pp3) & vcExtend : FALSE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & !vcExtend : TRUE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & vcExtend : TRUE;
+        _state=s8 & REQ & (vcEnd) & !vcExtend : FALSE;
+        _state=s8 & REQ & (vcEnd) & vcExtend : FALSE;
+        TRUE : vcExtend;
+    esac;
+    
+    init(vacuum_on) := FALSE;
+    next(vacuum_on) := case
+        _state=s1 & REQ & (pp2) & !vacuum_on : FALSE;
+        _state=s1 & REQ & (pp2) & vacuum_on : TRUE;
+        _state=s1 & REQ & (pp3) & !vacuum_on : FALSE;
+        _state=s1 & REQ & (pp3) & vacuum_on : TRUE;
+        _state=s1 & REQ & (pp1) & !vacuum_on : FALSE;
+        _state=s1 & REQ & (pp1) & vacuum_on : TRUE;
+        _state=s2 & REQ & (c2End) & !vacuum_on : FALSE;
+        _state=s2 & REQ & (c2End) & vacuum_on : TRUE;
+        _state=s3 & REQ & (c2End) & !vacuum_on : FALSE;
+        _state=s3 & REQ & (c2End) & vacuum_on : TRUE;
+        _state=s4 & REQ & (c1End) & !vacuum_on : FALSE;
+        _state=s4 & REQ & (c1End) & vacuum_on : TRUE;
+        _state=s5 & REQ & (!vac & vcEnd) & !vacuum_on : TRUE;
+        _state=s5 & REQ & (!vac & vcEnd) & vacuum_on : TRUE;
+        _state=s5 & REQ & (vcHome & vac) & !vacuum_on : FALSE;
+        _state=s5 & REQ & (vcHome & vac) & vacuum_on : TRUE;
+        _state=s6 & REQ & (c2End) & !vacuum_on : FALSE;
+        _state=s6 & REQ & (c2End) & vacuum_on : TRUE;
+        _state=s6 & REQ & (pp1) & !vacuum_on : FALSE;
+        _state=s6 & REQ & (pp1) & vacuum_on : TRUE;
+        _state=s6 & REQ & (vcEnd) & !vacuum_on : TRUE;
+        _state=s6 & REQ & (vcEnd) & vacuum_on : FALSE;
+        _state=s7 & REQ & (pp1) & !vacuum_on : FALSE;
+        _state=s7 & REQ & (pp1) & vacuum_on : TRUE;
+        _state=s7 & REQ & (pp2) & !vacuum_on : FALSE;
+        _state=s7 & REQ & (pp2) & vacuum_on : TRUE;
+        _state=s7 & REQ & (pp3) & !vacuum_on : FALSE;
+        _state=s7 & REQ & (pp3) & vacuum_on : TRUE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & !vacuum_on : TRUE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & vacuum_on : TRUE;
+        _state=s8 & REQ & (vcEnd) & !vacuum_on : FALSE;
+        _state=s8 & REQ & (vcEnd) & vacuum_on : TRUE;
+        TRUE : vacuum_on;
+    esac;
+    
+    init(vacuum_off) := FALSE;
+    next(vacuum_off) := case
+        _state=s1 & REQ & (pp2) & !vacuum_off : FALSE;
+        _state=s1 & REQ & (pp2) & vacuum_off : FALSE;
+        _state=s1 & REQ & (pp3) & !vacuum_off : FALSE;
+        _state=s1 & REQ & (pp3) & vacuum_off : FALSE;
+        _state=s1 & REQ & (pp1) & !vacuum_off : FALSE;
+        _state=s1 & REQ & (pp1) & vacuum_off : FALSE;
+        _state=s2 & REQ & (c2End) & !vacuum_off : FALSE;
+        _state=s2 & REQ & (c2End) & vacuum_off : TRUE;
+        _state=s3 & REQ & (c2End) & !vacuum_off : FALSE;
+        _state=s3 & REQ & (c2End) & vacuum_off : TRUE;
+        _state=s4 & REQ & (c1End) & !vacuum_off : FALSE;
+        _state=s4 & REQ & (c1End) & vacuum_off : TRUE;
+        _state=s5 & REQ & (!vac & vcEnd) & !vacuum_off : FALSE;
+        _state=s5 & REQ & (!vac & vcEnd) & vacuum_off : TRUE;
+        _state=s5 & REQ & (vcHome & vac) & !vacuum_off : FALSE;
+        _state=s5 & REQ & (vcHome & vac) & vacuum_off : TRUE;
+        _state=s6 & REQ & (c2End) & !vacuum_off : FALSE;
+        _state=s6 & REQ & (c2End) & vacuum_off : TRUE;
+        _state=s6 & REQ & (pp1) & !vacuum_off : FALSE;
+        _state=s6 & REQ & (pp1) & vacuum_off : TRUE;
+        _state=s6 & REQ & (vcEnd) & !vacuum_off : TRUE;
+        _state=s6 & REQ & (vcEnd) & vacuum_off : TRUE;
+        _state=s7 & REQ & (pp1) & !vacuum_off : FALSE;
+        _state=s7 & REQ & (pp1) & vacuum_off : FALSE;
+        _state=s7 & REQ & (pp2) & !vacuum_off : FALSE;
+        _state=s7 & REQ & (pp2) & vacuum_off : FALSE;
+        _state=s7 & REQ & (pp3) & !vacuum_off : FALSE;
+        _state=s7 & REQ & (pp3) & vacuum_off : FALSE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & !vacuum_off : FALSE;
+        _state=s7 & REQ & (c2Home & vac & c1Home) & vacuum_off : TRUE;
+        _state=s8 & REQ & (vcEnd) & !vacuum_off : FALSE;
+        _state=s8 & REQ & (vcEnd) & vacuum_off : TRUE;
+        TRUE : vacuum_off;
+    esac;
+
+
+VAR
+    -- vac : boolean;
+    vs : boolean;
+ASSIGN
+    init(vac) := FALSE;
+    next(vac) := case
+        next(vp1) | next(vp2) | next(vp3) : TRUE;
+        !next(vs) : FALSE;
+        TRUE : vac;
+    esac;
+
+    init(vs) := FALSE;
+    next(vs) := case
+        next(CNF) & next(vacuum_on) : TRUE;
+        next(CNF) & next(vacuum_off) : FALSE;
+        next(CNF) & !next(vacuum_on) : FALSE;
+        TRUE : vs;
+    esac;
+DEFINE
+    vp1 := c1End & c2Home & vcEnd & vs & pp1;
+    vp2 := c1Home & c2End & vcEnd & vs & pp2;
+    vp3 := c1End & c2End & vcEnd & vs & pp3;
+--JUSTICE CNF
+
+
+MODULE PLANT(CNF, c1Extend, c1Retract, c2Extend, c2Retract, vcExtend, vacuum_on, vacuum_off)
+VAR
+    c1Home : boolean;
+    c1End : boolean;
+    c2Home : boolean;
+    c2End : boolean;
+    vcHome : boolean;
+    vcEnd : boolean;
+    st1 : { st1_1, st1_2, st1_3, st1_4, st1_5, st1_6};
+    st2 : { st2_1, st2_2, st2_3, st2_4, st2_5, st2_6};
+    st3 : { st3_1, st3_2, st3_3, st3_4, st3_5, st3_6};
+ASSIGN
+    init(st1) := st1_1;
+    next(st1) := case
+        st1 = st1_1 & next(CNF & c1Extend) : st1_2;
+        st1 = st1_2 & next(CNF & c1Retract) : st1_1;
+        st1 = st1_2 & next(c1Extend) : st1_3;
+        st1 = st1_3 & next(CNF & c1Retract) : st1_4;
+        st1 = st1_4 & next(CNF & c1Extend) : st1_3;
+        st1 = st1_4 & next(c1Retract) : st1_1;
+        TRUE : st1;
+    esac;
+
+    c1Home := st1 = st1_1;
+    c1End := st1 = st1_3;
+
+    init(st2) := st2_1;
+    next(st2) := case
+        st2 = st2_1 & next(CNF & c2Extend) : st2_2;
+        st2 = st2_2 & next(CNF & c2Retract) : st2_1;
+        st2 = st2_2 & next(c2Extend) : st2_3;
+        st2 = st2_3 & next(CNF & c2Retract) : st2_4;
+        st2 = st2_4 & next(CNF & c2Extend) : st2_3;
+        st2 = st2_4 & next(c2Retract) : st2_1;
+        TRUE : st2;
+    esac;
+
+    c2Home := st2 = st2_1;
+    c2End := st2 = st2_3;
+
+    init(st3) := st3_1;
+    next(st3) := case
+        st3 = st3_1 & next(CNF & vcExtend) : st3_2;
+        st3 = st3_2 & next(vcExtend) : st3_5;
+        st3 = st3_5 & next(vcExtend) : st3_4;
+        st3 = st3_3 & next(CNF & vcExtend) : st3_4;
+        st3 = st3_2 & next(CNF & !vcExtend) : st3_1;
+        st3 = st3_3 & next(!vcExtend) : st3_6;
+        st3 = st3_6 & next(!vcExtend) : st3_1;
+        st3 = st3_4 & next(CNF & !vcExtend) : st3_3;
+        TRUE : st3;
+    esac;
+
+    vcHome := st3 = st3_1 | st3 = st3_2;
+    vcEnd := st3 = st3_3 | st3 = st3_4;
+
+MODULE main()
+VAR
+    REQ : boolean;
+    pp1 : boolean;
+    pp2 : boolean;
+    pp3 : boolean;
+    vac : boolean;
+    p1 : boolean;
+    p2 : boolean;
+    p3 : boolean;
+    lifted : boolean;
+
+    C : CONTROL(REQ, P.c1Home, P.c1End, P.c2Home, P.c2End, P.vcHome, P.vcEnd, pp1, pp2, pp3, vac);
+    P : PLANT(C.CNF, C.c1Extend, C.c1Retract, C.c2Extend, C.c2Retract, C.vcExtend, C.vacuum_on, C.vacuum_off);
+ASSIGN
+    REQ := TRUE;
+    p2 := FALSE;
+    p3 := FALSE;
+
+    init(pp1) := FALSE;
+    next(pp1) := case
+        C.vp1 : FALSE;
+        pp1 : TRUE;
+        TRUE : p1;
+    esac;
+
+    init(pp2) := FALSE;
+    next(pp2) := case
+        C.vp2 : FALSE;
+        pp2 : TRUE;
+        TRUE : p2;
+    esac;
+
+    init(pp3) := FALSE;
+    next(pp3) := case
+        C.vp3 : FALSE;
+        pp3 : TRUE;
+        TRUE : p3;
+    esac;
+
+    init(lifted) := FALSE;
+    next(lifted) := case
+        C.vp1 : TRUE;
+        dropped : FALSE;
+        TRUE : lifted;
+    esac;
+DEFINE
+    dropped := lifted & P.c1Home & P.c2Home & P.vcEnd & !C.vacuum_on & C.vacuum_off;
+
+    
+--specification
+

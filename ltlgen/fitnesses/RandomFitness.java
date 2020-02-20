@@ -296,12 +296,15 @@ public class RandomFitness extends SingleFitness{
         String row = new String();
         row = "\nLTLSPEC " + formula;
         File file = new File("smv_model/Controller.smv");
-        Verifier ver = new Verifier(file);
-        ver.addNewRow(row);
 
-        int test;
-        test = ver.testLtlFormulas("smv_model/Controller.smv");
-        ver.deleteLastRow();
+
+        Verifier ver = new Verifier("smv_model/Controller.smv");
+      //  ver.addNewRow(row);
+
+        int test=0;
+
+        test = ver.testLtlFormulas(row);
+     //   ver.deleteLastRow();
 
         if(test==1)
         {

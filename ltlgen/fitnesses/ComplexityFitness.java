@@ -12,6 +12,8 @@ public class ComplexityFitness extends SingleFitness {
     //    if (complexity>2)
         //{
             result= 1 / (1.0 + complexity);
+
+        //    System.out.println("LTLSPEC "+formula);
             return result < threshold ? -1 : result;
       //  }
      //   else

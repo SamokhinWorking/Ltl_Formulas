@@ -3,69 +3,66 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Verifier {
+    String path;
     File file;
 
-    public Verifier (File file){
-        this.file=file;
+    public Verifier (String path)
+    {
+        this.path=path;
+        this.file=new File(path);
     }
-    public void addNewRow(String row){
-        try (FileWriter writer =new FileWriter(this.file,true))
-        {
-            //write a row in a file
-            writer.write(row);
-            writer.flush();
-        }
-        catch (IOException ex){
-            System.out.println(ex.getMessage());
-        }
-       // System.out.println("We add new row");
-    }
-    public void deleteLastRow(){
 
-        //delete last row at file
 
+    private static void copyFileUsingStream(File source, File dest) throws IOException {
+        InputStream is = null;
+        OutputStream os = null;
         try {
-            RandomAccessFile f = new RandomAccessFile(this.file, "rw");
-            long length = f.length() - 1;
-            byte b;
-            do {
-                length -= 1;
-                f.seek(length);
-                b = f.readByte();
-            } while (b != 10 && length>0);
-            if(length==0) {
-                f.setLength(length);
+            is = new FileInputStream(source);
+            os = new FileOutputStream(dest);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = is.read(buffer)) > 0) {
+                os.write(buffer, 0, length);
             }
-            else{
-                f.setLength(length+1);
-            }
-            f.close();
+        } finally {
+            is.close();
+            os.close();
         }
-        catch (IOException ex){
-            System.out.println(ex.getMessage());
-        }
-       // System.out.println("We delite last row");
     }
-    public int testLtlFormulas(String path){
+
+    public int testLtlFormulas(String s){
         int verifier=0;
         try {
 
             // print a message
 
             // create a process and execute notepad.exe
+            String NewPath="verifier/tmp.smv";
+            File fileNew = new File(NewPath);
+
+            copyFileUsingStream(this.file,fileNew);
+
+            FileWriter writer =new FileWriter(fileNew,true);
+            writer.write(s);
+            writer.flush();
+
 
             String [] trying={"/bin/bash",
                     "-c",
-                    "/home/vlasam/Downloads/NuSMV-2.6.0-linux64/NuSMV-2.6.0-Linux/bin/NuSMV "+path,
+                    "/home/vlasam/Downloads/NuSMV-2.6.0-linux64/NuSMV-2.6.0-Linux/bin/NuSMV "+NewPath,
             };
             Process process = Runtime.getRuntime().exec(trying);
 
             BufferedReader input =new BufferedReader(new InputStreamReader(process.getInputStream()));
             BufferedReader error =new BufferedReader(new InputStreamReader(process.getErrorStream()));
+
+
+
+
             String line;
             ArrayList<String> str =new ArrayList<String>();
             while((line=input.readLine())!=null){
-                //  System.out.println(line);
+            //     System.out.println(line);
                 str.add(line);
             }
             input.close();
@@ -91,14 +88,14 @@ public class Verifier {
                    }
 
                }
-              // System.out.println(result);
+           //    System.out.println(result);
                if (result.contains("false")) {
                    verifier =0;
-                  // System.out.println("false confirm");
+                   //System.out.println("false confirm");
                } else if (result.contains("true")) {
-                   //System.out.println("true confirm");
+                 //  System.out.println("true confirm");
                    verifier =1;
-                  // System.out.println(result);
+                  //System.out.println(result);
                }
            }
 

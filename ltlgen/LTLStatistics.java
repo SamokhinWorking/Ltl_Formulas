@@ -58,14 +58,38 @@ public class LTLStatistics extends Statistics {
 
         Individual[] individuals = state.population.subpops.get(0).individuals.toArray(new Individual[0]);
 
-
+        int idx=0;
         Individual best = individuals[0];
+
+        /*
+        state.output.println("First: ==>"+idx+" "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
+        state.output.println("Second: ==>"+idx+" "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
+        state.output.println("Third: ==>"+idx+" "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
+        state.output.println("Fourth: ==>"+idx+" "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
+
+        state.output.println("All individuals", logFile);
+
+
+        for(int i=0;i<individuals.length;i++){
+            state.output.println(i+"---> "+individualToString(false, (GPIndividual) individuals[i], new HashSet<>()), logFile);
+        }
+
+         */
+
+
+
         for (int i = 1; i < individuals.length; i++) {
             if (individuals[i].fitness.betterThan(best.fitness)) {
+                //state.output.println(" my index = "+i,logFile);
                 best = individuals[i];
+               // idx=i;
             }
         }
-        state.output.println("Best individual: " + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
+
+
+        state.output.println("Best individual: "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
+
+
         state.output.println("--------------------", logFile);
     }
 
@@ -98,6 +122,8 @@ public class LTLStatistics extends Statistics {
         state.output.println("\nBest individuals:", fileId);
         List<Individual> individuals = new ArrayList<>();
         // change  state.population.subpops[0].individuals to  state.population.subpops.get(0).individuals.toArray(new Individual[0])
+
+
         Collections.addAll(individuals, state.population.subpops.get(0).individuals.toArray(new Individual[0]));
         Collections.sort(individuals, new IndividualsComparator());
         shown.clear();
