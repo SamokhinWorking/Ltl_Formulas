@@ -95,7 +95,7 @@ public class SmvModel {
 
         try {
 
-           // File file2 = new File("src/smv_model/first.smv");
+           // File file2 = new File("smv_model/first.smv");
 
             //Открываем 1-й файл для записи
             BufferedOutputStream bufOut = new BufferedOutputStream(new FileOutputStream(this.file, true)); // true - добавление в конец файла
@@ -259,7 +259,7 @@ public class SmvModel {
                 smv.addNewRow(rowToAdd);
             }
 
-            File file3 = new File("src/smv_model/C.smv");
+            File file3 = new File("smv_model/C.smv");
 
             //Открываем 1-й файл для записи
             BufferedOutputStream bufOut2 = new BufferedOutputStream(new FileOutputStream(this.file, true)); // true - добавление в конец файла
@@ -287,7 +287,7 @@ public class SmvModel {
     }
     public void clearFile(){
         try{
-            FileWriter fw = new FileWriter("src/smv_model/Controller.smv");
+            FileWriter fw = new FileWriter("smv_model/Controller.smv");
             PrintWriter pw = new PrintWriter(fw);
             pw.write("");
             pw.flush();
@@ -333,8 +333,8 @@ public class SmvModel {
             }
 
 
-            File file = new File("src/smv_model/Controller.smv");
-            SmvModel smv = new SmvModel(file, "src/smv_model/Controller.smv");
+            File file = new File("smv_model/Controller.smv");
+            SmvModel smv = new SmvModel(file, "smv_model/Controller.smv");
 
             smv.clearFile();
             smv.buildSmvModel(ecState,ecTransition,algorithm,condition,inputVars,outputVars);
