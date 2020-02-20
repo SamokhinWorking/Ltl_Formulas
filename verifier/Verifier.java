@@ -49,7 +49,7 @@ public class Verifier {
 
             String [] trying={"/bin/bash",
                     "-c",
-                    "NuSMV/bin/NuSMV "+NewPath,
+                    "resources/NuSMV "+NewPath,
             };
             Process process = Runtime.getRuntime().exec(trying);
 

@@ -23,8 +23,8 @@ DIRS = ltlgen/*.java \
        verifier/*.java \
        ltlgenCondition/*.java \
        ltlgenCondition/fitnesses/*.java \
-       ltlgenCondition/formulas/*.java \
-       main/*.java
+       ltlgenCondition/formulas/*.java 
+   
 all:
 	${JAVAC} ${DIRS}
 
@@ -39,7 +39,6 @@ clean:
 	find smv_model -name "*.class" -exec rm -f {} \;
 	find tree -name "*.class" -exec rm -f {} \;
 	find verifier -name "*.class" -exec rm -f {} \;
-	find main -name "*.class" -exec rm -f {} \;
 	find ltlgenCondition -name "*.class" -exec rm -f {} \;
 	
 	

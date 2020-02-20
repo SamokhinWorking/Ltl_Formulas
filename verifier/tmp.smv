@@ -251,3 +251,4 @@ DEFINE
 
 
 --specification
+LTLSPEC G((!(X(pp2)) | F(P.c1Home)))
