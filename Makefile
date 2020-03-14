@@ -15,6 +15,9 @@ DIRS = ltlgen/*.java \
        ltlgen/fitnesses/*.java \
        ltlgen/filters/*.java \
        ltlgen/formulas/*.java \
+       ltlgen/formulas/input/*.java \
+       ltlgen/formulas/output/*.java \
+       ltlgen/formulas/predicate/*.java \
        automat/*.java \
        helpClass/*.java \
        parse/*.java \
