@@ -21,18 +21,22 @@ public class Implication extends GPNode implements Verifiable {
         String left = data.result;
         int complexity = data.complexity;
         children[1].eval(state, thread, input, stack, individual, problem);
-        data.result = "(!(" + left + ") | " + data.result + ")";
+       // data.result = "(!(" + left + ") | " + data.result + ")";
+        data.result = "(" + left + " -> " + data.result + ")";
         data.complexity += complexity + 1;
     }
 
     @Override
     public String toStringForHumans() {
+        /*
         String left = children[0].toStringForHumans();
         if (left.charAt(0) == '!') {
             return "(" + left.substring(2, left.length() - 1) + " | " + children[1].toStringForHumans() + ")";
         } else {
             return "(" + children[0].toStringForHumans() + " -> " + children[1].toStringForHumans() + ")";
         }
+         */
+        return "(" + children[0].toStringForHumans() + " -> " + children[1].toStringForHumans() + ")";
     }
 
     @Override
