@@ -201,7 +201,7 @@ else
 
 	echo -e "parent.0 = ltlgen-spea2.params" >> params/ltlgen.params
 	echo -e "\n# \n# General \n#" >> params/ltlgen.params
-	echo -e "\npop.subpop.0.size = 500" >> params/ltlgen.paramss
+	echo -e "\npop.subpop.0.size = 500" >> params/ltlgen.params
 	echo -e "generations = 50" >> params/ltlgen.params
 	echo -e "\n# \n# Fitness \n#" >> params/ltlgen.params
 	echo -e "\nmulti.fitness.num-objectives = 2" >> params/ltlgen.params
