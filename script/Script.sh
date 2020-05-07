@@ -25,9 +25,9 @@ then
 		subpop="\npop.subpop.0.size = 500"
 		gen="generations = 50"
 		fitnum="\nmulti.fitness.num-objectives = 2"
-		fit="\neval.problem.fitness.0 = ltlgen.fitnesses.ComplexityFitness
-					\neval.problem.fitness.0.threshold = 0.04
-					\neval.problem.fitness.1 = ltlgen.fitnesses.CorrectnessFitness"
+		fit="\neval.problem.fitness.0 = ltlgen.fitnesses.CorrectnessFitness
+			\neval.problem.fitness.1 = ltlgen.fitnesses.ComplexityFitness
+			\neval.problem.fitness.1.threshold = 0.04"
 
 
 
@@ -201,13 +201,13 @@ else
 
 	echo -e "parent.0 = ltlgen-spea2.params" >> params/ltlgen.params
 	echo -e "\n# \n# General \n#" >> params/ltlgen.params
-	echo -e "\npop.subpop.0.size = 500" >> params/ltlgen.params
+	echo -e "\npop.subpop.0.size = 500" >> params/ltlgen.paramss
 	echo -e "generations = 50" >> params/ltlgen.params
 	echo -e "\n# \n# Fitness \n#" >> params/ltlgen.params
 	echo -e "\nmulti.fitness.num-objectives = 2" >> params/ltlgen.params
-	echo -e "\neval.problem.fitness.0 = ltlgen.fitnesses.ComplexityFitness
-			\neval.problem.fitness.0.threshold = 0.04
-			\neval.problem.fitness.1 = ltlgen.fitnesses.CorrectnessFitness" >> params/ltlgen.params
+	echo -e "\neval.problem.fitness.0 = ltlgen.fitnesses.CorrectnessFitness
+			\neval.problem.fitness.1 = ltlgen.fitnesses.ComplexityFitness
+			\neval.problem.fitness.1.threshold = 0.04" >> params/ltlgen.params
 
 	echo -e "\n# \n# Filters\n# \n\neval.problem.filters.number = 1
 	 		\neval.problem.filters.0 = ltlgen.filters.TemporalFilter " >> params/ltlgen.params

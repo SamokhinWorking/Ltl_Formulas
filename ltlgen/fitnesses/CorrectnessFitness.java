@@ -1,32 +1,20 @@
-package ltlgen.fitnesses;
+package  ltlgen.fitnesses;
 
-import automat.Automat;
-import verifier.Verifier;
+import ec.EvolutionState;
+import  automaton.Automaton;
+import  verifier.Verifier;
 
-import java.io.File;
-public class CorrectnessFitness extends SingleFitness{
+public class CorrectnessFitness extends SingleFitness {
 
     @Override
-    public double getFitness(String formula, int complexity, Automat automat,String []setOfCondition) {
+    public double getFitness(String formula, int complexity, EvolutionState evolutionState) {
+        Verifier ver = new Verifier(Automaton.automaton);
 
-        String row =new String();
-        row="LTLSPEC "+formula;
-       // File file = new File("C.smv");
-        Verifier ver =new Verifier("C.smv");
-        //ver.addNewRow(row);
-    //    System.out.println(row);
-
-        int test=0;
-        test= ver.testLtlFormulas(row);
-     //   ver.deleteLastRow();
-
-        if((test == 1) ){
+        int test = ver.verify(formula);
+        if (test == 1) {
             return 1.0;
-        }
-        else{
+        } else{
             return -1;
         }
-
     }
-
 }

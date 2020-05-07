@@ -1,0 +1,8 @@
+
+# 
+# Filters
+# 
+
+eval.problem.filters.number = 1
+	 		
+eval.problem.filters.0 = ltlgen.filters.TemporalFilter 

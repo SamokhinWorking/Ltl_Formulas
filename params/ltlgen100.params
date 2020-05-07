@@ -1,0 +1,25 @@
+parent.0 = ltlgen-nsga2.params
+
+# 
+# General 
+#
+
+pop.subpop.0.size = 400
+
+generations = 35
+
+# 
+# Fitness 
+#
+
+multi.fitness.num-objectives = 4
+
+eval.problem.fitness.0 = ltlgen.fitnesses.ComplexityFitness
+					
+eval.problem.fitness.0.threshold = 0.04
+					
+eval.problem.fitness.1 = ltlgen.fitnesses.CorrectnessFitness
+
+eval.problem.fitness.2 = ltlgen.fitnesses.TemplateFitness
+
+eval.problem.fitness.3 = ltlgen.fitnesses.ScenarioFitness

@@ -1,24 +1,17 @@
-package ltlgen.formulas;
+package  ltlgen.formulas;
 
 import ec.EvolutionState;
 import ec.Problem;
 import ec.gp.*;
-import ec.util.Code;
-import ltlgen.LTLData;
-import ltlgen.LTLProblem;
+import ec.gp.ADFStack;
+import ec.gp.GPData;
+import ec.gp.GPIndividual;
+import  automaton.Automaton;
+import  ltlgen.LTLData;
 
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
-import parse.parseInfo;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-import java.io.IOException;
 import java.util.Random;
 
-public class Event extends GPNode  implements Verifiable {
+public class Event extends GPNode implements Verifiable {
 
     @Override
     public void eval(EvolutionState state, int thread, GPData input, ADFStack stack, GPIndividual individual, Problem problem) {
@@ -32,6 +25,8 @@ public class Event extends GPNode  implements Verifiable {
         return toString();
     }
 
+
+
     @Override
     public String toStringForVerifier() {
         return toString();
@@ -39,25 +34,16 @@ public class Event extends GPNode  implements Verifiable {
 
     @Override
     public String toString() {
-        String output="Event";
-        try {
-            DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document document = documentBuilder.parse("CentralController.xml");
+        String[] outputVars = Automaton.automaton.getOutputVars();
 
-            String[] outputVars= parseInfo.parseOutputVars(document);
-
-            for(int i=0;i<outputVars.length;i++)
-            {
-                outputVars[i]="C."+outputVars[i];
-            }
-
-            Random random = new Random();
-            int indx = random.nextInt(outputVars.length);
-            output= outputVars[indx];
-
-        } catch (XPathExpressionException | ParserConfigurationException | SAXException | IOException ex) {
-            ex.printStackTrace(System.out);
+        for (int i = 0; i < outputVars.length; i++) {
+            outputVars[i] = "C." + outputVars[i];
         }
-        return output;
+
+
+        //TODO: remove this
+        Random random = new Random();
+        int indx = random.nextInt(outputVars.length);
+        return outputVars[indx];
     }
 }

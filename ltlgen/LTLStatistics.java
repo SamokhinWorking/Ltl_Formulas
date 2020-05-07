@@ -1,13 +1,12 @@
-package ltlgen;
+package  ltlgen;
 
 import ec.EvolutionState;
-import ec.Subpopulation;
 import ec.Individual;
 import ec.Statistics;
 import ec.gp.GPIndividual;
 import ec.multiobjective.MultiObjectiveFitness;
 import ec.util.Parameter;
-import ltlgen.formulas.Verifiable;
+import  ltlgen.formulas.Verifiable;
 
 import java.io.File;
 import java.io.IOException;

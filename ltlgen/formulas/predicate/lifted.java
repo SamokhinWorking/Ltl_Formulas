@@ -1,13 +1,10 @@
-package ltlgen.formulas.predicate;
+package  ltlgen.formulas.predicate;
 
 import ec.EvolutionState;
 import ec.Problem;
 import ec.gp.*;
-import ec.util.Code;
-import helpClass.*;
-import ltlgen.LTLData;
-import ltlgen.LTLProblem;
-import ltlgen.formulas.Verifiable;
+import  ltlgen.LTLData;
+import  ltlgen.formulas.Verifiable;
 
 
 public class lifted extends GPNode implements Verifiable {
@@ -31,8 +28,7 @@ public class lifted extends GPNode implements Verifiable {
 
     @Override
     public String toString() {
-        String input="lifted";
-        return input;
+        return "lifted";
     }
 
 }

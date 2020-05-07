@@ -1,0 +1,3852 @@
+
+Generation: 0
+Subpopulation 0:
+
+Front: 
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+
+Generation: 1
+Subpopulation 0:
+
+Front: 
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+
+Generation: 2
+Subpopulation 0:
+
+Front: 
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 3
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 3
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 3
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+
+Generation: 3
+Subpopulation 0:
+
+Front: 
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 7
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 3
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 7
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 7
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 7
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 7
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 7
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+
+Generation: 4
+Subpopulation 0:
+
+Front: 
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((P.c1Home -> F(P.vcHome)) P.c1Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | P.c1Home) (F(P.c1Home) P.c1Home)
+     P.c1Home)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 2
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+
+Generation: 5
+Subpopulation 0:
+
+Front: 
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c1Home -> F(P.vcHome)) P.c1Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | P.c1Home) (F(P.c1Home) P.c1Home)
+     P.c1Home)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | P.c1Home) (F(P.c1Home) P.c1Home)
+     P.c1Home)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c1Home -> F(P.vcHome)) P.c1Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.vcHome)) P.c2Home (F(P.vcHome)
+     P.vcHome))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home -> F(P.c1Home)) P.c2Home (F(P.c1Home)
+     P.c1Home))
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.vcHome) | C.vp3) (F(P.vcHome) P.vcHome)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | C.vp3) (F(P.c1Home) P.c1Home)
+     C.vp3)
+Evaluated: true
+Fitness: [1.0 0.2 1.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(P.c1Home) | pp1) (F(P.c1Home) P.c1Home)
+     pp1)

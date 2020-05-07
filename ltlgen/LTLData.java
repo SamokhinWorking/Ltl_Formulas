@@ -1,4 +1,4 @@
-package ltlgen;
+package  ltlgen;
 
 import ec.gp.GPData;
 

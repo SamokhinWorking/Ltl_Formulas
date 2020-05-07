@@ -1,4 +1,4 @@
-package ltlgen.formulas;
+package  ltlgen.formulas;
 
 import ec.EvolutionState;
 import ec.Problem;
@@ -6,7 +6,7 @@ import ec.gp.ADFStack;
 import ec.gp.GPData;
 import ec.gp.GPIndividual;
 import ec.gp.GPNode;
-import ltlgen.LTLData;
+import  ltlgen.LTLData;
 
 public class Implication extends GPNode implements Verifiable {
     @Override

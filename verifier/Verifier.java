@@ -1,107 +1,76 @@
-package verifier;
+package  verifier;
+import  automaton.Automaton;
+
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Verifier {
-    String path;
-    File file;
+    private String smvModel;
 
-    public Verifier (String path)
-    {
-        this.path=path;
-        this.file=new File(path);
+    public Verifier(Automaton automaton) {
+        this.smvModel = automaton.toSMV();
     }
 
-
-    private static void copyFileUsingStream(File source, File dest) throws IOException {
-        InputStream is = null;
-        OutputStream os = null;
+    public Verifier(String filename) {
+        Scanner in = null;
         try {
-            is = new FileInputStream(source);
-            os = new FileOutputStream(dest);
-            byte[] buffer = new byte[1024];
-            int length;
-            while ((length = is.read(buffer)) > 0) {
-                os.write(buffer, 0, length);
-            }
-        } finally {
-            is.close();
-            os.close();
+            in = new Scanner(new File(filename));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
+
+        StringBuilder sb = new StringBuilder();
+        while (in.hasNext()) {
+            sb.append(in.nextLine()).append("\n");
+        }
+        smvModel = sb.toString();
+        in.close();
     }
 
-    public int testLtlFormulas(String s){
-        int verifier=0;
+    public int verify(String s) {
+        int verificationResult = 0;
         try {
+            File modelFile = File.createTempFile("smvModel", "");
+            PrintWriter writer = new PrintWriter(modelFile);
+            writer.write(smvModel + "\nLTLSPEC " + s);
+            writer.close();
+            Process p = Runtime.getRuntime().exec("resources/NuSMV " + modelFile.getPath());
 
-            // print a message
+            Scanner sc = new Scanner(new BufferedInputStream(p.getInputStream()));
 
-            // create a process and execute notepad.exe
-            String NewPath="verifier/tmp.smv";
-            File fileNew = new File(NewPath);
-
-            copyFileUsingStream(this.file,fileNew);
-
-            FileWriter writer =new FileWriter(fileNew,true);
-            writer.write(s);
-            writer.flush();
-
-
-            String [] trying={"/bin/bash",
-                    "-c",
-                    "resources/NuSMV "+NewPath,
-            };
-            Process process = Runtime.getRuntime().exec(trying);
-
-            BufferedReader input =new BufferedReader(new InputStreamReader(process.getInputStream()));
-            BufferedReader error =new BufferedReader(new InputStreamReader(process.getErrorStream()));
-
-
-
-
-            String line;
-            ArrayList<String> str =new ArrayList<String>();
-            while((line=input.readLine())!=null){
-            //     System.out.println(line);
+            ArrayList<String> str = new ArrayList<String>();
+            while (sc.hasNext()){
+                String line = sc.nextLine();
                 str.add(line);
             }
-            input.close();
-            String [] row =str.toArray(new String[str.size()]);
-            while((line=error.readLine())!=null){
-                System.out.println(line);
-            }
+            sc.close();
+
+            String[] lines = str.toArray(new String[str.size()]);
 
             // print another message
-
-           if(row[row.length-1].equals("")){
-               verifier=0;
-           }
-           else {
-
-               String result = new String();
+           if (lines[lines.length - 1].isEmpty()){
+               verificationResult = 0;
+           } else {
+               String result = "";
                String target = "-- specification";
 
-               for (int i = 0; i < row.length; i++) {
-                   if (row[i].contains(target)) {
-                       result = row[i];
+               for (int i = 0; i < lines.length; i++) {
+                   if (lines[i].contains(target)) {
+                       result = lines[i];
                        break;
                    }
-
                }
-           //    System.out.println(result);
                if (result.contains("false")) {
-                   verifier =0;
-                   //System.out.println("false confirm");
+                   verificationResult = 0;
                } else if (result.contains("true")) {
-                 //  System.out.println("true confirm");
-                   verifier =1;
-                  //System.out.println(result);
+                   verificationResult = 1;
                }
            }
 
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return verifier;
+        return verificationResult;
     }
 }

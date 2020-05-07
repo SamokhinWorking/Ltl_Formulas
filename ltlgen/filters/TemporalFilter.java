@@ -1,4 +1,4 @@
-package ltlgen.filters;
+package  ltlgen.filters;
 
 public class TemporalFilter extends Filter {
 

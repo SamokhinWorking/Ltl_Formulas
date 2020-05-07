@@ -1,31 +1,19 @@
-package ltlgen.fitnesses;
+package  ltlgen.fitnesses;
 
-import automat.Automat;
-import verifier.Verifier;
+import ec.EvolutionState;
+import  automaton.Automaton;
+import  verifier.Verifier;
 
-import java.io.File;
 public class ScenarioFitness extends SingleFitness{
 
     @Override
-    public double getFitness(String formula, int complexity, Automat automat,String []setOfCondition) {
-
-        String row =new String();
-        row="LTLSPEC "+formula;
-
-        Verifier ver =new Verifier("Scenario.smv");
-
-
-        int test=0;
-        test= ver.testLtlFormulas(row);
-
-
-        if((test == 1) ){
+    public double getFitness(String formula, int complexity, EvolutionState evolutionState) {
+        Verifier verifier = new Verifier("Scenario.smv");
+        int test = verifier.verify(formula);
+        if (test == 1) {
             return -1.0;
-        }
-        else {
+        } else {
             return 1.0;
         }
-
     }
-
 }

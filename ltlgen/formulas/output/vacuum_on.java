@@ -1,13 +1,10 @@
-package ltlgen.formulas.output;
+package  ltlgen.formulas.output;
 
 import ec.EvolutionState;
 import ec.Problem;
 import ec.gp.*;
-import ec.util.Code;
-import helpClass.*;
-import ltlgen.LTLData;
-import ltlgen.LTLProblem;
-import ltlgen.formulas.Verifiable;
+import  ltlgen.LTLData;
+import  ltlgen.formulas.Verifiable;
 
 
 public class vacuum_on extends GPNode implements Verifiable {
@@ -31,8 +28,6 @@ public class vacuum_on extends GPNode implements Verifiable {
 
     @Override
     public String toString() {
-        String input="C.vacuum_on";
-        return input;
+        return "C.vacuum_on";
     }
-
 }

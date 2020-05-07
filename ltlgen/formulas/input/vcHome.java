@@ -1,15 +1,12 @@
-package ltlgen.formulas.input;
+package  ltlgen.formulas.input;
 
 import ec.EvolutionState;
 import ec.Problem;
 import ec.gp.*;
-import ec.util.Code;
-import helpClass.*;
-import ltlgen.LTLData;
-import ltlgen.LTLProblem;
+import  ltlgen.LTLData;
 
 
-import ltlgen.formulas.Verifiable;
+import  ltlgen.formulas.Verifiable;
 
 
 public class vcHome extends GPNode implements Verifiable {
@@ -33,8 +30,6 @@ public class vcHome extends GPNode implements Verifiable {
 
     @Override
     public String toString() {
-        String input="P.vcHome";
-        return input;
+        return "P.vcHome";
     }
-
 }

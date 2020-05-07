@@ -1,0 +1,128 @@
+Front:
+G((P.c1Home U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: Infinity
+--------------------
+G((P.c2End U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((C.c1Retract U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((lifted U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((C.c1Extend U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((F(P.c1Home) U P.c1Home))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+
+Best individuals:
+G((P.c1Home U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: Infinity
+--------------------
+G((F(P.c1Home) U F(P.c1Home)))
+Fitness: [1.0 0.14285714285714285 1.0]
+Rank: 0
+Sparsity: Infinity
+--------------------
+G(P.c1Home)
+Fitness: [0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+--------------------
+G((P.c1Home U (P.c1Home U F(P.c1Home))))
+Fitness: [1.0 0.1111111111111111 1.0]
+Rank: 0
+Sparsity: Infinity
+--------------------
+G((P.c1Home U (P.c2End U F(P.c1Home))))
+Fitness: [1.0 0.1111111111111111 1.0]
+Rank: 0
+Sparsity: Infinity
+--------------------
+G((P.c2End U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((C.c1Retract U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((lifted U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((C.c1Extend U F(P.c1Home)))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((F(P.c1Home) U P.c1Home))
+Fitness: [1.0 0.16666666666666666 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((C.c1Extend U (P.c1Home U F(P.c1Home))))
+Fitness: [1.0 0.1111111111111111 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((P.c1Home U (C.c1Retract U F(P.c1Home))))
+Fitness: [1.0 0.1111111111111111 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((P.c1Home U P.c1Home))
+Fitness: [0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((P.c1Home U (C.c1Extend U F(P.c1Home))))
+Fitness: [1.0 0.1111111111111111 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((P.c2End U (P.c1Home U F(P.c1Home))))
+Fitness: [1.0 0.1111111111111111 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((P.c1Home U F((P.c1Home U F(P.c1Home)))))
+Fitness: [1.0 0.1 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G(((P.c1Home U F(P.c1Home)) U F(P.c1Home)))
+Fitness: [1.0 0.1 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((P.c1Home U C.c1Extend))
+Fitness: [0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+--------------------
+G((C.c1Extend U F((P.c1Home U F(P.c1Home)))))
+Fitness: [1.0 0.1 1.0]
+Rank: 0
+Sparsity: 0.0
+--------------------

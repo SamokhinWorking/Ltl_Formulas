@@ -4,24 +4,646 @@ Subpopulation 0:
 
 Front: 
 Evaluated: true
-Fitness: [0.06666666666666667 1.0 0.5274999999999996]
+Fitness: [0.0 0.0 0.0 0.0]
 Rank: 0
 Sparsity: 0.0
 Tree 0:
- ((( P.c1Home V C.vacuum_off) -> (C.vac & C.c2Extend))
-     (( pp1 V C.c2Extend) P.c1Home C.c1Extend)
-     ((P.c2End & C.c1Retract) P.c1Home C.c2Retract))
+ C.vacuum_off
 Evaluated: true
-Fitness: [0.09090909090909091 1.0 0.4049999999999999]
+Fitness: [0.0 0.0 0.0 0.0]
 Rank: 0
 Sparsity: 0.0
 Tree 0:
- ((C.vacuum_on U P.c1End) C.c2Retract pp2)
+ P.c1Home
 Evaluated: true
-Fitness: [0.125 1.0 0.24750000000000028]
+Fitness: [0.0 0.0 0.0 0.0]
 Rank: 0
 Sparsity: 0.0
 Tree 0:
- ((X(P.vcEnd) -> (C.vacuum_off -> P.vcHome))
-     (X(pp1) P.vcHome) ((C.vcExtend -> P.vcHome)
-     C.vacuum_on pp1))
+ (((((C.vp3 & dropped) U (C.vp1 | pp1)) | X(( C.vcExtend R lifted))) U (F(( C.vacuum_off R P.vcEnd)) -> !(F(dropped))))
+     ((((C.vp3 & dropped) U (C.vp1 | pp1)) | X(( C.vcExtend R lifted)))
+         (((C.vp3 & dropped) U (C.vp1 | pp1)) ((C.vp3 & dropped)
+             C.vp3 dropped) ((C.vp1 | pp1) C.vp1 pp1))
+         (X(( C.vcExtend R lifted)) (( C.vcExtend R lifted)
+             C.vcExtend lifted))) ((F(( C.vacuum_off R P.vcEnd)) -> !(F(dropped)))
+     (F(( C.vacuum_off R P.vcEnd)) (( C.vacuum_off R P.vcEnd)
+         C.vacuum_off P.vcEnd)) (!(F(dropped)) (F(dropped)
+     dropped))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ (((X((P.c1End -> C.c1Extend)) & (F(dropped) & F(lifted))) -> ( ((C.vp3 | lifted) U (P.vcHome U C.vp3)) R ( !(lifted) R !(C.c2Retract))))
+     ((X((P.c1End -> C.c1Extend)) & (F(dropped) & F(lifted)))
+         (X((P.c1End -> C.c1Extend)) ((P.c1End -> C.c1Extend)
+             P.c1End C.c1Extend)) ((F(dropped) & F(lifted))
+         (F(dropped) dropped) (F(lifted) lifted)))
+     (( ((C.vp3 | lifted) U (P.vcHome U C.vp3)) R ( !(lifted) R !(C.c2Retract)))
+         (((C.vp3 | lifted) U (P.vcHome U C.vp3))
+             ((C.vp3 | lifted) C.vp3 lifted) ((P.vcHome U C.vp3)
+             P.vcHome C.vp3)) (( !(lifted) R !(C.c2Retract))
+         (!(lifted) lifted) (!(C.c2Retract) C.c2Retract))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((P.c2Home U pp2) P.c2Home pp2)
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ C.c2Retract
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((X(X((P.c2Home & C.vacuum_off))) | ((F(C.vp2) | X(pp1)) & (!(C.vacuum_on) & !(P.c1Home))))
+     (X(X((P.c2Home & C.vacuum_off))) (X((P.c2Home & C.vacuum_off))
+         ((P.c2Home & C.vacuum_off) P.c2Home C.vacuum_off)))
+     (((F(C.vp2) | X(pp1)) & (!(C.vacuum_on) & !(P.c1Home)))
+         ((F(C.vp2) | X(pp1)) (F(C.vp2) C.vp2) (X(pp1)
+             pp1)) ((!(C.vacuum_on) & !(P.c1Home)) (!(C.vacuum_on)
+         C.vacuum_on) (!(P.c1Home) P.c1Home))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((( X((C.vac & P.c2Home)) R (!(C.c2Extend) U (C.c2Retract | pp2))) -> ( ((lifted | P.vcEnd) U ( dropped R C.vcExtend)) R F(( C.vcExtend R P.vcHome))))
+     (( X((C.vac & P.c2Home)) R (!(C.c2Extend) U (C.c2Retract | pp2)))
+         (X((C.vac & P.c2Home)) ((C.vac & P.c2Home)
+             C.vac P.c2Home)) ((!(C.c2Extend) U (C.c2Retract | pp2))
+         (!(C.c2Extend) C.c2Extend) ((C.c2Retract | pp2)
+         C.c2Retract pp2))) (( ((lifted | P.vcEnd) U ( dropped R C.vcExtend)) R F(( C.vcExtend R P.vcHome)))
+     (((lifted | P.vcEnd) U ( dropped R C.vcExtend))
+         ((lifted | P.vcEnd) lifted P.vcEnd) (( dropped R C.vcExtend)
+         dropped C.vcExtend)) (F(( C.vcExtend R P.vcHome))
+     (( C.vcExtend R P.vcHome) C.vcExtend P.vcHome))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((( ( X(C.c1Extend) R (P.c2End U C.c1Extend)) R ( (C.c2Retract | lifted) R F(dropped))) -> (!((P.c2End U dropped)) -> ( (C.c2Retract -> pp3) R ( P.c1Home R P.c2End))))
+     (( ( X(C.c1Extend) R (P.c2End U C.c1Extend)) R ( (C.c2Retract | lifted) R F(dropped)))
+         (( X(C.c1Extend) R (P.c2End U C.c1Extend))
+             (X(C.c1Extend) C.c1Extend) ((P.c2End U C.c1Extend)
+             P.c2End C.c1Extend)) (( (C.c2Retract | lifted) R F(dropped))
+         ((C.c2Retract | lifted) C.c2Retract lifted)
+         (F(dropped) dropped))) ((!((P.c2End U dropped)) -> ( (C.c2Retract -> pp3) R ( P.c1Home R P.c2End)))
+     (!((P.c2End U dropped)) ((P.c2End U dropped)
+         P.c2End dropped)) (( (C.c2Retract -> pp3) R ( P.c1Home R P.c2End))
+     ((C.c2Retract -> pp3) C.c2Retract pp3) (( P.c1Home R P.c2End)
+     P.c1Home P.c2End))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ pp3
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((( P.c2End R C.c1Extend) U (C.vp1 U C.vp2))
+     (( P.c2End R C.c1Extend) P.c2End C.c1Extend)
+     ((C.vp1 U C.vp2) C.vp1 C.vp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ (((F((!(lifted) & X(C.vp3))) & (( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off)) & X((pp1 -> P.vcEnd)))) U ((( !(C.c1Retract) R F(P.vcEnd)) | ((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract))) -> !(((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2)))))
+     ((F((!(lifted) & X(C.vp3))) & (( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off)) & X((pp1 -> P.vcEnd))))
+         (F((!(lifted) & X(C.vp3))) ((!(lifted) & X(C.vp3))
+             (!(lifted) lifted) (X(C.vp3) C.vp3))) ((( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off)) & X((pp1 -> P.vcEnd)))
+         (( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off))
+             (( C.c1Extend R C.vacuum_on) C.c1Extend C.vacuum_on)
+             (( pp1 R C.vacuum_off) pp1 C.vacuum_off))
+         (X((pp1 -> P.vcEnd)) ((pp1 -> P.vcEnd) pp1
+             P.vcEnd)))) (((( !(C.c1Retract) R F(P.vcEnd)) | ((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract))) -> !(((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2))))
+     ((( !(C.c1Retract) R F(P.vcEnd)) | ((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract)))
+         (( !(C.c1Retract) R F(P.vcEnd)) (!(C.c1Retract)
+             C.c1Retract) (F(P.vcEnd) P.vcEnd)) (((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract))
+         ((P.vcHome -> P.vcEnd) P.vcHome P.vcEnd)
+         ((P.vcEnd -> C.c1Retract) P.vcEnd C.c1Retract)))
+     (!(((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2)))
+         (((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2))
+             ((C.c1Retract U C.vacuum_off) C.c1Retract
+                 C.vacuum_off) (( C.c1Retract R C.vp2) C.c1Retract
+             C.vp2)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     (X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac))))
+         ((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))
+             (( (P.vcEnd | C.vac) R X(C.vcExtend)) ((P.vcEnd | C.vac)
+                 P.vcEnd C.vac) (X(C.vcExtend) C.vcExtend))
+             (((C.c1Retract -> C.vp2) U !(C.vac)) ((C.c1Retract -> C.vp2)
+                 C.c1Retract C.vp2) (!(C.vac) C.vac)))) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ C.vp1
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ P.c2End
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((X(X(( (P.vcHome -> pp2) R !(C.c1Extend)))) -> (((X(pp1) U (C.c1Retract | C.c1Retract)) U F((pp3 U dropped))) | F(!((C.c2Retract U C.vp3)))))
+     (X(X(( (P.vcHome -> pp2) R !(C.c1Extend))))
+         (X(( (P.vcHome -> pp2) R !(C.c1Extend)))
+             (( (P.vcHome -> pp2) R !(C.c1Extend)) ((P.vcHome -> pp2)
+                 P.vcHome pp2) (!(C.c1Extend) C.c1Extend))))
+     ((((X(pp1) U (C.c1Retract | C.c1Retract)) U F((pp3 U dropped))) | F(!((C.c2Retract U C.vp3))))
+         (((X(pp1) U (C.c1Retract | C.c1Retract)) U F((pp3 U dropped)))
+             ((X(pp1) U (C.c1Retract | C.c1Retract)) (X(pp1)
+                 pp1) ((C.c1Retract | C.c1Retract) C.c1Retract
+                 C.c1Retract)) (F((pp3 U dropped)) ((pp3 U dropped)
+             pp3 dropped))) (F(!((C.c2Retract U C.vp3)))
+         (!((C.c2Retract U C.vp3)) ((C.c2Retract U C.vp3)
+             C.c2Retract C.vp3)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(C.vcExtend) U (C.vp2 | pp2)) (F(C.vcExtend)
+     C.vcExtend) ((C.vp2 | pp2) C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((C.c1Extend U C.c1Retract) C.c1Extend C.c1Retract)
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((C.vp2 | P.c2Home) C.vp2 P.c2Home)
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((((lifted | C.vacuum_off) -> !(lifted)) & (( C.c2Extend R P.vcHome) -> (C.c2Extend -> pp2)))
+     (((lifted | C.vacuum_off) -> !(lifted)) ((lifted | C.vacuum_off)
+         lifted C.vacuum_off) (!(lifted) lifted))
+     ((( C.c2Extend R P.vcHome) -> (C.c2Extend -> pp2))
+         (( C.c2Extend R P.vcHome) C.c2Extend P.vcHome)
+         ((C.c2Extend -> pp2) C.c2Extend pp2)))
+
+Generation: 1
+Subpopulation 0:
+
+Front: 
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((( C.c2Extend R P.vcHome) -> (C.c2Extend -> pp2))
+     (( C.c2Extend R P.vcHome) C.c2Extend P.vcHome)
+     ((C.c2Extend -> pp2) C.c2Extend pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((((lifted | C.vacuum_off) -> !(lifted)) & C.vp1)
+     (((lifted | C.vacuum_off) -> !(lifted)) ((lifted | C.vacuum_off)
+         lifted C.vacuum_off) (!(lifted) lifted))
+     C.vp1)
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X((( C.vcExtend R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     (X((( C.vcExtend R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac))))
+         ((( C.vcExtend R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))
+             (( C.vcExtend R X(C.vcExtend)) C.vcExtend
+                 (X(C.vcExtend) C.vcExtend)) (((C.c1Retract -> C.vp2) U !(C.vac))
+             ((C.c1Retract -> C.vp2) C.c1Retract C.vp2)
+             (!(C.vac) C.vac)))) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((F((P.vcEnd | C.vac)) U (C.vp2 | pp2)) (F((P.vcEnd | C.vac))
+     ((P.vcEnd | C.vac) P.vcEnd C.vac)) ((C.vp2 | pp2)
+     C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & (F(C.vcExtend) U !(C.vac)))) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     (X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & (F(C.vcExtend) U !(C.vac))))
+         ((( (P.vcEnd | C.vac) R X(C.vcExtend)) & (F(C.vcExtend) U !(C.vac)))
+             (( (P.vcEnd | C.vac) R X(C.vcExtend)) ((P.vcEnd | C.vac)
+                 P.vcEnd C.vac) (X(C.vcExtend) C.vcExtend))
+             ((F(C.vcExtend) U !(C.vac)) (F(C.vcExtend)
+                 C.vcExtend) (!(C.vac) C.vac)))) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((F(C.vcExtend) U F(C.vcExtend)) (F(C.vcExtend)
+     C.vcExtend) (F(C.vcExtend) C.vcExtend))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((F(C.vcExtend) U (C.vp2 | pp2)) (F(C.vcExtend)
+     C.vcExtend) ((C.vp2 | pp2) C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ (((F(C.vcExtend) U (C.vp2 | pp2)) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     ((F(C.vcExtend) U (C.vp2 | pp2)) (F(C.vcExtend)
+         C.vcExtend) ((C.vp2 | pp2) C.vp2 pp2)) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ (((C.c1Retract -> C.vp2) U (C.vp2 | pp2))
+     ((C.c1Retract -> C.vp2) C.c1Retract C.vp2)
+     ((C.vp2 | pp2) C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((X(X(( (P.vcHome -> pp2) R !(C.c1Extend)))) -> (((X(pp1) U (C.c1Retract | C.c1Retract)) U F((pp3 U dropped))) | F(!((C.c2Retract U C.vp3)))))
+     (X(X(( (P.vcHome -> pp2) R !(C.c1Extend))))
+         (X(( (P.vcHome -> pp2) R !(C.c1Extend)))
+             (( (P.vcHome -> pp2) R !(C.c1Extend)) ((P.vcHome -> pp2)
+                 P.vcHome pp2) (!(C.c1Extend) C.c1Extend))))
+     ((((X(pp1) U (C.c1Retract | C.c1Retract)) U F((pp3 U dropped))) | F(!((C.c2Retract U C.vp3))))
+         (((X(pp1) U (C.c1Retract | C.c1Retract)) U F((pp3 U dropped)))
+             ((X(pp1) U (C.c1Retract | C.c1Retract)) (X(pp1)
+                 pp1) ((C.c1Retract | C.c1Retract) C.c1Retract
+                 C.c1Retract)) (F((pp3 U dropped)) ((pp3 U dropped)
+             pp3 dropped))) (F(!((C.c2Retract U C.vp3)))
+         (!((C.c2Retract U C.vp3)) ((C.c2Retract U C.vp3)
+             C.c2Retract C.vp3)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ (((F((!(lifted) & X(C.vp3))) & (( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off)) & X((pp1 -> P.vcEnd)))) U ((( !(C.c1Retract) R F(P.vcEnd)) | ((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract))) -> !(((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2)))))
+     ((F((!(lifted) & X(C.vp3))) & (( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off)) & X((pp1 -> P.vcEnd))))
+         (F((!(lifted) & X(C.vp3))) ((!(lifted) & X(C.vp3))
+             (!(lifted) lifted) (X(C.vp3) C.vp3))) ((( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off)) & X((pp1 -> P.vcEnd)))
+         (( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off))
+             (( C.c1Extend R C.vacuum_on) C.c1Extend C.vacuum_on)
+             (( pp1 R C.vacuum_off) pp1 C.vacuum_off))
+         (X((pp1 -> P.vcEnd)) ((pp1 -> P.vcEnd) pp1
+             P.vcEnd)))) (((( !(C.c1Retract) R F(P.vcEnd)) | ((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract))) -> !(((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2))))
+     ((( !(C.c1Retract) R F(P.vcEnd)) | ((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract)))
+         (( !(C.c1Retract) R F(P.vcEnd)) (!(C.c1Retract)
+             C.c1Retract) (F(P.vcEnd) P.vcEnd)) (((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract))
+         ((P.vcHome -> P.vcEnd) P.vcHome P.vcEnd)
+         ((P.vcEnd -> C.c1Retract) P.vcEnd C.c1Retract)))
+     (!(((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2)))
+         (((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2))
+             ((C.c1Retract U C.vacuum_off) C.c1Retract
+                 C.vacuum_off) (( C.c1Retract R C.vp2) C.c1Retract
+             C.vp2)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((F(C.vcExtend) U (C.vp2 | pp2)) (F(C.vcExtend)
+     C.vcExtend) ((C.vp2 | pp2) C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     (X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac))))
+         ((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))
+             (( (P.vcEnd | C.vac) R X(C.vcExtend)) ((P.vcEnd | C.vac)
+                 P.vcEnd C.vac) (X(C.vcExtend) C.vcExtend))
+             (((C.c1Retract -> C.vp2) U !(C.vac)) ((C.c1Retract -> C.vp2)
+                 C.c1Retract C.vp2) (!(C.vac) C.vac)))) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((( P.c2End R C.c1Extend) U (C.vp1 U C.vp2))
+     (( P.c2End R C.c1Extend) P.c2End C.c1Extend)
+     ((C.vp1 U C.vp2) C.vp1 C.vp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ C.vp1
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((C.c1Extend U C.c1Retract) C.c1Extend C.c1Retract)
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ (((C.vp2 | pp2) U (C.vp2 | pp2)) ((C.vp2 | pp2)
+     C.vp2 pp2) ((C.vp2 | pp2) C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((((lifted | C.vacuum_off) -> !(lifted)) & (( C.c2Extend R P.vcHome) -> (C.c2Extend -> pp2)))
+     (((lifted | C.vacuum_off) -> !(lifted)) ((lifted | C.vacuum_off)
+         lifted C.vacuum_off) (!(lifted) lifted))
+     ((( C.c2Extend R P.vcHome) -> (C.c2Extend -> pp2))
+         (( C.c2Extend R P.vcHome) C.c2Extend P.vcHome)
+         ((C.c2Extend -> pp2) C.c2Extend pp2)))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ P.c2End
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((C.vp2 | P.c2Home) C.vp2 P.c2Home)
+
+Generation: 2
+Subpopulation 0:
+
+Front: 
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))) | (X(X((lifted U P.c1End))) -> ((C.vp2 | pp2) U (C.vp2 | pp2))))
+     (X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac))))
+         ((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))
+             (( (P.vcEnd | C.vac) R X(C.vcExtend)) ((P.vcEnd | C.vac)
+                 P.vcEnd C.vac) (X(C.vcExtend) C.vcExtend))
+             (((C.c1Retract -> C.vp2) U !(C.vac)) ((C.c1Retract -> C.vp2)
+                 C.c1Retract C.vp2) (!(C.vac) C.vac)))) ((X(X((lifted U P.c1End))) -> ((C.vp2 | pp2) U (C.vp2 | pp2)))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (((C.vp2 | pp2) U (C.vp2 | pp2))
+     ((C.vp2 | pp2) C.vp2 pp2) ((C.vp2 | pp2)
+     C.vp2 pp2))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ (((C.vp2 | pp2) U (C.vp2 | pp2)) ((C.vp2 | pp2)
+     C.vp2 pp2) ((C.vp2 | pp2) C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     (X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac))))
+         ((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))
+             (( (P.vcEnd | C.vac) R X(C.vcExtend)) ((P.vcEnd | C.vac)
+                 P.vcEnd C.vac) (X(C.vcExtend) C.vcExtend))
+             (((C.c1Retract -> C.vp2) U !(C.vac)) ((C.c1Retract -> C.vp2)
+                 C.c1Retract C.vp2) (!(C.vac) C.vac)))) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U X((lifted U P.c1End))))) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     (X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U X((lifted U P.c1End)))))
+         ((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U X((lifted U P.c1End))))
+             (( (P.vcEnd | C.vac) R X(C.vcExtend)) ((P.vcEnd | C.vac)
+                 P.vcEnd C.vac) (X(C.vcExtend) C.vcExtend))
+             (((C.c1Retract -> C.vp2) U X((lifted U P.c1End)))
+                 ((C.c1Retract -> C.vp2) C.c1Retract C.vp2)
+                 (X((lifted U P.c1End)) ((lifted U P.c1End)
+                     lifted P.c1End))))) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X((( (P.vcEnd | C.vac) R (C.vp2 | pp2)) & ((C.c1Retract -> C.vp2) U !(C.vac)))) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     (X((( (P.vcEnd | C.vac) R (C.vp2 | pp2)) & ((C.c1Retract -> C.vp2) U !(C.vac))))
+         ((( (P.vcEnd | C.vac) R (C.vp2 | pp2)) & ((C.c1Retract -> C.vp2) U !(C.vac)))
+             (( (P.vcEnd | C.vac) R (C.vp2 | pp2)) ((P.vcEnd | C.vac)
+                 P.vcEnd C.vac) ((C.vp2 | pp2) C.vp2 pp2))
+             (((C.c1Retract -> C.vp2) U !(C.vac)) ((C.c1Retract -> C.vp2)
+                 C.c1Retract C.vp2) (!(C.vac) C.vac)))) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ C.vac
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ (((( P.c2End R C.c1Extend) U (C.vp1 U C.vp2)) U (C.vp2 | pp2))
+     ((( P.c2End R C.c1Extend) U (C.vp1 U C.vp2))
+         (( P.c2End R C.c1Extend) P.c2End C.c1Extend)
+         ((C.vp1 U C.vp2) C.vp1 C.vp2)) ((C.vp2 | pp2)
+     C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((C.vp2 | pp2) C.vp2 pp2)
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X(C.vcExtend) U (C.vp2 | pp2)) (X(C.vcExtend)
+     C.vcExtend) ((C.vp2 | pp2) C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((C.c1Extend U C.c1Retract) C.c1Extend C.c1Retract)
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((F(C.vcExtend) U (C.vp2 | pp2)) (F(C.vcExtend)
+     C.vcExtend) ((C.vp2 | pp2) C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ (((C.vp2 | pp2) U (C.vp2 | pp2)) ((C.vp2 | pp2)
+     C.vp2 pp2) ((C.vp2 | pp2) C.vp2 pp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     (X((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac))))
+         ((( (P.vcEnd | C.vac) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))
+             (( (P.vcEnd | C.vac) R X(C.vcExtend)) ((P.vcEnd | C.vac)
+                 P.vcEnd C.vac) (X(C.vcExtend) C.vcExtend))
+             (((C.c1Retract -> C.vp2) U !(C.vac)) ((C.c1Retract -> C.vp2)
+                 C.c1Retract C.vp2) (!(C.vac) C.vac)))) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ (((F((!(lifted) & X(C.vp3))) & (( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off)) & X((pp1 -> P.vcEnd)))) U ((( !(C.c1Retract) R F(P.vcEnd)) | ((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract))) -> !(((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2)))))
+     ((F((!(lifted) & X(C.vp3))) & (( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off)) & X((pp1 -> P.vcEnd))))
+         (F((!(lifted) & X(C.vp3))) ((!(lifted) & X(C.vp3))
+             (!(lifted) lifted) (X(C.vp3) C.vp3))) ((( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off)) & X((pp1 -> P.vcEnd)))
+         (( ( C.c1Extend R C.vacuum_on) R ( pp1 R C.vacuum_off))
+             (( C.c1Extend R C.vacuum_on) C.c1Extend C.vacuum_on)
+             (( pp1 R C.vacuum_off) pp1 C.vacuum_off))
+         (X((pp1 -> P.vcEnd)) ((pp1 -> P.vcEnd) pp1
+             P.vcEnd)))) (((( !(C.c1Retract) R F(P.vcEnd)) | ((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract))) -> !(((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2))))
+     ((( !(C.c1Retract) R F(P.vcEnd)) | ((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract)))
+         (( !(C.c1Retract) R F(P.vcEnd)) (!(C.c1Retract)
+             C.c1Retract) (F(P.vcEnd) P.vcEnd)) (((P.vcHome -> P.vcEnd) -> (P.vcEnd -> C.c1Retract))
+         ((P.vcHome -> P.vcEnd) P.vcHome P.vcEnd)
+         ((P.vcEnd -> C.c1Retract) P.vcEnd C.c1Retract)))
+     (!(((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2)))
+         (((C.c1Retract U C.vacuum_off) | ( C.c1Retract R C.vp2))
+             ((C.c1Retract U C.vacuum_off) C.c1Retract
+                 C.vacuum_off) (( C.c1Retract R C.vp2) C.c1Retract
+             C.vp2)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((( P.c2End R C.c1Extend) U (C.vp1 U C.vp2))
+     (( P.c2End R C.c1Extend) P.c2End C.c1Extend)
+     ((C.vp1 U C.vp2) C.vp1 C.vp2))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((((lifted | C.vacuum_off) -> !(lifted)) & (( C.c2Extend R P.vcHome) -> (C.c2Extend -> pp2)))
+     (((lifted | C.vacuum_off) -> !(lifted)) ((lifted | C.vacuum_off)
+         lifted C.vacuum_off) (!(lifted) lifted))
+     ((( C.c2Extend R P.vcHome) -> (C.c2Extend -> pp2))
+         (( C.c2Extend R P.vcHome) C.c2Extend P.vcHome)
+         ((C.c2Extend -> pp2) C.c2Extend pp2)))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: Infinity
+Tree 0:
+ ((X((( (P.vcEnd | ((C.vp2 | pp2) U (C.vp2 | pp2))) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))) | (X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home)))))
+     (X((( (P.vcEnd | ((C.vp2 | pp2) U (C.vp2 | pp2))) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac))))
+         ((( (P.vcEnd | ((C.vp2 | pp2) U (C.vp2 | pp2))) R X(C.vcExtend)) & ((C.c1Retract -> C.vp2) U !(C.vac)))
+             (( (P.vcEnd | ((C.vp2 | pp2) U (C.vp2 | pp2))) R X(C.vcExtend))
+                 ((P.vcEnd | ((C.vp2 | pp2) U (C.vp2 | pp2)))
+                     P.vcEnd (((C.vp2 | pp2) U (C.vp2 | pp2))
+                     ((C.vp2 | pp2) C.vp2 pp2) ((C.vp2 | pp2)
+                     C.vp2 pp2))) (X(C.vcExtend) C.vcExtend))
+             (((C.c1Retract -> C.vp2) U !(C.vac)) ((C.c1Retract -> C.vp2)
+                 C.c1Retract C.vp2) (!(C.vac) C.vac)))) ((X(X((lifted U P.c1End))) -> X((F(P.c1End) & (P.c1End -> P.c1Home))))
+     (X(X((lifted U P.c1End))) (X((lifted U P.c1End))
+         ((lifted U P.c1End) lifted P.c1End))) (X((F(P.c1End) & (P.c1End -> P.c1Home)))
+     ((F(P.c1End) & (P.c1End -> P.c1Home)) (F(P.c1End)
+         P.c1End) ((P.c1End -> P.c1Home) P.c1End P.c1Home)))))
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ ((C.vp2 | P.c2Home) C.vp2 P.c2Home)
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ C.vp1
+Evaluated: true
+Fitness: [0.0 0.0 0.0 0.0]
+Rank: 0
+Sparsity: 0.0
+Tree 0:
+ P.c2End

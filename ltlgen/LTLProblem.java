@@ -1,11 +1,10 @@
 package ltlgen;
 
-import automat.Automat;
+import automaton.Automaton;
 import ec.EvolutionState;
 import ec.Individual;
 import ec.gp.GPIndividual;
 import ec.gp.GPProblem;
-import ec.gp.koza.KozaFitness;
 import ec.multiobjective.MultiObjectiveFitness;
 import ec.util.Parameter;
 import ltlgen.filters.Filter;
@@ -19,11 +18,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 public class LTLProblem extends GPProblem {
-    public static int EVENT_NUMBER;
-    public static int ACTION_NUMBER;
     private static Filter[] filters;
     private static SingleFitness[] fitnesses;
     private static final Map<String, EvaluationResult> results = new HashMap<>();
@@ -34,10 +30,6 @@ public class LTLProblem extends GPProblem {
         if (!(input instanceof LTLData)) {
             state.output.fatal("GPData class must subclass from " + LTLData.class, base.push(P_DATA));
         }
-
-       // Parameter a = new Parameter("automaton");
-        //EVENT_NUMBER = state.parameters.getInt(a.push("event-number"), null);
-        //ACTION_NUMBER = state.parameters.getInt(a.push("action-number"), null);
 
         Parameter ft = base.push("filters");
         filters = new Filter[state.parameters.getInt(ft.push("number"), null)];
@@ -65,11 +57,10 @@ public class LTLProblem extends GPProblem {
         }
     }
 
-    private double[]  getFitness(String formula, int size, Automat automat, String[] setOfCondition) {
+    private double[] getFitness(String formula, int size, EvolutionState state) {
         if (results.containsKey(formula)) {
             return results.get(formula).result;
         }
-       // int result=0; // = new double[fitnesses.length];
         double[] result = new double[fitnesses.length];
 
         boolean r = true;
@@ -81,7 +72,7 @@ public class LTLProblem extends GPProblem {
         }
         if (r) {
             for (int i = 0; i < result.length; i++) {
-                result[i] = fitnesses[i].getFitness(formula, size,automat,setOfCondition);
+                result[i] = fitnesses[i].getFitness(formula, size, state);
                 if (result[i] == -1) {
                     for (int j = 0; j <= i; j++) {
                         result[j] = 0;
@@ -101,27 +92,16 @@ public class LTLProblem extends GPProblem {
             GPIndividual individual = (GPIndividual) ind;
             individual.trees[0].child.eval(state, threadnum, input, stack, individual, this);
 
-            //change my file add automat to function getFitness()
-            Automat automat = new Automat("CentralController.xml");
-            String [] setOfCondition=TakeConditions("conditions/result-humans.stat");
-
-            /*
-            KozaFitness f =(KozaFitness) ind.fitness;
-
-            String formula = "G(" + input.result + ")";
-
-
-            f.setStandardizedFitness(state, getFitness(formula, input.complexity));
-            ind.evaluated = true;
-
-            */
+            Automaton automaton = new Automaton("CentralController.xml");
+            String[] setOfCondition = TakeConditions("conditions/result-humans.stat");
 
             MultiObjectiveFitness f = (MultiObjectiveFitness) ind.fitness;
             String formula = "G(" + input.result + ")";
             //f.set
-            f.setObjectives(state, getFitness(formula, input.complexity,automat,setOfCondition));
+//            f.setObjectives(state, getFitness(formula, input.complexity, automaton, setOfCondition, state));
+            f.setObjectives(state, getFitness(formula, input.complexity, state));
             ind.evaluated = true;
-
+//            System.out.println(input.result);
         }
     }
 
@@ -129,7 +109,6 @@ public class LTLProblem extends GPProblem {
     public static String [] TakeConditions(String name){
         ArrayList<String> lines = new ArrayList<String>();
         try{
-
             BufferedReader reader =new BufferedReader(new FileReader(name));
             String line;
             String target1="Fitness:";
@@ -143,7 +122,6 @@ public class LTLProblem extends GPProblem {
             }
             reader.close();
 
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -151,15 +129,11 @@ public class LTLProblem extends GPProblem {
         }
 
         String [] allCondition = lines.toArray(new String[lines.size()]);
-
-
-
         return allCondition;
     }
 
     private static class EvaluationResult {
         private final double[] result;
-
         public EvaluationResult(double[] result) {
             this.result = result;
         }
