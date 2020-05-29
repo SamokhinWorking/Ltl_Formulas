@@ -146,15 +146,15 @@ gp.adf-stack.context = ec.gp.ADFContext
 # The default is 10% terminals, 90% nonterminals when possible,
 # 0% "always pick the root", 0% "pick any node"
 
-gp.koza.ns.terminals = 0.1
-gp.koza.ns.nonterminals = 0.9
+gp.koza.ns.terminals = 0.5
+gp.koza.ns.nonterminals = 0.5
 gp.koza.ns.root = 0.0
 
 
 
 
 # You need to create at least one function set, 
-# called "f0", which your first tree will use.  
+# called "f0", which your first tree will use.
 # You don't need to include the class declaration here,
 # but it quiets warnings.
 

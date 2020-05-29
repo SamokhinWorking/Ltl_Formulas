@@ -17,16 +17,21 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class LTLProblem extends GPProblem {
     private static Filter[] filters;
     private static SingleFitness[] fitnesses;
     private static final Map<String, EvaluationResult> results = new HashMap<>();
+    public static List<String> terminals;
+    public static String[] predicates = new String[]{"lifted", "dropped", "C.vp1", "C.vp2", "C.vp3"};
+    public static Parameter base;
 
     @Override
     public void setup(final EvolutionState state, Parameter base) {
         super.setup(state, base);
+
         if (!(input instanceof LTLData)) {
             state.output.fatal("GPData class must subclass from " + LTLData.class, base.push(P_DATA));
         }
@@ -55,30 +60,45 @@ public class LTLProblem extends GPProblem {
                 state.output.fatal("Error while loading fitness function: " + e.getMessage());
             }
         }
+
+        terminals = new ArrayList<>();
+        for (String s : Automaton.automaton.getInputVars()) {
+            terminals.add(s);
+        }
+
+        for (String s : Automaton.automaton.getOutputVars()) {
+            terminals.add(s);
+        }
+        terminals.add("lifted");
+        terminals.add("dropped");
+        terminals.add("vp1");
+        terminals.add("vp2");
+        terminals.add("vp3");
+
+        LTLProblem.base = this.defaultBase();
     }
 
-    private double[] getFitness(String formula, int size, EvolutionState state) {
+    private double[] getFitness(Individual individual, String formula, int size, EvolutionState state) {
         if (results.containsKey(formula)) {
             return results.get(formula).result;
         }
+
         double[] result = new double[fitnesses.length];
 
-        boolean r = true;
         for (Filter filter : filters) {
             if (!filter.accepts(formula, size)) {
-                r = false;
-                break;
+                results.put(formula, new EvaluationResult(result));
+                return result;
             }
         }
-        if (r) {
-            for (int i = 0; i < result.length; i++) {
-                result[i] = fitnesses[i].getFitness(formula, size, state);
-                if (result[i] == -1) {
-                    for (int j = 0; j <= i; j++) {
-                        result[j] = 0;
-                    }
-                    break;
+
+        for (int i = 0; i < result.length; i++) {
+            result[i] = fitnesses[i].getFitness(formula, size, state);
+            if (result[i] == -1) {
+                for (int j = 0; j <= i; j++) {
+                    result[j] = 0;
                 }
+                break;
             }
         }
         results.put(formula, new EvaluationResult(result));
@@ -91,45 +111,11 @@ public class LTLProblem extends GPProblem {
             LTLData input = (LTLData) this.input;
             GPIndividual individual = (GPIndividual) ind;
             individual.trees[0].child.eval(state, threadnum, input, stack, individual, this);
-
-            Automaton automaton = new Automaton("CentralController.xml");
-            String[] setOfCondition = TakeConditions("conditions/result-humans.stat");
-
             MultiObjectiveFitness f = (MultiObjectiveFitness) ind.fitness;
             String formula = "G(" + input.result + ")";
-            //f.set
-//            f.setObjectives(state, getFitness(formula, input.complexity, automaton, setOfCondition, state));
-            f.setObjectives(state, getFitness(formula, input.complexity, state));
+            f.setObjectives(state, getFitness(individual, formula, input.complexity, state));
             ind.evaluated = true;
-//            System.out.println(input.result);
         }
-    }
-
-
-    public static String [] TakeConditions(String name){
-        ArrayList<String> lines = new ArrayList<String>();
-        try{
-            BufferedReader reader =new BufferedReader(new FileReader(name));
-            String line;
-            String target1="Fitness:";
-            String target2="Strength:";
-            String target3="Distance:";
-            while((line=reader.readLine())!= null){
-
-                if(!line.contains(target1) &&  !line.contains(target2) && !line.contains(target3)) {
-                    lines.add(line);
-                }
-            }
-            reader.close();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String [] allCondition = lines.toArray(new String[lines.size()]);
-        return allCondition;
     }
 
     private static class EvaluationResult {

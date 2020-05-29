@@ -68,7 +68,7 @@ pop.subpop.0 = 				ec.Subpopulation
 pop.subpop.0.size =			1024
 # don't bother trying to eliminate duplicates from the
 # initial population
-pop.subpop.0.duplicate-retries =	0
+pop.subpop.0.duplicate-retries =	10
 
 # ==You need to provide the species info for the subpopulation.==
 
@@ -78,7 +78,7 @@ pop.subpop.0.duplicate-retries =	0
 # By default elitism isn't done.  If you want to do elitism for, say,
 # the top 10 individuals in subpopulation 0, you'd say:
 
-# breed.elite.0 = 			10
+#breed.elite.0 = 			10
 
 
 # ec.SimpleStatistics

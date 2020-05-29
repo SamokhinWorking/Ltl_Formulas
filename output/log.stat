@@ -1,300 +1,540 @@
 Generation 0
-Best individual: G((((pp3 | C.c1Retract) U (C.c2Retract | C.vacuum_off)) U (X(P.c1End) | F(C.vcExtend))))
-Fitness: [0.0 0.0 0.0]
+Best individual: G((F(C.vacuum_off) & (C.vcExtend V C.vacuum_on)))
+Fitness: [0.06666666666666667 0.282842712474619 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: 0.0
 --------------------
 Generation 1
-Best individual: G((!(X(lifted)) | F(P.vcHome)))
-Fitness: [0.16666666666666666 1.0 0.28]
+Best individual: G((!(((F((C.vp3 V C.vp3)) | (!((!(P.vcEnd) | P.c1Home)) | X(C.vcExtend))) & (!(((C.vacuum_off & C.vacuum_on) & (C.vacuum_on V C.c1Retract))) | (F(C.vacuum_off) U X(vac))))) | (((!(X(lifted)) | (C.vacuum_on U C.vcExtend)) V ((C.vp1 & P.c1End) U (C.vp1 | C.c1Extend))) V F((F(C.c1Retract) | (C.c1Retract & C.vcExtend))))))
+Fitness: [0.009523809523809525 0.2773500981126146 0.8200000000000001 0.0 1.0]
 Rank: 0
 Sparsity: 0.0
 --------------------
 Generation 2
-Best individual: G((!(pp2) | C.c1Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | C.vacuum_on) & F(!(C.c1Extend))))
+Fitness: [0.1111111111111111 1.0 0.24 0.0 1.0]
 Rank: 0
-Sparsity: Infinity
+Sparsity: 0.0
 --------------------
 Generation 3
-Best individual: G((!(pp2) | C.c1Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | C.vacuum_on) & F(!(C.c1Extend))))
+Fitness: [0.1111111111111111 1.0 0.24 0.0 1.0]
 Rank: 0
-Sparsity: Infinity
+Sparsity: 0.0
 --------------------
 Generation 4
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | C.vacuum_on) & F(!(C.c1Extend))))
+Fitness: [0.1111111111111111 1.0 0.24 0.0 1.0]
 Rank: 0
-Sparsity: Infinity
+Sparsity: 0.0
 --------------------
 Generation 5
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | C.vacuum_on) & F(!(C.c1Extend))))
+Fitness: [0.1111111111111111 1.0 0.24 0.0 1.0]
 Rank: 0
-Sparsity: Infinity
+Sparsity: 0.0
 --------------------
 Generation 6
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | C.vacuum_on) & F(!(C.c1Extend))))
+Fitness: [0.1111111111111111 1.0 0.24 0.0 1.0]
 Rank: 0
-Sparsity: Infinity
+Sparsity: 0.0
 --------------------
 Generation 7
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | C.vacuum_on) & (!(X(lifted)) | (C.vacuum_on U C.vcExtend))))
+Fitness: [0.05263157894736842 1.0 0.30000000000000004 0.0 0.3086066999241839]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 8
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | C.vacuum_on) & (!(X(lifted)) | (C.vacuum_on U C.vcExtend))))
+Fitness: [0.05263157894736842 1.0 0.30000000000000004 0.0 0.3086066999241839]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 9
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | C.vacuum_on) & (!(X(lifted)) | (C.vacuum_on U C.vcExtend))))
+Fitness: [0.05263157894736842 1.0 0.30000000000000004 0.0 0.3086066999241839]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 10
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | P.c1Home) & (!(X(lifted)) | (C.vacuum_on U C.vcExtend))))
+Fitness: [0.05263157894736842 1.0 0.31999999999999995 0.0 0.3086066999241839]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 11
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G(((!(P.c2End) | P.c1Home) & (!(X(lifted)) | (C.vacuum_on U C.vcExtend))))
+Fitness: [0.05263157894736842 1.0 0.31999999999999995 0.0 0.3086066999241839]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 12
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((!(((F((C.vp3 V (!(C.vcExtend) | C.c1Retract))) | (!((!(P.vcEnd) | C.vacuum_on)) | X(C.vcExtend))) & (!(!(C.c1Extend)) | (!(C.c1Extend) U X(vac))))) | (((!(X(P.c2End)) | (C.vacuum_on U C.vcExtend)) V P.c2End) V F((F(C.c1Retract) | (C.c1Retract & C.vcExtend))))))
+Fitness: [0.012345679012345678 0.2773500981126146 1.0 1.0 1.0]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 13
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((!(((F((C.vp3 V (!(C.vcExtend) | C.c1Retract))) | (!((!(P.vcEnd) | C.vacuum_on)) | X(C.vcExtend))) & (!(!(C.c1Extend)) | (!(C.c1Extend) U X(vac))))) | (((!(X(P.c2End)) | (C.vacuum_on U C.vcExtend)) V P.c2End) V F((F(C.c1Retract) | (C.c1Retract & C.vcExtend))))))
+Fitness: [0.012345679012345678 0.2773500981126146 1.0 1.0 1.0]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 14
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 15
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 16
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 17
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 18
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 19
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 20
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 21
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 22
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 23
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 24
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 25
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 26
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 27
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 28
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 29
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 30
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 31
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 32
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 33
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 34
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((C.vacuum_on & X(C.vacuum_on)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 35
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((!(((C.vacuum_on | vac) & P.c1End)) | (!(C.vacuum_on) V F((P.c2End | (C.c1Retract & C.vcExtend))))))
+Fitness: [0.041666666666666664 1.0 0.42000000000000004 0.0 0.30151134457776363]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 36
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((!(((C.vacuum_on | vac) & P.c1End)) | (!(C.vacuum_on) V F((P.c2End | (C.c1Retract & C.vcExtend))))))
+Fitness: [0.041666666666666664 1.0 0.42000000000000004 0.0 0.30151134457776363]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 37
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((!(((C.vacuum_on | vac) & P.c1End)) | (!(C.vacuum_on) V F((P.c2End | (C.c1Retract & C.vcExtend))))))
+Fitness: [0.041666666666666664 1.0 0.42000000000000004 0.0 0.30151134457776363]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 38
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((!(((C.vacuum_on | vac) & P.c1End)) | (!(C.vacuum_on) V F((P.c2End | (C.c1Retract & C.vcExtend))))))
+Fitness: [0.041666666666666664 1.0 0.42000000000000004 0.0 0.30151134457776363]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 39
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((!(((C.vacuum_on | vac) & P.c1End)) | (!(C.vacuum_on) V F((P.c2End | (C.c1Retract & C.vcExtend))))))
+Fitness: [0.041666666666666664 1.0 0.42000000000000004 0.0 0.30151134457776363]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 40
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((!(((C.vacuum_on | vac) & P.c1End)) | (!(C.vacuum_on) V F((P.c2End | (C.c1Retract & C.vcExtend))))))
+Fitness: [0.041666666666666664 1.0 0.42000000000000004 0.0 0.30151134457776363]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 41
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 42
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 43
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 44
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 45
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 46
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 47
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 48
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
 Rank: 0
 Sparsity: Infinity
 --------------------
 Generation 49
-Best individual: G((!(C.vp2) | C.c2Retract))
-Fitness: [0.25 1.0 0.0]
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 50
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 51
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 52
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 53
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 54
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 55
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 56
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 57
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 58
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 59
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 60
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 61
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 62
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 63
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 64
+Best individual: G((P.c2End & X(P.c2End)))
+Fitness: [0.16666666666666666 0.5773502691896258 1.0 1.0 0.7071067811865475]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 65
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 66
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 67
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 68
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 69
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 70
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 71
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 72
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 73
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 74
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 75
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 76
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 77
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 78
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 79
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 80
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 81
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 82
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 83
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 84
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 85
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 86
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 87
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 88
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
+Rank: 0
+Sparsity: Infinity
+--------------------
+Generation 89
+Best individual: G((!(C.c1Extend) | (!(C.vacuum_on) V F((C.c1Retract & C.vcExtend)))))
+Fitness: [0.05555555555555555 1.0 0.5 0.0 0.30151134457776363]
 Rank: 0
 Sparsity: Infinity
 --------------------

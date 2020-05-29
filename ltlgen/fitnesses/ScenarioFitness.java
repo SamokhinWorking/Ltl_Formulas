@@ -1,19 +1,22 @@
-package  ltlgen.fitnesses;
+package ltlgen.fitnesses;
 
 import ec.EvolutionState;
-import  automaton.Automaton;
-import  verifier.Verifier;
+import ec.util.Parameter;
+import automaton.Automaton;
+import verifier.Verifier;
 
-public class ScenarioFitness extends SingleFitness{
+public class ScenarioFitness extends SingleFitness {
+
+    private Verifier verifier;
+
+    @Override
+    public void setup(EvolutionState state, Parameter base) {
+        super.setup(state, base);
+        verifier = new Verifier("Scenario.smv");
+    }
 
     @Override
     public double getFitness(String formula, int complexity, EvolutionState evolutionState) {
-        Verifier verifier = new Verifier("Scenario.smv");
-        int test = verifier.verify(formula);
-        if (test == 1) {
-            return -1.0;
-        } else {
-            return 1.0;
-        }
+        return 1 - verifier.verify(formula).getUnsatisfiedFormulaFunction();
     }
 }

@@ -1,6 +1,6 @@
-package  ltlgen.fitnesses;
+package ltlgen.fitnesses;
 
-import  automaton.Automaton;
+import automaton.Automaton;
 import ec.EvolutionState;
 import ec.Setup;
 import ec.util.Parameter;

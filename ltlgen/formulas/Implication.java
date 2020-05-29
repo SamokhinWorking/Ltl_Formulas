@@ -1,4 +1,4 @@
-package  ltlgen.formulas;
+package ltlgen.formulas;
 
 import ec.EvolutionState;
 import ec.Problem;
@@ -6,7 +6,7 @@ import ec.gp.ADFStack;
 import ec.gp.GPData;
 import ec.gp.GPIndividual;
 import ec.gp.GPNode;
-import  ltlgen.LTLData;
+import ltlgen.LTLData;
 
 public class Implication extends GPNode implements Verifiable {
     @Override
@@ -21,22 +21,13 @@ public class Implication extends GPNode implements Verifiable {
         String left = data.result;
         int complexity = data.complexity;
         children[1].eval(state, thread, input, stack, individual, problem);
-       // data.result = "(!(" + left + ") | " + data.result + ")";
         data.result = "(" + left + " -> " + data.result + ")";
         data.complexity += complexity + 1;
     }
 
     @Override
     public String toStringForHumans() {
-        /*
-        String left = children[0].toStringForHumans();
-        if (left.charAt(0) == '!') {
-            return "(" + left.substring(2, left.length() - 1) + " | " + children[1].toStringForHumans() + ")";
-        } else {
-            return "(" + children[0].toStringForHumans() + " -> " + children[1].toStringForHumans() + ")";
-        }
-         */
-        return "(" + children[0].toStringForHumans() + " -> " + children[1].toStringForHumans() + ")";
+        return "(" + ((Verifiable) children[0]).toStringForVerifier() + " -> " + ((Verifiable) children[1]).toStringForVerifier() + ")";
     }
 
     @Override

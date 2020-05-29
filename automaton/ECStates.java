@@ -1,4 +1,4 @@
-package  automaton;
+package automaton;
 
 public class ECStates {
     public String[] name;

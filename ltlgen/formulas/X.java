@@ -1,4 +1,4 @@
-package  ltlgen.formulas;
+package ltlgen.formulas;
 
 import ec.EvolutionState;
 import ec.Problem;
@@ -6,7 +6,7 @@ import ec.gp.ADFStack;
 import ec.gp.GPData;
 import ec.gp.GPIndividual;
 import ec.gp.GPNode;
-import  ltlgen.LTLData;
+import ltlgen.LTLData;
 
 public class X extends GPNode implements Verifiable {
     @Override
@@ -19,12 +19,12 @@ public class X extends GPNode implements Verifiable {
         LTLData data = ((LTLData) (input));
         children[0].eval(state, thread, input, stack, individual, problem);
         data.result = "X(" + data.result + ")";
-        data.complexity += 1;
+        data.complexity += 2;
     }
 
     @Override
     public String toStringForHumans() {
-        return "X(" + children[0].toStringForHumans() + ")";
+        return "X(" + ((Verifiable) children[0]).toStringForVerifier() + ")";
     }
 
     @Override

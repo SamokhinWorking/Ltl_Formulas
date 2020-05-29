@@ -15,15 +15,13 @@ DIRS = ltlgen/*.java \
        ltlgen/fitnesses/*.java \
        ltlgen/filters/*.java \
        ltlgen/formulas/*.java \
-       ltlgen/formulas/input/*.java \
-       ltlgen/formulas/output/*.java \
-       ltlgen/formulas/predicate/*.java \
        automaton/*.java \
        tree/*.java \
+       tree/parser/*.java \
+       tree/ast/*.java \
+       tree/ast/nonterminal/*.java \
+       tree/ast/terminal/*.java \
        verifier/*.java 
-     #  ltlgenCondition/*.java \
-      # ltlgenCondition/fitnesses/*.java \
-      # ltlgenCondition/formulas/*.java 
    
 all:
 	${JAVAC} ${DIRS}
@@ -36,6 +34,6 @@ clean:
 	find ltlgen -name "*.class" -exec rm -f {} \;
 	find tree -name "*.class" -exec rm -f {} \;
 	find verifier -name "*.class" -exec rm -f {} \;
-	#find ltlgenCondition -name "*.class" -exec rm -f {} \;
+
 	
 	

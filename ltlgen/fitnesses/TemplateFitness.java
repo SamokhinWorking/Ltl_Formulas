@@ -1,7 +1,7 @@
-package  ltlgen.fitnesses;
+package ltlgen.fitnesses;
 
 import ec.EvolutionState;
-import  automaton.Automaton;
+import automaton.Automaton;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

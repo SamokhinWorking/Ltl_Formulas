@@ -10,6 +10,13 @@ eval.problem.data = ltlgen.LTLData
 #
 # Types
 #
+#
+
+gp.type.a.size = 1
+gp.type.a.0.name = nil
+gp.type.s.size = 0
+
+
 
 gp.type.a.size = 4
 gp.type.a.0.name = not
@@ -48,7 +55,7 @@ gp.type.s.4.member.0 = not
 gp.type.s.4.member.1 = f
 gp.type.s.4.member.2 = others
 
-#
+
 # Tree Constraints
 #
 
@@ -103,7 +110,7 @@ gp.fs.0 = ec.gp.GPFunctionSet
 gp.fs.0.name = f0
 
 #gp.fs.0.size = 25
-gp.fs.0.size = 30
+gp.fs.0.size = 11
 
 gp.fs.0.func.0 = ltlgen.formulas.And
 gp.fs.0.func.0.nc = oth2
@@ -122,59 +129,12 @@ gp.fs.0.func.6.nc = x-type
 gp.fs.0.func.7 = ltlgen.formulas.F
 gp.fs.0.func.7.nc = f-type
 
-#gp.fs.0.func.8 = ltlgen.formulas.Event
-#gp.fs.0.func.8.nc = oth0
-#gp.fs.0.func.9 = ltlgen.formulas.Action
-#gp.fs.0.func.9.nc = oth0
-
-gp.fs.0.func.8 = ltlgen.formulas.input.c1End
+gp.fs.0.func.8 = ltlgen.formulas.InputVariable
 gp.fs.0.func.8.nc = oth0
-gp.fs.0.func.9 = ltlgen.formulas.input.c1Home
+gp.fs.0.func.9 = ltlgen.formulas.OutputVariable
 gp.fs.0.func.9.nc = oth0
-gp.fs.0.func.10 = ltlgen.formulas.input.c2End
+gp.fs.0.func.10 = ltlgen.formulas.Predicate
 gp.fs.0.func.10.nc = oth0
-gp.fs.0.func.11 = ltlgen.formulas.input.c2Home
-gp.fs.0.func.11.nc = oth0
-gp.fs.0.func.12 = ltlgen.formulas.input.pp1
-gp.fs.0.func.12.nc = oth0
-gp.fs.0.func.13 = ltlgen.formulas.input.pp2
-gp.fs.0.func.13.nc = oth0
-gp.fs.0.func.14 = ltlgen.formulas.input.pp3
-gp.fs.0.func.14.nc = oth0
-gp.fs.0.func.15 = ltlgen.formulas.input.vac
-gp.fs.0.func.15.nc = oth0
-gp.fs.0.func.16 = ltlgen.formulas.input.vcEnd
-gp.fs.0.func.16.nc = oth0
-gp.fs.0.func.17 = ltlgen.formulas.input.vcHome
-gp.fs.0.func.17.nc = oth0
-gp.fs.0.func.18 = ltlgen.formulas.output.c1Extend
-gp.fs.0.func.18.nc = oth0
-gp.fs.0.func.19 = ltlgen.formulas.output.c2Extend
-gp.fs.0.func.19.nc = oth0
-gp.fs.0.func.20 = ltlgen.formulas.output.c1Retract
-gp.fs.0.func.20.nc = oth0
-gp.fs.0.func.21 = ltlgen.formulas.output.c2Retract
-gp.fs.0.func.21.nc = oth0
-gp.fs.0.func.22 = ltlgen.formulas.output.vcExtend
-gp.fs.0.func.22.nc = oth0
-gp.fs.0.func.23 = ltlgen.formulas.output.vacuum_on
-gp.fs.0.func.23.nc = oth0
-gp.fs.0.func.24 = ltlgen.formulas.output.vacuum_off
-gp.fs.0.func.24.nc = oth0
-
-gp.fs.0.func.25 = ltlgen.formulas.predicate.dropped
-gp.fs.0.func.25.nc = oth0
-gp.fs.0.func.26 = ltlgen.formulas.predicate.lifted
-gp.fs.0.func.26.nc = oth0
-gp.fs.0.func.27 = ltlgen.formulas.predicate.vp1
-gp.fs.0.func.27.nc = oth0
-gp.fs.0.func.28 = ltlgen.formulas.predicate.vp2
-gp.fs.0.func.28.nc = oth0
-gp.fs.0.func.29 = ltlgen.formulas.predicate.vp3
-gp.fs.0.func.29.nc = oth0
-
-
-
 
 
 #

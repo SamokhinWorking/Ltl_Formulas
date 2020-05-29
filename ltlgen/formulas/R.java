@@ -1,4 +1,4 @@
-package  ltlgen.formulas;
+package ltlgen.formulas;
 
 import ec.EvolutionState;
 import ec.Problem;
@@ -6,7 +6,7 @@ import ec.gp.ADFStack;
 import ec.gp.GPData;
 import ec.gp.GPIndividual;
 import ec.gp.GPNode;
-import  ltlgen.LTLData;
+import ltlgen.LTLData;
 
 public class R extends GPNode implements Verifiable {
     @Override
@@ -21,26 +21,22 @@ public class R extends GPNode implements Verifiable {
         String left = data.result;
         int complexity = data.complexity;
         children[1].eval(state, thread, input, stack, individual, problem);
-//        data.result = "(" + left + " V " + data.result + ")";
-        data.result = "(" + left + " R " + data.result + ")";
-        data.complexity += complexity + 2;
+        data.result = "(" + left + " V " + data.result + ")";
+        data.complexity += complexity + 8 ;
     }
 
     @Override
     public String toStringForHumans() {
-//        return  "( " +children[0].toStringForHumans() + " V "  + children[1].toStringForHumans() + ")";
-        return  "( " +children[0].toStringForHumans() + " R "  + children[1].toStringForHumans() + ")";
+        return  "( " + ((Verifiable) children[0]).toStringForVerifier() + " V "  + ((Verifiable) children[1]).toStringForVerifier() + ")";
     }
 
     @Override
     public String toStringForVerifier() {
-//        return "(" + ((Verifiable) children[0]).toStringForVerifier() + " V " + ((Verifiable) children[1]).toStringForVerifier() + ")";
-        return "(" + ((Verifiable) children[0]).toStringForVerifier() + " R " + ((Verifiable) children[1]).toStringForVerifier() + ")";
+        return "(" + ((Verifiable) children[0]).toStringForVerifier() + " V " + ((Verifiable) children[1]).toStringForVerifier() + ")";
     }
 
     @Override
     public String toString() {
-//        return "V";
-        return "R";
+        return "V";
     }
 }

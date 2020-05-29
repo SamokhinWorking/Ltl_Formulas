@@ -9,33 +9,32 @@ import verifier.Verifier;
 import java.util.HashSet;
 import java.util.Set;
 
-
-public class MutatedFitness extends SingleFitness {
+public class RandomAutomataFitness extends SingleFitness {
 
     private static final int SAMPLE_SIZE = 50;
     private static final Automaton auto = new Automaton("CentralController.xml");
-    private static Automaton mutants[] = null;
+    private static Automaton randomAutomata[] = null;
 
 
     @Override
     public void setup(EvolutionState state, Parameter base) {
         super.setup(state, base);
         MersenneTwisterFast random = state.random[(int)Thread.currentThread().getId() - 1];
-        mutants = new Automaton[SAMPLE_SIZE];
+        randomAutomata = new Automaton[SAMPLE_SIZE];
 
-        Set<String> uniqueMutants = new HashSet<>();
-        uniqueMutants.add(auto.toSMV());
+        Set<String> uniqueAutomata = new HashSet<>();
+        uniqueAutomata.add(auto.toSMV());
         for (int i = 0; i < SAMPLE_SIZE; i++) {
-            mutants[i] = new Automaton(auto);
-            while (uniqueMutants.contains(mutants[i].toSMV())) {
-                mutants[i].mutate(random);
+            randomAutomata[i] = Automaton.generateRandomAutomaton(random);
+            while (uniqueAutomata.contains(randomAutomata[i].toSMV())) {
+                randomAutomata[i].mutate(random);
             }
-            uniqueMutants.add(mutants[i].toSMV());
+            uniqueAutomata.add(randomAutomata[i].toSMV());
         }
     }
 
     public double getResult(String formula, int i) {
-        return new Verifier(mutants[i]).verify(formula).verified;
+        return new Verifier(randomAutomata[i]).verify(formula).verified;
     }
 
     @Override
@@ -46,7 +45,7 @@ public class MutatedFitness extends SingleFitness {
         }
         double ans = 1.0 - result / SAMPLE_SIZE;
 
-        System.out.println("Mutated: " + result + "/" + SAMPLE_SIZE);
+       // System.out.println("Random: " + result + "/" + SAMPLE_SIZE);
         return ans;
     }
 }

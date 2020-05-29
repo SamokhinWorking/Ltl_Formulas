@@ -1,21 +1,28 @@
-package  automaton;
+package automaton;
 
 
 import ec.util.MersenneTwisterFast;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
-import tree.BooleanExpressionTree;
+import tree.Lexer;
+import tree.ast.BooleanExpression;
+import tree.parser.RecursiveDescentParser;
 
+import javax.crypto.spec.PSource;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.*;
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+import java.util.function.IntFunction;
 
 public class Automaton {
 
@@ -25,10 +32,10 @@ public class Automaton {
 //        ALGORITHM
     }
 
-    private String[] eventInputs;
-    private String[] eventOutputs;
-    private String[] inputVars;
-    private String[] outputVars;
+    private static String[] eventInputs;
+    private static String[] eventOutputs;
+    private static String[] inputVars;
+    private static String[] outputVars;
     private String[] ecStateName;
     private String[] ecStateAlgorithmName;
     private String[] transitionSource;
@@ -62,6 +69,24 @@ public class Automaton {
             ECAlgorithm algorithm = parseAlgorithm(document);
             algorithmName = algorithm.name;
             algorithmText = algorithm.text;
+
+            for (int i = 0; i < transitionCondition.length; i++) {
+                if (transitionCondition[i].contains("AND")) {
+                    transitionCondition[i] = transitionCondition[i].replace("AND", "&");
+                }
+                // replace OR -> |
+                if (transitionCondition[i].contains("OR")) {
+                    transitionCondition[i] = transitionCondition[i].replace("OR", "|");
+                }
+                // replace NOT -> !
+                if (transitionCondition[i].contains("NOT")) {
+                    transitionCondition[i] = transitionCondition[i].replace("NOT", "!");
+                }
+                // replace IMPL -> "->"
+                if (transitionCondition[i].contains("IMPL")) {
+                    transitionCondition[i] = transitionCondition[i].replace("IMPL", "->");
+                }
+            }
         } catch (XPathExpressionException | ParserConfigurationException | SAXException | IOException ex) {
             ex.printStackTrace(System.out);
         }
@@ -81,18 +106,14 @@ public class Automaton {
         this.algorithmText = Arrays.copyOf(other.algorithmText, other.algorithmText.length);
     }
 
-//    public int inputVarId(String input) {
-//        for (int i = 0; i < inputVars.length; i++) {
-//            if (input.equals(inputVars[i])) {
-//                return i;
-//            }
-//        }
-//    }
-
     public void mutate(MersenneTwisterFast random) {
-       // System.out.println("Mutating");
         //select random transition
-        int transition = random.nextInt(transitionSource.length);
+        int transition = 0;
+
+        while (transition < 2) {
+            transition = random.nextInt(transitionSource.length);
+        }
+
 
         MutationType mutationType = MutationType.values()[random.nextInt(MutationType.values().length)];
         //either change the transition destination or condition
@@ -106,13 +127,9 @@ public class Automaton {
                 break;
             }
             case TRANSITION_CONDITION: {
-             //   System.out.println("Current: " + transitionCondition[transition]);
-                BooleanExpressionTree tree = new BooleanExpressionTree(transitionCondition[transition]);
-//                tree.changeTreeOneValue(inputVars[random.nextInt(inputVars.length)], random);
-                tree.mutateLeaf(random);
-                transitionCondition[transition] = tree.makeString();
-            //    System.out.println("Mutated: " + transitionCondition[transition]);
-               // System.exit(0);
+                BooleanExpression be = new RecursiveDescentParser(new Lexer(transitionCondition[transition])).build();
+                be = be.mutate(random);
+                transitionCondition[transition] = be.toString();
                 break;
             }
 //            case ALGORITHM: {
@@ -155,14 +172,6 @@ public class Automaton {
 
     public String[] getOutputVars() {
         return outputVars;
-    }
-    public void setAlgorithm( ECAlgorithm algorithm){
-        algorithmName =algorithm.name;
-        algorithmText=algorithm.text;
-    }
-    public void setECState(String[] ecStateNameNew, String []ecStateAlgorithmNameNew){
-        ecStateName=ecStateNameNew;
-        ecStateAlgorithmName= ecStateAlgorithmNameNew;
     }
 
     private static String readPlantModel() {
@@ -210,26 +219,6 @@ public class Automaton {
         sb.append("ASSIGN\n\tinit(_state) := " + ecStateName[0] + ";\n\n" +
                 "--variable part of controller starts here--\n\n" +
                 "next(_state) := case\n");
-
-
-        // replace AND -> &
-        for (int i = 0; i < transitionCondition.length; i++) {
-            if (transitionCondition[i].contains("AND")) {
-                transitionCondition[i] = transitionCondition[i].replace("AND", "&");
-            }
-            // replace OR -> |
-            if (transitionCondition[i].contains("OR")) {
-                transitionCondition[i] = transitionCondition[i].replace("OR", "|");
-            }
-            // replace NOT -> !
-            if (transitionCondition[i].contains("NOT")) {
-                transitionCondition[i] = transitionCondition[i].replace("NOT", "!");
-            }
-            // replace IMPL -> "->"
-            if (transitionCondition[i].contains("IMPL")) {
-                transitionCondition[i] = transitionCondition[i].replace("IMPL", "->");
-            }
-        }
 
         // ot pervonachalnogo ya vischitau pervii stroki statov, a tolko potom yje next
 
@@ -283,7 +272,6 @@ public class Automaton {
                                         String[] ecStateAlgorithmName, String outputVar) {
         String rowLine = "init(" + outputVar + ") := FALSE;\n\nnext(" + outputVar + ") := case\n";
 
-        //TODO: shouldn't rowT start with a TRUE?
         String rowT = "\tFALSE | next(_state) = ";
         String rowF = "\tFALSE | next(_state) = ";
 
@@ -444,8 +432,6 @@ public class Automaton {
                 conditionList.add(eElement.getAttribute("Condition"));
             }
         }
-
-        //TODO: what in the world is this?
         int metka = 15;
         while (sourceList.size() > metka) {
             sourceList.remove(metka);
@@ -520,9 +506,96 @@ public class Automaton {
         }
     }
 
+    public static Automaton generateRandomAutomaton(MersenneTwisterFast random) {
+        Automaton a = new Automaton(automaton);
+        int minStateDegree = 1;
+        int maxStateDegree = 3;
+        int minGuardConditionSize = 1;
+        int maxGuardConditionSize = 10;
+        int nStates = automaton.algorithmName.length;
+
+        List<Integer> src = new ArrayList<>();
+        List<Integer> dst = new ArrayList<>();
+        List<String> guard = new ArrayList<>();
+
+        for (int source = 0; source < nStates; source++) {
+            int degree = random.nextInt(maxStateDegree - minStateDegree) + minStateDegree;
+            for (int i = 0; i < degree; i++) {
+                int destination = random.nextInt(nStates);
+                //we need to have at least one non-loop transition
+                if (i == 0) {
+                    while (destination == source) {
+                        destination = random.nextInt(nStates);
+                    }
+                }
+                src.add(source);
+                dst.add(destination);
+            }
+        }
+
+        String terminals = Arrays.toString(automaton.getInputVars()).replaceAll(",", "");
+        terminals = terminals.substring(1, terminals.length() - 1);
+
+        StringBuilder sb = new StringBuilder("randltl").append(" -n ").append(src.size() * 3).append(" -p ").append(terminals)
+                .append(" --ltl-priorities=X=0,xor=0,U=0,R=0,F=0,G=0,W=0,M=0,implies=0,equiv=0")
+                .append(" --tree-size=").append(minGuardConditionSize).append("..").append(maxGuardConditionSize).append(" --seed ").append(System.currentTimeMillis());
+
+        try {
+            Process p = Runtime.getRuntime().exec(sb.toString());
+            Scanner sc = new Scanner(new BufferedInputStream(p.getInputStream()));
+            while (sc.hasNextLine()) {
+                if (guard.size() == src.size()) {
+                    break;
+                }
+                String line = sc.nextLine();
+                if (!line.equalsIgnoreCase("0") && !line.equalsIgnoreCase("1")) {
+                    guard.add(line);
+                }
+            }
+            sc.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+//        for (int i = 0; i < src.size(); i++) {
+//            System.out.println(src.get(i) + " -> " + dst.get(i) + " [" + guard.get(i) + "]");
+//        }
+
+        a.ecStateName = new String[nStates];
+        for (int i = 0; i < nStates; i++) {
+            a.ecStateName[i] = i + "";
+        }
+
+        a.algorithmName = new String[nStates];
+        for (int i = 0; i < nStates; i++) {
+            a.algorithmName[i] = "alg_" + i;
+        }
+
+        a.transitionCondition = guard.toArray(new String[0]);
+        a.transitionSource = Arrays.stream(src.toArray(new Integer[0])).map(x -> x + "").toArray(String[]::new);
+        a.transitionDestination = Arrays.stream(dst.toArray(new Integer[0])).map(x -> x + "").toArray(String[]::new);
+
+        for (int state = 0; state < nStates; state++) {
+            StringBuilder alg = new StringBuilder();
+
+            for (int i = 0; i < outputVars.length; i++) {
+                if (random.nextDouble() < 2.0 / outputVars.length) {
+                    alg.append(outputVars[i]).append(":=").append(random.nextBoolean() ? "TRUE" : "FALSE").append(";\n");
+                }
+            }
+
+            a.algorithmText[state] = alg.toString();
+        }
+
+//        System.out.println(Arrays.toString(a.algorithmText));
+
+        return a;
+    }
+
+
     public static void main(String[] args) {
         Automaton auto = new Automaton("CentralController.xml");
-
+        MersenneTwisterFast random = new MersenneTwisterFast();
     }
 }
 

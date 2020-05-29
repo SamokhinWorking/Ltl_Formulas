@@ -1,4 +1,4 @@
-package  ltlgen.formulas;
+package ltlgen.formulas;
 
 import ec.EvolutionState;
 import ec.Problem;
@@ -6,7 +6,7 @@ import ec.gp.ADFStack;
 import ec.gp.GPData;
 import ec.gp.GPIndividual;
 import ec.gp.GPNode;
-import  ltlgen.LTLData;
+import ltlgen.LTLData;
 
 public class Or extends GPNode implements Verifiable {
     @Override
@@ -30,14 +30,8 @@ public class Or extends GPNode implements Verifiable {
 
     @Override
     public String toStringForHumans() {
-        String left = children[0].toStringForHumans(), right = children[1].toStringForHumans();
-        if (left.charAt(0) == '!') {
-            return "(" + left.substring(2, left.length() - 1) + " -> " + right + ")";
-        } else if (right.charAt(0) == '!') {
-            return "(" + right.substring(2, right.length() - 1) + " -> " + left + ")";
-        } else {
-            return "(" + left + " | " + children[1].toStringForHumans() + ")";
-        }
+        return toStringForVerifier();
+
     }
 
     @Override

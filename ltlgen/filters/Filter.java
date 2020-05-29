@@ -1,4 +1,4 @@
-package  ltlgen.filters;
+package ltlgen.filters;
 
 import ec.EvolutionState;
 import ec.Setup;

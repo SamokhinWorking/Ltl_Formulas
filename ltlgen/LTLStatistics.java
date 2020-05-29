@@ -1,15 +1,22 @@
-package  ltlgen;
+package ltlgen;
 
 import ec.EvolutionState;
 import ec.Individual;
 import ec.Statistics;
+import ec.app.push.Print;
 import ec.gp.GPIndividual;
+import ec.gp.GPInitializer;
 import ec.multiobjective.MultiObjectiveFitness;
+import ec.util.MersenneTwisterFast;
 import ec.util.Parameter;
-import  ltlgen.formulas.Verifiable;
+import automaton.Automaton;
+import ltlgen.formulas.Verifiable;
+import verifier.Verifier;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class LTLStatistics extends Statistics {
@@ -18,6 +25,22 @@ public class LTLStatistics extends Statistics {
     private int logFile, resultFile, humansFile;
     private int bestNumber;
     private long startTime;
+    private Parameter base;
+    private static final int SAMPLE_SIZE = 1000;
+    private Automaton[] mutants;
+    private static final Automaton auto = new Automaton("CentralController.xml");
+
+    private static final String[] referenceSpecification = new String[]{
+            "G(!(C.c1Extend & C.c1Retract))",
+            "G(!(C.c2Extend & C.c2Retract))",
+            "G(!(C.vacuum_on & C.vacuum_off))",
+            "G(!P.vcHome & !P.vcEnd -> P.c1Home | P.c1End)",
+            "G(!P.c1Home & !P.c1End -> P.vcHome | P.vcEnd)",
+            "G(P.c1Home & P.c2Home & P.vcHome & !pp1 & !lifted -> X(!C.c1Extend & !C.c2Extend & !C.vcExtend))",
+            "G(pp1 -> F(C.vp1))",
+            "G(!(!P.c1Home & !P.c1End & !P.vcHome & !P.vcEnd))",
+            "G(lifted -> F(dropped))"
+    };
 
     @Override
     public void setup(final EvolutionState state, final Parameter base) {
@@ -34,19 +57,29 @@ public class LTLStatistics extends Statistics {
             state.output.fatal("Error while setting up stats file: " + e.getMessage());
         }
         startTime = System.currentTimeMillis();
+        this.base = base;
+
+        MersenneTwisterFast random = state.random[(int)Thread.currentThread().getId() - 1];
+        mutants = new Automaton[SAMPLE_SIZE];
+
+        Set<String> uniqueMutants = new HashSet<>();
+        uniqueMutants.add(auto.toSMV());
+        for (int i = 0; i < SAMPLE_SIZE; i++) {
+            mutants[i] = new Automaton(auto);
+            while (uniqueMutants.contains(mutants[i].toSMV())) {
+                mutants[i].mutate(random);
+            }
+            uniqueMutants.add(mutants[i].toSMV());
+        }
     }
 
-    private String individualToString(boolean forHumans, GPIndividual individual, Set<String> sh) {
+    private String individualToString(boolean forHumans, GPIndividual individual) {
         String s;
         if (forHumans) {
             s = "G(" + individual.trees[0].child.toStringForHumans() + ")\n";
         } else {
             s = "G(" + ((Verifiable) individual.trees[0].child).toStringForVerifier() + ")\n";
         }
-        if (sh.contains(s)) {
-            return "";
-        }
-        sh.add(s);
         return s + individual.fitness.fitnessToStringForHumans();
     }
 
@@ -57,45 +90,97 @@ public class LTLStatistics extends Statistics {
 
         Individual[] individuals = state.population.subpops.get(0).individuals.toArray(new Individual[0]);
 
-        int idx=0;
         Individual best = individuals[0];
-
-        /*
-        state.output.println("First: ==>"+idx+" "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
-        state.output.println("Second: ==>"+idx+" "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
-        state.output.println("Third: ==>"+idx+" "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
-        state.output.println("Fourth: ==>"+idx+" "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
-
-        state.output.println("All individuals", logFile);
-
-
-        for(int i=0;i<individuals.length;i++){
-            state.output.println(i+"---> "+individualToString(false, (GPIndividual) individuals[i], new HashSet<>()), logFile);
-        }
-
-         */
-
-
 
         for (int i = 1; i < individuals.length; i++) {
             if (individuals[i].fitness.betterThan(best.fitness)) {
-                //state.output.println(" my index = "+i,logFile);
                 best = individuals[i];
-               // idx=i;
             }
         }
 
-
-        state.output.println("Best individual: "  + individualToString(false, (GPIndividual) best, new HashSet<>()), logFile);
-
-
+        state.output.println("Best individual: "  + individualToString(false, (GPIndividual) best), logFile);
         state.output.println("--------------------", logFile);
+
+        ArrayList<Individual> front = new ArrayList<>();
+        MultiObjectiveFitness.partitionIntoParetoFront(state.population.subpops.get(0).individuals, front, null);
+        printUniqueIndividuals(state, front.toArray(new Individual[0]), "front");
+        printUniqueIndividuals(state, individuals, "all");
+
+        //calculate the mutants metric
+//        calculateMutantsMetric(state);
     }
+
+    private void printUniqueIndividuals(EvolutionState state, Individual[] individuals, String filePrefix) {
+        Set<String> set = new HashSet<>();
+        PrintWriter out = null;
+        try {
+            out = new PrintWriter(new File(filePrefix + "-" + state.generation));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        int i = 0;
+        for (Individual individual : individuals) {
+            GPIndividual gpIndividual = (GPIndividual)individual;
+            if (!set.contains(gpIndividual.trees[0].child.toStringForHumans())) {
+                out.println(i++ + ": " + individualToString(true, gpIndividual));
+                set.add(gpIndividual.trees[0].child.toStringForHumans());
+            }
+        }
+
+        out.close();
+    }
+
 
     @Override
     public void finalStatistics(EvolutionState state, int result) {
         printFinal(state, result, false, resultFile);
         printFinal(state, result, true, humansFile);
+
+        //calculate the mutants metric
+        calculateMutantsMetric(state);
+    }
+
+    private void calculateMutantsMetric(EvolutionState state) {
+        double referenceSpecificationUnsatisfiedRatio = 0;
+        for (Automaton a : mutants) {
+            Verifier verifier = new Verifier(a);
+            for (String ltl : referenceSpecification) {
+                if (verifier.verify(ltl).verified == 0) {
+                    referenceSpecificationUnsatisfiedRatio++;
+                    break;
+                }
+            }
+        }
+
+        referenceSpecificationUnsatisfiedRatio = referenceSpecificationUnsatisfiedRatio / SAMPLE_SIZE;
+        System.out.println("Reference ratio = " + referenceSpecificationUnsatisfiedRatio);
+
+        List<Individual> generatedSpecification = new ArrayList<>();
+        for (Individual i : state.population.subpops.get(0).individuals) {
+            if (((MultiObjectiveFitness)i.fitness).getObjective(1) > 0.99999) {
+                generatedSpecification.add(i);
+            }
+        }
+
+        System.out.println("generated " + generatedSpecification.size() + " satisfiable formulas");
+
+        double generatedSpecificationUnsatisfiedRatio = 0;
+        for (Automaton a : mutants) {
+            Verifier verifier = new Verifier(a);
+            for (Individual individual : generatedSpecification) {
+                String ltl = "G(" + ((GPIndividual)individual).trees[0].child.toStringForHumans() + ")";
+                if (verifier.verify(ltl).verified == 0) {
+                    generatedSpecificationUnsatisfiedRatio++;
+                    break;
+                }
+            }
+        }
+
+        generatedSpecificationUnsatisfiedRatio = generatedSpecificationUnsatisfiedRatio / SAMPLE_SIZE;
+
+        double mutantsMetric = generatedSpecificationUnsatisfiedRatio / referenceSpecificationUnsatisfiedRatio;
+        System.out.println("Mutants metric = " + mutantsMetric);
     }
 
     private void printFinal(EvolutionState state, int result, boolean forHumans, int fileId) {
@@ -111,8 +196,8 @@ public class LTLStatistics extends Statistics {
         Set<String> shown = new HashSet<>();
         MultiObjectiveFitness.partitionIntoParetoFront(state.population.subpops.get(0).individuals, front, null);
         for (Individual individual : front) {
-            String s = individualToString(forHumans, (GPIndividual) individual, shown);
-            if (!s.equals("")) {
+            String s = individualToString(forHumans, (GPIndividual) individual);
+            if (!s.equals("") && !shown.contains(s)) {
                 state.output.println(s, fileId);
                 state.output.println("--------------------", fileId);
                 shown.add(s);
@@ -120,9 +205,6 @@ public class LTLStatistics extends Statistics {
         }
         state.output.println("\nBest individuals:", fileId);
         List<Individual> individuals = new ArrayList<>();
-        // change  state.population.subpops[0].individuals to  state.population.subpops.get(0).individuals.toArray(new Individual[0])
-
-
         Collections.addAll(individuals, state.population.subpops.get(0).individuals.toArray(new Individual[0]));
         Collections.sort(individuals, new IndividualsComparator());
         shown.clear();
@@ -131,8 +213,8 @@ public class LTLStatistics extends Statistics {
             if (count >= bestNumber) {
                 break;
             }
-            String s = individualToString(forHumans, (GPIndividual) individual, shown);
-            if (!s.equals("")) {
+            String s = individualToString(forHumans, (GPIndividual) individual);
+            if (!s.equals("") && !shown.contains(s)) {
                 state.output.println(s, fileId);
                 state.output.println("--------------------", fileId);
                 shown.add(s);

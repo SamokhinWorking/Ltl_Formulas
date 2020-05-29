@@ -1,4 +1,4 @@
-package  automaton;
+package automaton;
 
 public class ECTransition {
     public String[] source;

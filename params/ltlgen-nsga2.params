@@ -5,7 +5,6 @@ parent.1 = nsga2.params
 # General
 #
 
-#eval = ec.multiobjective.nsga2.NSGA2Evaluator
 breed = ec.multiobjective.nsga2.NSGA2Breeder
 
 #
